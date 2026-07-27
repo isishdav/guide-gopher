@@ -12,23 +12,16 @@ import Contact from "./pages/contact";
 import BlogDashboard from "./pages/dashboard/blog";
 import BlogEditor from "./pages/dashboard/blog/editor";
 import ProfilePage from "./pages/dashboard/profile";
-import EarlyAccess from "./pages/early-access";
-import Feature from "./pages/feature";
 import CollectionsPage from "./pages/collections";
 import ServicesPage from "./pages/services";
 import ProjectsPage from "./pages/projects";
 import TestimonialsPage from "./pages/testimonials";
 import Home from "./pages/home";
-import Integration from "./pages/integration";
-import IntegrationDetailsPage from "./pages/integration/[slug]";
 import CookiePolicyPage from "./pages/legal/cookie-policy";
 import PrivacyPolicyPage from "./pages/legal/privacy-&-policy";
 import TermsAndConditionPage from "./pages/legal/terms-&-condition";
 import LoginPage from "./pages/login";
 import NotFound from "./pages/not-found";
-import Pricing from "./pages/pricing";
-import ProfessionalPricing from "./pages/pricing/professional";
-import StarterPricing from "./pages/pricing/starter";
 import SignupPage from "./pages/signup";
 
 const queryClient = new QueryClient();
@@ -47,17 +40,14 @@ const App = () => (
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/testimonials" element={<TestimonialsPage />} />
-              <Route path="/feature" element={<Feature />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/pricing/starter" element={<StarterPricing />} />
-              <Route path="/pricing/professional" element={<ProfessionalPricing />} />
+
+
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/integration" element={<Integration />} />
-              <Route path="/integration/:slug" element={<IntegrationDetailsPage />} />
-              <Route path="/early-access" element={<EarlyAccess />} />
+
+
               <Route path="/dashboard/profile" element={<ProfilePage />} />
               <Route path="/dashboard/blog" element={<BlogDashboard />} />
               <Route path="/dashboard/blog/new" element={<BlogEditor />} />
