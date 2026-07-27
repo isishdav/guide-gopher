@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import { brand } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -83,11 +84,11 @@ const ContactForm = () => {
         {/* Header Section */}
         <div className="text-center max-w-[540px] mx-auto space-y-4">
           <h1 className="h1">
-            Contact Us
+            Book Your Free Curtain Consultation
           </h1>
           <p className="text-lg text-muted-foreground">
-            Discover tips, tools, and trends to help you grow and manage your
-            finances more efficiently.
+            Tell us about your space and a Curtains Hub designer will visit with fabric samples,
+            measure your windows and prepare a tailored quote — free of charge.
           </p>
         </div>
 
@@ -95,10 +96,9 @@ const ContactForm = () => {
           {/* Left Column: Contact Info */}
           <div className="bg-card md:p-[30px] p-6 md:rounded-3xl rounded-lg border border-border md:space-y-[60px] space-y-8 h-full">
             <div className="space-y-3">
-              <h2 className="h3">Get in Touch with Us</h2>
+              <h2 className="h3">Speak to a Curtain Designer</h2>
               <p className="text-muted-foreground">
-                Have questions or need assistance? We're here to help you
-                every step of the way.
+                Homes, hotels, offices or full developments — we answer every enquiry within one working day.
               </p>
             </div>
 
@@ -112,7 +112,7 @@ const ContactForm = () => {
                   <span className="font-medium">Email</span>
                 </div>
                 <div className="text-sm text-muted-foreground pt-4">
-                  support@onixtheme.com
+                  <a href={`mailto:${brand.email}`} className="hover:text-primary transition-colors">{brand.email}</a>
                 </div>
               </div>
 
@@ -125,7 +125,7 @@ const ContactForm = () => {
                   <span className="font-medium">Phone</span>
                 </div>
                 <div className="text-sm text-muted-foreground pt-4">
-                  +(914) 2631 261
+                  <a href={brand.phoneHref} className="hover:text-primary transition-colors">{brand.phone}</a>
                 </div>
               </div>
 
@@ -138,7 +138,7 @@ const ContactForm = () => {
                   <span className="font-medium">Address</span>
                 </div>
                 <div className="text-sm text-muted-foreground pt-4">
-                  237 Camden High Street, London, NW1 7BU, UK
+                  {brand.address.street}, {brand.address.locality}
                 </div>
               </div>
             </div>
@@ -231,7 +231,7 @@ const ContactForm = () => {
                       <FormLabel className="text-xs uppercase tracking-wider">Message</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Type here..."
+                          placeholder="Tell us about your rooms, windows and preferred fabrics..."
                           className="min-h-[150px] bg-background border-none rounded-[14px] focus-visible:ring-1 focus-visible:ring-white/20 resize-none"
                           {...field}
                         />

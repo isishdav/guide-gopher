@@ -14,15 +14,23 @@ const ScrollToTop = () => {
     return null
 }
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <main>
+        <>
             <ScrollToTop />
+            <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:rounded-md focus:bg-primary focus:text-primary-foreground"
+            >
+                Skip to main content
+            </a>
             <Navbar />
-            {children}
-            <CTA />
+            <main id="main-content">
+                {children}
+                <CTA />
+            </main>
             <Footer />
-        </main>
+        </>
     )
 }
 

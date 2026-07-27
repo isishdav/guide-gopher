@@ -2,48 +2,7 @@ import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import * as React from "react"
 
-interface Testimonial {
-    id: number
-    title: string
-    quote: string
-    author: string
-    image: string
-}
-
-const testimonials: Testimonial[] = [
-    {
-        id: 1,
-        title: "Finally Found the Solution",
-        quote:
-            "I used to dread checking my accounts, but AI budgeting tools gave me a clear picture of my spending within days. Now I actually look forward to managing my money.",
-        author: "James Arthur",
-        image: "/images/home/testimonial-1.webp",
-    },
-    {
-        id: 2,
-        title: "Game Changer for My Business",
-        quote:
-            "The insights provided by this platform have completely transformed how we approach our monthly financial planning. It's intuitive, powerful, and essential.",
-        author: "Sarah Chen",
-        image: "/images/home/testimonial-2.webp",
-    },
-    {
-        id: 3,
-        title: "Simplified My Life",
-        quote:
-            "I never thought managing multiple streams of income could be this simple. The automation handles the heavy lifting, leaving me to focus on what I love.",
-        author: "Elena Rodriguez",
-        image: "/images/home/testimonial-3.webp",
-    },
-    {
-        id: 4,
-        title: "Total Peace of Mind",
-        quote:
-            "Knowing that my finances are being monitored by such a sophisticated AI gives me peace of mind I haven't had in years. Highly recommended for everyone.",
-        author: "Michael Ross",
-        image: "/images/home/testimonial-4.webp",
-    },
-]
+import { testimonials } from "@/data/site"
 
 const TestimonialSlider = () => {
     const [currentIndex, setCurrentIndex] = React.useState(0)
@@ -77,8 +36,8 @@ const TestimonialSlider = () => {
                         <div className="relative md:w-80 md:h-80 h-64 w-64 flex-shrink-0 overflow-hidden rounded-2xl">
                             <img
                                 src={testimonials[currentIndex].image || "/images/common/placeholder.svg"}
-                                alt={testimonials[currentIndex].author}
-                                className="object-cover"
+                                alt={`${testimonials[currentIndex].author}, ${testimonials[currentIndex].role}`}
+                                loading="lazy" decoding="async" width={1024} height={1024} className="w-full h-full object-cover"
                             />
                         </div>
                         <div className="flex flex-col justify-between h-full max-w-md text-center md:text-left">
@@ -86,7 +45,7 @@ const TestimonialSlider = () => {
                                 <h3 className="h4 mb-4">{testimonials[currentIndex].title}</h3>
                                 <p className="text-lg font-medium text-muted-foreground mb-2">"{testimonials[currentIndex].quote}"</p>
                             </div>
-                            <p className="text-muted-foreground">{testimonials[currentIndex].author}</p>
+                            <p className="text-foreground font-medium">{testimonials[currentIndex].author}<span className="block text-sm text-muted-foreground font-normal">{testimonials[currentIndex].role}</span></p>
                         </div>
                     </motion.div>
 
@@ -113,8 +72,8 @@ const TestimonialSlider = () => {
                                 >
                                     <img
                                         src={testimonials[index].image || "/images/common/placeholder.svg"}
-                                        alt={testimonials[index].author}
-                                        className="object-cover"
+                                        alt={`${testimonials[index].author}, ${testimonials[index].role}`}
+                                        loading="lazy" decoding="async" width={1024} height={1024} className="w-full h-full object-cover"
                                     />
                                 </motion.div>
                             )
