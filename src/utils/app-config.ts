@@ -1,8 +1,10 @@
 export const appConfig = {
-    name: "Paymark",
-    description: "Paymark is a payment processing platform that allows you to accept payments online and offline.",
-    url: "https://paymark.lovable.dev",
-    logo: "/images/common/logo.svg",
-    favicon: "/favicon.ico",
-    ogImage: "/og-image.jpg",
+    name: "Curtains Hub",
+    slogan: "Your Confidence Begins Here.",
+    description:
+        "Curtains Hub designs, tailors and installs luxury curtains for homes, hotels and offices — premium fabrics, custom measurements and expert installation.",
+    url: "",
+    logo: "/images/curtains/logo-mark.png",
+    favicon: "/favicon.png",
+    ogImage: "/images/curtains/hero.jpg",
 }

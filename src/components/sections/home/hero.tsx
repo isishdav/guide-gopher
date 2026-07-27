@@ -1,72 +1,56 @@
+import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
-import { Newsletter } from "@/components/ui/newsletter";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden hero-padding-top pb-10 md:pb-0 bg-[url(/images/home/hero-bg.webp)] bg-cover bg-center">
+    <section
+      className="relative flex items-center justify-center overflow-hidden hero-padding-top pb-16 md:pb-24"
+      aria-labelledby="hero-heading"
+    >
+      <img
+        src="/images/curtains/hero.jpg"
+        alt="Luxury living room at golden hour with floor-to-ceiling ivory curtains diffusing natural light"
+        width={1920}
+        height={1080}
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" aria-hidden="true" />
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <StaggerContainer>
-            <AnimateOnView
-              blur
-            >
-              <h1
-                className="h1 text-foreground mb-4"
-              >
-                Smart Solutions Built for the Future of Finance
-              </h1>
-            </AnimateOnView>
-
-            <AnimateOnView
-              blur
-              delay={0.2}
-            >
-              <p
-                className="text-body-md max-w-2xl mx-auto mb-5"
-              >
-                Track the growth and engagement of your newsletter detailed analytics your reach.
+            <AnimateOnView blur>
+              <p className="text-primary tracking-[0.28em] uppercase text-xs md:text-sm mb-5">
+                Your Confidence Begins Here
               </p>
             </AnimateOnView>
 
-            <AnimateOnView
-              className="flex items-center justify-center mb-16"
-              delay={0.3}
-            >
-              <Newsletter />
+            <AnimateOnView blur>
+              <h1 id="hero-heading" className="h1 text-foreground mb-5">
+                Luxury Curtains That Transform Every Space
+              </h1>
+            </AnimateOnView>
+
+            <AnimateOnView blur delay={0.2}>
+              <p className="text-body-md max-w-2xl mx-auto mb-8 text-muted-foreground">
+                Bring elegance, comfort, privacy, and confidence into your home with premium curtains
+                designed for modern living.
+              </p>
+            </AnimateOnView>
+
+            <AnimateOnView className="flex flex-col sm:flex-row items-center justify-center gap-4" delay={0.3}>
+              <Button asChild size="lg" className="w-full sm:w-auto min-h-11">
+                <Link to="/collections">Explore Collection</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto min-h-11">
+                <Link to="/contact">Book a Free Consultation</Link>
+              </Button>
             </AnimateOnView>
           </StaggerContainer>
-
-          <div
-            className="relative flex items-center justify-center"
-          >
-            <StaggerContainer className="relative w-full max-w-[840px] flex items-center justify-center">
-
-              <AnimateOnView delay={0.1} className="absolute right-0 top-1/2 -translate-y-1/2 aspect-[429/259] w-[51%] z-0">
-                <img
-                  src="/images/home/card-2.png"
-                  alt="Credit card placeholder"
-                  className="w-full h-full object-cover"
-                />
-              </AnimateOnView>
-
-              <AnimateOnView delay={0.2} className="aspect-[525/317] w-[63%] z-10 bg-[url('/images/home/card-bg.png')] bg-cover bg-center rounded-[19px]">
-                <img
-                  src="/images/home/card-1.png"
-                  alt="Credit card placeholder"
-                  className="w-full h-full object-cover"
-                />
-              </AnimateOnView>
-
-              <AnimateOnView delay={0.3} className="absolute left-0 top-1/2 -translate-y-1/2 aspect-[429/259] w-[51%] z-0">
-                <img
-                  src="/images/home/card-2.png"
-                  alt="Credit card placeholder"
-                  className="w-full h-full object-cover"
-                />
-              </AnimateOnView>
-            </StaggerContainer>
-          </div>
         </div>
       </div>
     </section>

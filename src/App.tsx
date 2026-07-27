@@ -14,6 +14,10 @@ import BlogEditor from "./pages/dashboard/blog/editor";
 import ProfilePage from "./pages/dashboard/profile";
 import EarlyAccess from "./pages/early-access";
 import Feature from "./pages/feature";
+import CollectionsPage from "./pages/collections";
+import ServicesPage from "./pages/services";
+import ProjectsPage from "./pages/projects";
+import TestimonialsPage from "./pages/testimonials";
 import Home from "./pages/home";
 import Integration from "./pages/integration";
 import IntegrationDetailsPage from "./pages/integration/[slug]";
@@ -39,6 +43,10 @@ const App = () => (
             <Sonner />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/collections" element={<CollectionsPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/testimonials" element={<TestimonialsPage />} />
               <Route path="/feature" element={<Feature />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />

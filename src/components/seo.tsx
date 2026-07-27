@@ -8,6 +8,7 @@ interface SEOProps {
     ogImage?: string;
     twitterCard?: "summary" | "summary_large_image";
     jsonLd?: object;
+    noindex?: boolean;
 }
 
 const SEO = ({
@@ -15,46 +16,35 @@ const SEO = ({
     description,
     canonicalUrl,
     ogType = "website",
-    ogImage = "/og-image.jpg",
+    ogImage = "/images/curtains/hero.jpg",
     twitterCard = "summary_large_image",
     jsonLd,
+    noindex = false,
 }: SEOProps) => {
-    const siteUrl = "https://morganblake.com";
-    const fullUrl = `${siteUrl}${canonicalUrl}`;
-    const fullImageUrl = ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`;
-
     return (
         <Helmet>
-            {/* Basic Meta Tags */}
             <title>{title}</title>
             <meta name="description" content={description} />
-            <link rel="canonical" href={fullUrl} />
+            <link rel="canonical" href={canonicalUrl} />
+            <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large"} />
 
-            {/* Open Graph Meta Tags */}
             <meta property="og:type" content={ogType} />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
-            <meta property="og:url" content={fullUrl} />
-            <meta property="og:image" content={fullImageUrl} />
+            <meta property="og:url" content={canonicalUrl} />
+            <meta property="og:image" content={ogImage} />
             <meta property="og:image:alt" content={title} />
-            <meta property="og:site_name" content="Revio - Offline & Online Payment" />
+            <meta property="og:site_name" content="Curtains Hub" />
             <meta property="og:locale" content="en_US" />
 
-            {/* Twitter Card Meta Tags */}
             <meta name="twitter:card" content={twitterCard} />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={fullImageUrl} />
+            <meta name="twitter:image" content={ogImage} />
             <meta name="twitter:image:alt" content={title} />
-            <meta name="twitter:site" content="@revio.photo" />
-            <meta name="twitter:creator" content="@revio.photo" />
 
-            {/* Additional Meta Tags */}
-            <meta name="author" content="Revio" />
-            <meta name="robots" content="index, follow" />
-            <meta name="googlebot" content="index, follow" />
+            <meta name="author" content="Curtains Hub" />
 
-            {/* JSON-LD Structured Data */}
             {jsonLd && (
                 <script type="application/ld+json">
                     {JSON.stringify(jsonLd)}
