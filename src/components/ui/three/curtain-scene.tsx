@@ -139,14 +139,17 @@ const Motes = () => {
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
       <pointsMaterial
-        size={0.06}
+        size={0.09}
         color="#e0c58f"
+        map={moteTexture}
+        alphaMap={moteTexture}
         transparent
-        opacity={0.5}
+        opacity={0.45}
         sizeAttenuation
         depthWrite={false}
         blending={THREE.AdditiveBlending}
       />
+
     </points>
   );
 };
