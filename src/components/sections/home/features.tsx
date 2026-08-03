@@ -1,47 +1,57 @@
 import { AnimateOnView } from '@/components/ui/motion/animate-on-view'
-import { StaggerContainer } from '@/components/ui/motion/stagger'
+import { Reveal } from '@/components/motion/reveal'
+import { SplitText } from '@/components/motion/split-text'
 import { services } from '@/data/site'
 import { Link } from 'react-router-dom'
 import Container from '../../container'
 import { Button } from '../../ui/button'
+import { Magnetic } from '@/components/motion/magnetic'
 
 const Features = () => {
   return (
-    <section className="py-12 md:py-[60px] bg-background" aria-labelledby="services-heading">
-      <Container className="space-y-8 md:space-y-16">
-        <StaggerContainer className="text-center max-w-2xl mx-auto">
-          <AnimateOnView blur>
-            <h2 id="services-heading" className="h2 mb-6">
-              Everything Your Windows Need, Under One Roof
-            </h2>
-          </AnimateOnView>
-          <AnimateOnView blur delay={0.2}>
+    <section className="relative py-16 md:py-24 bg-background overflow-hidden" aria-labelledby="services-heading">
+      <span className="ambient-orb right-[-10%] top-1/3 h-80 w-80" aria-hidden="true" />
+
+      <Container className="relative z-10 space-y-10 md:space-y-16">
+        <div className="text-center max-w-2xl mx-auto">
+          <SplitText
+            as="h2"
+            id="services-heading"
+            text="Everything Your Windows Need, Under One Roof"
+            className="h2 mb-6 block"
+          />
+          <Reveal variant="blur" delay={0.1}>
             <p className="text-muted-foreground">
               From fabric selection and custom measurements to professional installation — Curtains Hub
               handles the whole journey so your interior design stays effortless.
             </p>
-          </AnimateOnView>
-        </StaggerContainer>
+          </Reveal>
+        </div>
 
-        <StaggerContainer>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((service, index) => (
-              <AnimateOnView
-                key={service.title}
-                delay={(index % 3) * 0.08}
-                className="p-6 rounded-[20px] bg-card border border-border hover:border-primary/50 transition-colors"
-              >
-                <h3 className="h4 mb-2">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
-              </AnimateOnView>
-            ))}
-          </div>
-        </StaggerContainer>
+        {/* Slide-in stagger — this section's own motion identity */}
+        <Reveal
+          variant="slide-right"
+          stagger={0.07}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          {services.map((service) => (
+            <Reveal
+              item
+              key={service.title}
+              className="card-lux p-6 rounded-[20px] bg-card border border-border"
+            >
+              <h3 className="h4 mb-2">{service.title}</h3>
+              <p className="text-muted-foreground">{service.description}</p>
+            </Reveal>
+          ))}
+        </Reveal>
 
         <AnimateOnView className="flex justify-center">
-          <Button asChild>
-            <Link to="/services">View All Services</Link>
-          </Button>
+          <Magnetic strength={10}>
+            <Button asChild className="sweep">
+              <Link to="/services">View All Services</Link>
+            </Button>
+          </Magnetic>
         </AnimateOnView>
       </Container>
     </section>
