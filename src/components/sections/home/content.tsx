@@ -1,41 +1,50 @@
-import { AnimateOnView } from '@/components/ui/motion/animate-on-view';
-import { StaggerContainer } from '@/components/ui/motion/stagger';
-import { stats } from '@/data/site';
-import Container from '../../container';
+import { Counter } from '@/components/motion/counter'
+import { Reveal } from '@/components/motion/reveal'
+import { SplitText } from '@/components/motion/split-text'
+import { stats } from '@/data/site'
+import Container from '../../container'
 
 const Content = () => {
   return (
-    <section className="py-12 md:py-[60px]" aria-labelledby="stats-heading">
-      <Container className="space-y-8 md:space-y-16">
-        <StaggerContainer className="text-center max-w-2xl mx-auto">
-          <AnimateOnView blur>
-            <h2 id="stats-heading" className="h2 md:mb-5 mb-3">
-              Fifteen Years of Beautiful Windows
-            </h2>
-          </AnimateOnView>
-          <AnimateOnView blur delay={0.2}>
+    <section className="py-16 md:py-24" aria-labelledby="stats-heading">
+      <Container className="space-y-10 md:space-y-16">
+        <div className="text-center max-w-2xl mx-auto">
+          <SplitText
+            as="h2"
+            id="stats-heading"
+            text="Fifteen Years of Beautiful Windows"
+            className="h2 md:mb-5 mb-3 block"
+          />
+          <Reveal variant="blur" delay={0.1}>
             <p className="text-muted-foreground">
               Numbers we are quietly proud of — earned one perfectly hung curtain at a time.
             </p>
-          </AnimateOnView>
-        </StaggerContainer>
+          </Reveal>
+        </div>
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-          {stats.map((stat, index) => (
-            <AnimateOnView
+        {/* Scale-in stagger with smooth counters */}
+        <Reveal
+          variant="scale"
+          stagger={0.09}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5"
+        >
+          {stats.map((stat) => (
+            <Reveal
+              item
               key={stat.label}
-              delay={index * 0.08}
-              className="p-6 rounded-[20px] bg-card border border-border text-center lg:text-left"
+              className="card-lux p-6 rounded-[20px] bg-card border border-border text-center lg:text-left"
             >
-              <p className="h3 text-primary mb-2">{stat.value}</p>
+              <p className="h3 text-primary mb-2 tabular-nums">
+                <Counter value={stat.value} />
+              </p>
               <h3 className="text-base font-medium mb-1">{stat.label}</h3>
               <p className="text-muted-foreground text-sm">{stat.description}</p>
-            </AnimateOnView>
+            </Reveal>
           ))}
-        </StaggerContainer>
+        </Reveal>
       </Container>
     </section>
-  );
-};
+  )
+}
 
-export default Content;
+export default Content

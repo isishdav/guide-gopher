@@ -5,23 +5,79 @@ import { Menu, XIcon } from "lucide-react";
 import React from "react";
 
 import Container from "@/components/container";
+import { Magnetic } from "@/components/motion/magnetic";
 import UserMenu from "@/components/sections/shared/user-menu";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { navLinks } from "@/data/site";
 import { useAuth } from "@/hooks/use-auth";
-import { Link } from "react-router-dom";
+import { EASE, gsap, prefersReducedMotion } from "@/lib/motion/gsap";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const { user, loading } = useAuth();
   const [isOpen, setIsOpen] = React.useState(false);
+  const { pathname } = useLocation();
+  const header = React.useRef<HTMLElement>(null);
+
+  /**
+   * Transparent over the hero, condensed glass after scrolling, hidden while
+   * scrolling down and revealed on the way back up.
+   */
+  React.useLayoutEffect(() => {
+    const el = header.current;
+    if (!el) return;
+    if (prefersReducedMotion()) return;
+
+    const ctx = gsap.context(() => {
+      const showTo = gsap.quickTo(el, "yPercent", { duration: 0.6, ease: EASE.micro });
+      let last = window.scrollY;
+      let condensed = false;
+
+      const onScroll = () => {
+        const y = window.scrollY;
+        const goingDown = y > last && y > 220;
+        last = y;
+
+        showTo(goingDown ? -110 : 0);
+
+        const shouldCondense = y > 80;
+        if (shouldCondense !== condensed) {
+          condensed = shouldCondense;
+          el.dataset.condensed = String(condensed);
+          gsap.to(el, {
+            paddingTop: condensed ? 10 : 0,
+            paddingBottom: condensed ? 10 : 0,
+            duration: 0.5,
+            ease: EASE.micro,
+          });
+        }
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+      return () => window.removeEventListener("scroll", onScroll);
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <header className="w-full md:top-10 top-6 mx-auto absolute z-40">
+    <header
+      ref={header}
+      data-condensed="false"
+      className="w-full fixed top-0 left-0 z-40 will-change-transform transition-colors duration-500 data-[condensed=true]:bg-background/75 data-[condensed=true]:backdrop-blur-xl data-[condensed=true]:border-b data-[condensed=true]:border-border/60 md:pt-10 pt-6 pb-2"
+    >
       <Container className="flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2 w-fit" aria-label="Curtains Hub — home">
-          <img src="/images/curtains/logo-mark.png" alt="Curtains Hub logo" width={40} height={40} className="h-9 w-9 object-contain" />
+        <Link to="/" className="flex items-center gap-2 w-fit group" aria-label="Curtains Hub — home">
+          <img
+            src="/images/curtains/logo-mark.png"
+            alt="Curtains Hub logo"
+            width={40}
+            height={40}
+            className="h-9 w-9 object-contain transition-transform duration-700 group-hover:rotate-[8deg] group-hover:scale-105"
+          />
           <span className="text-lg font-medium tracking-[0.18em] uppercase text-foreground">Curtains Hub</span>
         </Link>
 
@@ -31,7 +87,7 @@ const Navbar = () => {
             user ? (
               <UserMenu />
             ) : (
-              <Button asChild size="sm">
+              <Button asChild size="sm" className="sweep">
                 <Link to="/contact">Free Consultation</Link>
               </Button>
             )
@@ -66,7 +122,8 @@ const Navbar = () => {
                       key={page.href}
                       to={page.href}
                       onClick={() => setIsOpen(false)}
-                      className="block py-2 min-h-11 text-muted-foreground hover:text-primary transition-colors">
+                      aria-current={pathname === page.href ? "page" : undefined}
+                      className="block py-2 min-h-11 text-muted-foreground hover:text-primary aria-[current=page]:text-primary transition-colors">
                       {page.title}
                     </Link>
                   ))}
@@ -82,7 +139,12 @@ const Navbar = () => {
             {navLinks.map((page) => (
               <NavigationMenuItem key={page.href}>
                 <NavigationMenuLink asChild>
-                  <Link to={page.href} className="px-3 py-2 text-foreground hover:text-primary transition-colors">
+                  <Link
+                    to={page.href}
+                    data-active={pathname === page.href}
+                    aria-current={pathname === page.href ? "page" : undefined}
+                    className="nav-link px-3 py-2 text-foreground hover:text-primary data-[active=true]:text-primary transition-colors"
+                  >
                     {page.title}
                   </Link>
                 </NavigationMenuLink>
@@ -96,9 +158,11 @@ const Navbar = () => {
             user ? (
               <UserMenu />
             ) : (
-              <Button asChild>
-                <Link to="/contact">Book a Free Consultation</Link>
-              </Button>
+              <Magnetic strength={8}>
+                <Button asChild className="sweep">
+                  <Link to="/contact">Book a Free Consultation</Link>
+                </Button>
+              </Magnetic>
             )
           )}
         </div>

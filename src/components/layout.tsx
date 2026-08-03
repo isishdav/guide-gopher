@@ -1,5 +1,8 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import CursorGlow from './motion/cursor-glow'
+import CurtainLoader from './motion/curtain-loader'
+import SmoothScroll from './motion/smooth-scroll'
 import CTA from './sections/shared/cta'
 import Footer from './sections/shared/footer'
 import Navbar from './sections/shared/navbar'
@@ -18,6 +21,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <ScrollToTop />
+            <SmoothScroll />
+            <CurtainLoader />
+            <CursorGlow />
             <a
                 href="#main-content"
                 className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:rounded-md focus:bg-primary focus:text-primary-foreground"

@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import { Reveal } from "@/components/motion/reveal";
 import { Newsletter } from "@/components/ui/newsletter";
 import { brand, collections, navLinks } from "@/data/site";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
@@ -15,9 +16,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#070707] text-foreground pt-24 pb-12">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
+        <Reveal variant="fade-up" stagger={0.12} className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
           {/* Company */}
-          <div className="space-y-6 lg:col-span-2">
+          <div data-reveal-item className="space-y-6 lg:col-span-2">
             <Link to="/" className="flex items-center gap-3" aria-label="Curtains Hub — home">
               <img src="/images/curtains/logo-mark.png" alt="Curtains Hub logo" width={44} height={44} loading="lazy" className="h-11 w-11 object-contain" />
               <span className="text-lg tracking-[0.18em] uppercase">Curtains Hub</span>
@@ -33,7 +34,7 @@ const Footer = () => {
           </div>
 
           {/* Quick links */}
-          <nav aria-label="Footer">
+          <nav data-reveal-item aria-label="Footer">
             <h3 className="font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-4">
               {navLinks.map((link) => (
@@ -47,7 +48,7 @@ const Footer = () => {
           </nav>
 
           {/* Collections + contact */}
-          <div className="space-y-8">
+          <div data-reveal-item className="space-y-8">
             <div>
               <h3 className="font-semibold mb-6">Collections</h3>
               <ul className="space-y-4">
@@ -78,7 +79,7 @@ const Footer = () => {
               <p className="text-sm">{brand.hours}</p>
             </address>
           </div>
-        </div>
+        </Reveal>
 
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-muted-foreground text-sm text-center md:text-left">
@@ -95,7 +96,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all text-muted-foreground hover:text-primary"
+                  className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:-translate-y-1 hover:border-primary/50 transition-all duration-500 text-muted-foreground hover:text-primary"
                   aria-label={social.label}
                 >
                   <social.icon className="w-4 h-4" aria-hidden="true" />
