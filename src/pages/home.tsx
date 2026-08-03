@@ -7,6 +7,7 @@ const Features = lazy(() => import("@/components/sections/home/features"));
 const Confidence = lazy(() => import("@/components/sections/home/confidence"));
 const Content = lazy(() => import("@/components/sections/home/content"));
 const Collections = lazy(() => import("@/components/sections/home/pricing"));
+const BeforeAfter = lazy(() => import("@/components/sections/home/before-after"));
 const Testimonials = lazy(() => import("@/components/sections/home/testimonials"));
 const FAQ = lazy(() => import("@/components/sections/shared/faq"));
 const LogoTicker = lazy(() => import("@/components/sections/shared/logo-ticker"));
@@ -27,6 +28,9 @@ const Home = () => {
         </Suspense>
         <Suspense fallback={null}>
           <Features />
+        </Suspense>
+        <Suspense fallback={null}>
+          <BeforeAfter />
         </Suspense>
         <Suspense fallback={null}>
           <Confidence />
