@@ -6,9 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
  * Plugins are registered once, eases + timing live here so every
  * animation on the site shares one rhythm.
  */
-if (!gsap.core.globals().ScrollTrigger) {
-  gsap.registerPlugin(ScrollTrigger);
-}
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.defaults({ ease: "power3.out", duration: 1 });
 
