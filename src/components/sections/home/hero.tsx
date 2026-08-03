@@ -173,7 +173,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Magnetic data-hero-cta className="w-full sm:w-auto">
+            <Magnetic className="w-full sm:w-auto">
               <span data-hero-cta data-hero-fade className="block opacity-0">
                 <Button asChild size="lg" className="w-full sm:w-auto min-h-11 sweep">
                   <Link to="/collections">Explore Collection</Link>
