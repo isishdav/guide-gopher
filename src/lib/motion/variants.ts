@@ -1,4 +1,4 @@
-import type { TweenVars } from "gsap";
+import type { gsap as GsapType } from "gsap";
 import { EASE } from "./gsap";
 
 export type RevealVariant =
@@ -13,7 +13,7 @@ export type RevealVariant =
   | "clip-right"
   | "clip-center";
 
-type Tween = TweenVars;
+type Tween = GsapType.TweenVars;
 
 interface VariantDef {
   from: Tween;
