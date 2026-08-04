@@ -159,8 +159,8 @@ const Curtain = () => {
     () => ({
       uTime: { value: 0 },
       uPointer: { value: new THREE.Vector2(0, 0) },
-      uGold: { value: new THREE.Color("#c6a36a") },
-      uDark: { value: new THREE.Color("#0a0a0a") },
+      uGold: { value: new THREE.Color("#ffffff") },
+      uDark: { value: new THREE.Color("#e9e8e5") },
     }),
     []
   );
@@ -239,7 +239,7 @@ const Motes = () => {
       </bufferGeometry>
       <pointsMaterial
         size={0.09}
-        color="#e0c58f"
+        color="#bdbbb6"
         map={moteTexture}
         alphaMap={moteTexture}
         transparent
