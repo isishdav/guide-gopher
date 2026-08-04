@@ -35,7 +35,7 @@ const UserMenu = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="focus:outline-none">
-        <Avatar className="h-10 w-10 border-2 border-white/10 hover:border-primary/50 transition-colors cursor-pointer">
+        <Avatar className="h-10 w-10 border-2 border-border hover:border-primary/50 transition-colors cursor-pointer">
           <AvatarImage src={profile?.avatar_url || undefined} alt={displayName} />
           <AvatarFallback className="bg-primary/20 text-primary text-sm font-medium">
             {initials}
@@ -44,7 +44,7 @@ const UserMenu = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="w-56 bg-card border-white/10 z-50"
+        className="w-56 bg-card border-border z-50"
       >
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
@@ -52,22 +52,22 @@ const UserMenu = () => {
             <p className="text-xs text-muted-foreground truncate">{user.email}</p>
           </div>
         </DropdownMenuLabel>
-        <DropdownMenuSeparator className="bg-white/10" />
-        <DropdownMenuItem asChild className="cursor-pointer focus:bg-white/5">
+        <DropdownMenuSeparator className="bg-accent" />
+        <DropdownMenuItem asChild className="cursor-pointer focus:bg-secondary">
           <Link to="/dashboard/profile" className="flex items-center gap-2">
             <User className="w-4 h-4" />
             Profile
           </Link>
         </DropdownMenuItem>
         {isAdmin && (
-          <DropdownMenuItem asChild className="cursor-pointer focus:bg-white/5">
+          <DropdownMenuItem asChild className="cursor-pointer focus:bg-secondary">
             <Link to="/dashboard/blog" className="flex items-center gap-2">
               <LayoutDashboard className="w-4 h-4" />
               Blog Dashboard
             </Link>
           </DropdownMenuItem>
         )}
-        <DropdownMenuSeparator className="bg-white/10" />
+        <DropdownMenuSeparator className="bg-accent" />
         <DropdownMenuItem
           onClick={handleSignOut}
           className="cursor-pointer text-destructive focus:bg-destructive/10 focus:text-destructive"

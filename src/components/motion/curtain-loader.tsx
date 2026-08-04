@@ -72,11 +72,11 @@ export const CurtainLoader = () => {
     <div ref={root} className="fixed inset-0 z-[100] pointer-events-none" aria-hidden="true">
       <div
         data-loader-panel="left"
-        className="absolute inset-y-0 left-0 w-1/2 bg-[#070707] curtain-fabric curtain-fabric--left"
+        className="absolute inset-y-0 left-0 w-1/2 bg-white curtain-fabric curtain-fabric--left"
       />
       <div
         data-loader-panel="right"
-        className="absolute inset-y-0 right-0 w-1/2 bg-[#070707] curtain-fabric curtain-fabric--right"
+        className="absolute inset-y-0 right-0 w-1/2 bg-white curtain-fabric curtain-fabric--right"
       />
 
       <div
@@ -91,18 +91,16 @@ export const CurtainLoader = () => {
           height={64}
           className="h-14 w-14 object-contain"
         />
-        <p
-          data-loader-slogan
-          className="text-primary text-[0.7rem] md:text-xs tracking-[0.42em] uppercase"
-        >
+        <p data-loader-slogan className="eyebrow">
           Your Confidence Begins Here
         </p>
-        <span className="block h-px w-40 md:w-56 bg-white/12 overflow-hidden">
-          <span data-loader-bar className="block h-px w-full origin-left bg-gradient-primary" />
+        <span className="block h-px w-40 md:w-56 bg-foreground/10 overflow-hidden">
+          <span data-loader-bar className="block h-px w-full origin-left bg-foreground" />
         </span>
       </div>
     </div>
   );
 };
+
 
 export default CurtainLoader;

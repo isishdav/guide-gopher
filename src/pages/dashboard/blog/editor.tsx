@@ -334,7 +334,7 @@ const BlogEditor = () => {
                       type="button"
                       variant="outline"
                       size="icon"
-                      className="absolute top-2 right-2 bg-destructive/80 border-destructive text-white hover:bg-destructive"
+                      className="absolute top-2 right-2 bg-destructive/80 border-destructive text-foreground hover:bg-destructive"
                       onClick={() => setImage("")}
                     >
                       <X className="w-4 h-4" />
@@ -392,7 +392,7 @@ const BlogEditor = () => {
             </div>
 
             {/* Submit Button */}
-            <div className="flex justify-end gap-4 pt-6 border-t border-white/10">
+            <div className="flex justify-end gap-4 pt-6 border-t border-border">
               <Button type="button" variant="outline" asChild>
                 <Link to="/dashboard/blog">Cancel</Link>
               </Button>

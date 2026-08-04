@@ -107,7 +107,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
       className={`p-2 rounded-lg transition-colors ${
         active
           ? "bg-primary/20 text-primary"
-          : "text-muted-foreground hover:text-foreground hover:bg-white/10"
+          : "text-muted-foreground hover:text-foreground hover:bg-accent"
       }`}
     >
       {children}
@@ -115,9 +115,9 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
   );
 
   return (
-    <div className="border border-white/10 rounded-xl overflow-hidden">
+    <div className="border border-border rounded-xl overflow-hidden">
       {/* Toolbar */}
-      <div className="flex flex-wrap items-center gap-1 p-2 border-b border-white/10 bg-white/5">
+      <div className="flex flex-wrap items-center gap-1 p-2 border-b border-border bg-secondary">
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleBold().run()}
           active={editor.isActive("bold")}
@@ -131,7 +131,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
           <Italic className="w-4 h-4" />
         </ToolbarButton>
 
-        <div className="w-px h-6 bg-white/10 mx-1" />
+        <div className="w-px h-6 bg-accent mx-1" />
 
         <ToolbarButton
           onClick={() =>
@@ -158,7 +158,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
           <Heading3 className="w-4 h-4" />
         </ToolbarButton>
 
-        <div className="w-px h-6 bg-white/10 mx-1" />
+        <div className="w-px h-6 bg-accent mx-1" />
 
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleBulletList().run()}
@@ -173,7 +173,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
           <ListOrdered className="w-4 h-4" />
         </ToolbarButton>
 
-        <div className="w-px h-6 bg-white/10 mx-1" />
+        <div className="w-px h-6 bg-accent mx-1" />
 
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
@@ -188,7 +188,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
           <Code className="w-4 h-4" />
         </ToolbarButton>
 
-        <div className="w-px h-6 bg-white/10 mx-1" />
+        <div className="w-px h-6 bg-accent mx-1" />
 
         <Dialog open={linkDialogOpen} onOpenChange={setLinkDialogOpen}>
           <DialogTrigger asChild>
@@ -197,7 +197,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
               className={`p-2 rounded-lg transition-colors ${
                 editor.isActive("link")
                   ? "bg-primary/20 text-primary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-white/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-accent"
               }`}
             >
               <LinkIcon className="w-4 h-4" />
@@ -226,7 +226,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="p-2 rounded-lg transition-colors text-muted-foreground hover:text-foreground hover:bg-white/10"
+              className="p-2 rounded-lg transition-colors text-muted-foreground hover:text-foreground hover:bg-accent"
             >
               <ImageIcon className="w-4 h-4" />
             </button>

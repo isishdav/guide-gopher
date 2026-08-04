@@ -52,7 +52,7 @@ export default function TestimonialCard({
           {/* Text Content - Only rendered when active */}
           {isActive && (
             <div className="flex flex-col space-y-6 flex-1 animate-in fade-in slide-in-from-left-4 duration-500">
-              <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-medium text-foreground tracking-tight">
                 {title}
               </h2>
 

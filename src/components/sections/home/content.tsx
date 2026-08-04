@@ -12,7 +12,7 @@ const Content = () => {
           <SplitText
             as="h2"
             id="stats-heading"
-            text="Fifteen Years of Beautiful Windows"
+            text="Fifteen years of better mornings."
             className="h2 md:mb-5 mb-3 block"
           />
           <Reveal variant="blur" delay={0.1}>
@@ -32,9 +32,9 @@ const Content = () => {
             <Reveal
               item
               key={stat.label}
-              className="card-lux p-6 rounded-[20px] bg-card border border-border text-center lg:text-left"
+              className="card-lux p-7 rounded-[24px] bg-secondary border border-border text-center lg:text-left"
             >
-              <p className="h3 text-primary mb-2 tabular-nums">
+              <p className="h3 mb-2 tabular-nums">
                 <Counter value={stat.value} />
               </p>
               <h3 className="text-base font-medium mb-1">{stat.label}</h3>

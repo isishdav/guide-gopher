@@ -56,7 +56,7 @@ const BlogDetailsHero = ({ post }: BlogDetailsHeroProps) => {
                         </div>
                     </AnimateOnView>
                     <AnimateOnView blur delay={0.1}>
-                        <h1 className="h1 text-white mb-4">
+                        <h1 className="h1 text-foreground mb-4">
                             {post.title}
                         </h1>
                     </AnimateOnView>
@@ -65,14 +65,14 @@ const BlogDetailsHero = ({ post }: BlogDetailsHeroProps) => {
                         <div className="flex items-center justify-center gap-3 bg-background relative z-10 px-4">
                             <button 
                                 onClick={handleCopyLink}
-                                className="text-white/40 hover:text-white transition-colors border border-border rounded-full h-10 w-10 flex items-center justify-center"
+                                className="text-foreground/40 hover:text-foreground transition-colors border border-border rounded-full h-10 w-10 flex items-center justify-center"
                                 aria-label="Copy link to clipboard"
                             >
                                 <Link2 className="w-5 h-5" />
                             </button>
                             <button 
                                 onClick={() => openShareWindow(shareLinks.twitter)}
-                                className="text-white/40 hover:text-white transition-colors border border-border rounded-full h-10 w-10 flex items-center justify-center"
+                                className="text-foreground/40 hover:text-foreground transition-colors border border-border rounded-full h-10 w-10 flex items-center justify-center"
                                 aria-label="Share on Twitter"
                             >
                                 <Twitter className="w-5 h-5" />
@@ -80,14 +80,14 @@ const BlogDetailsHero = ({ post }: BlogDetailsHeroProps) => {
 
                             <button 
                                 onClick={() => openShareWindow(shareLinks.facebook)}
-                                className="text-white/40 hover:text-white transition-colors border border-border rounded-full h-10 w-10 flex items-center justify-center"
+                                className="text-foreground/40 hover:text-foreground transition-colors border border-border rounded-full h-10 w-10 flex items-center justify-center"
                                 aria-label="Share on Facebook"
                             >
                                 <Facebook className="w-5 h-5" />
                             </button>
                             <button 
                                 onClick={() => openShareWindow(shareLinks.linkedin)}
-                                className="text-white/40 hover:text-white transition-colors border border-border rounded-full h-10 w-10 flex items-center justify-center"
+                                className="text-foreground/40 hover:text-foreground transition-colors border border-border rounded-full h-10 w-10 flex items-center justify-center"
                                 aria-label="Share on LinkedIn"
                             >
                                 <Linkedin className="w-5 h-5" />

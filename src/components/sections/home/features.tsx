@@ -17,7 +17,7 @@ const Features = () => {
           <SplitText
             as="h2"
             id="services-heading"
-            text="Everything Your Windows Need, Under One Roof"
+            text="Everything your home needs, handled by one team."
             className="h2 mb-6 block"
           />
           <Reveal variant="blur" delay={0.1}>
@@ -38,9 +38,9 @@ const Features = () => {
             <Reveal
               item
               key={service.title}
-              className="card-lux p-6 rounded-[20px] bg-card border border-border"
+              className="card-lux p-7 md:p-8 rounded-[24px] bg-secondary border border-border"
             >
-              <h3 className="h4 mb-2">{service.title}</h3>
+              <h3 className="h4 mb-2.5">{service.title}</h3>
               <p className="text-muted-foreground">{service.description}</p>
             </Reveal>
           ))}
@@ -49,7 +49,7 @@ const Features = () => {
         <AnimateOnView className="flex justify-center">
           <Magnetic strength={10}>
             <Button asChild className="sweep">
-              <Link to="/services">View All Services</Link>
+              <Link to="/services">How we work</Link>
             </Button>
           </Magnetic>
         </AnimateOnView>

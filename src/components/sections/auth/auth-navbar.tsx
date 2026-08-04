@@ -11,15 +11,15 @@ const AuthNavbar = () => {
                     <span className="font-semibold text-xl tracking-tight hidden sm:inline uppercase">Curtains Hub</span>
                 </Link>
 
-                <nav className="hidden lg:flex items-center gap-8 text-white/70">
-                    <Link to="/about" className="hover:text-white transition-colors">About</Link>
-                    <Link to="/collections" className="hover:text-white transition-colors">Collections</Link>
-                    <Link to="/services" className="hover:text-white transition-colors">Services</Link>
-                    <Link to="/blog" className="hover:text-white transition-colors">Blogs</Link>
+                <nav className="hidden lg:flex items-center gap-8 text-foreground/70">
+                    <Link to="/about" className="hover:text-foreground transition-colors">About</Link>
+                    <Link to="/collections" className="hover:text-foreground transition-colors">Collections</Link>
+                    <Link to="/services" className="hover:text-foreground transition-colors">Services</Link>
+                    <Link to="/blog" className="hover:text-foreground transition-colors">Blogs</Link>
                 </nav>
 
                 <div className="flex gap-6 items-center lg:w-[25%] justify-end">
-                    <Link to="/login" className="text-white hover:text-white/80 transition-colors hidden sm:block">
+                    <Link to="/login" className="text-foreground hover:text-foreground transition-colors hidden sm:block">
                         Login
                     </Link>
                     <Button asChild>

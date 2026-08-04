@@ -137,9 +137,9 @@ const BlogDashboard = () => {
           </div>
 
           {/* Table */}
-          <div className="border border-white/10 rounded-xl overflow-hidden">
+          <div className="border border-border rounded-xl overflow-hidden">
             <table className="w-full">
-              <thead className="bg-white/5">
+              <thead className="bg-secondary">
                 <tr>
                   <th className="text-left px-4 py-3 text-sm font-medium text-muted-foreground">
                     Post
@@ -158,7 +158,7 @@ const BlogDashboard = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/10">
+              <tbody className="divide-y divide-border">
                 {isLoading ? (
                   Array.from({ length: 5 }).map((_, i) => (
                     <tr key={i}>
@@ -190,7 +190,7 @@ const BlogDashboard = () => {
                   </tr>
                 ) : (
                   data?.posts.map((post) => (
-                    <tr key={post.id} className="hover:bg-white/5">
+                    <tr key={post.id} className="hover:bg-secondary">
                       <td className="px-4 py-4">
                         <div className="flex items-center gap-3">
                           <img
@@ -284,7 +284,7 @@ const BlogDashboard = () => {
                 variant="outline"
                 onClick={handleDelete}
                 disabled={deleteMutation.isPending}
-                className="bg-destructive/10 border-destructive/20 text-destructive hover:bg-destructive hover:text-white"
+                className="bg-destructive/10 border-destructive/20 text-destructive hover:bg-destructive hover:text-foreground"
               >
                 {deleteMutation.isPending ? "Deleting..." : "Delete"}
               </Button>

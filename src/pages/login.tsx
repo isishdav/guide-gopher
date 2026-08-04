@@ -50,32 +50,32 @@ const LoginPage = () => {
 
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-2 text-left">
-              <label className="text-white text-sm font-medium ml-1">Enter your Email</label>
+              <label className="text-foreground text-sm font-medium ml-1">Enter your Email</label>
               <Input
                 type="email"
                 placeholder="Your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-[#121212] border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
+                className="bg-secondary border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
                 disabled={loading}
               />
             </div>
 
             <div className="space-y-2 text-left">
-              <label className="text-white text-sm font-medium ml-1">Enter your Password</label>
+              <label className="text-foreground text-sm font-medium ml-1">Enter your Password</label>
               <Input
                 type="password"
                 placeholder="Your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="bg-[#121212] border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
+                className="bg-secondary border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
                 disabled={loading}
               />
             </div>
 
             <div className="flex justify-start">
               <span className="text-muted-foreground text-sm">
-                Trouble signing in? Contact <a href="mailto:support@paymark.dev" className="text-white hover:text-primary transition-colors">support@paymark.dev</a>
+                Trouble signing in? Contact <a href="mailto:support@paymark.dev" className="text-foreground hover:text-primary transition-colors">support@paymark.dev</a>
               </span>
             </div>
 
@@ -92,7 +92,7 @@ const LoginPage = () => {
             <div className="text-center pt-4">
               <p className="text-muted-foreground text-sm">
                 Don't have an account?{" "}
-                <Link to="/signup" className="text-white font-medium hover:underline">
+                <Link to="/signup" className="text-foreground font-medium hover:underline">
                   Sign up
                 </Link>
               </p>

@@ -3,7 +3,7 @@ export const brand = {
   shortName: "Curtains Hub",
   slogan: "Your Confidence Begins Here.",
   description:
-    "Curtains Hub designs, tailors and installs luxury curtains for homes, hotels and offices — premium fabrics, custom measurements and expert installation.",
+    "Curtains Hub creates calm, private, beautifully lit homes — bespoke curtains and blinds, measured, tailored and installed by our own craftspeople.",
   email: "hello@curtainshub.com",
   phone: "+1 (555) 018-2244",
   phoneHref: "tel:+15550182244",
@@ -33,104 +33,206 @@ export const navLinks = [
   { title: "Contact", href: "/contact" },
 ];
 
+/**
+ * Collections — written around how a room feels, never around fabric specs.
+ * Each entry carries a small gallery so the collections page can breathe like
+ * a lifestyle editorial rather than a product list.
+ */
 export const collections = [
   {
-    slug: "luxury-curtains",
-    title: "Luxury Curtains",
+    slug: "sheer-curtains",
+    title: "Sheer Curtains",
+    feeling: "Softer mornings",
     description:
-      "Hand-finished velvet, silk and jacquard drapes with a deep, sculptural fall. Designed for living rooms and reception spaces that should feel unmistakably premium.",
-    image: "/images/curtains/collection-luxury.jpg",
-    alt: "Floor-to-ceiling champagne gold velvet luxury curtains in a modern living room",
+      "Daylight arrives filtered instead of glaring, and the room glows. You keep the view and the privacy — the harshness is simply gone.",
+    image: "/images/curtains/cat-sheer.jpg",
+    alt: "Bright Scandinavian living room with white sheer curtains diffusing morning sunlight",
+    gallery: [
+      { src: "/images/curtains/cat-sheer.jpg", alt: "White sheer curtains softening sunlight in a bright minimal living room" },
+      { src: "/images/curtains/collection-sheer.jpg", alt: "Voile sheer curtains layered across a tall apartment window" },
+      { src: "/images/curtains/hero-light.jpg", alt: "Sheer linen curtains moving gently in a sunlit modern room" },
+    ],
   },
   {
     slug: "blackout-curtains",
     title: "Blackout Curtains",
+    feeling: "Deeper sleep",
     description:
-      "Triple-weave blackout curtains that block up to 99% of light, soften sound and improve insulation — ideal for bedrooms, media rooms and hotel suites.",
-    image: "/images/curtains/collection-blackout.jpg",
-    alt: "Charcoal blackout curtains darkening a minimalist luxury bedroom",
+      "True darkness, quieter rooms, cooler afternoons. The kind of night that lets a family wake up genuinely rested.",
+    image: "/images/curtains/cat-blackout.jpg",
+    alt: "Calm hotel-style bedroom with soft blackout curtains drawn against morning light",
+    gallery: [
+      { src: "/images/curtains/cat-blackout.jpg", alt: "Blackout curtains creating restful darkness in a serene bedroom" },
+      { src: "/images/curtains/collection-blackout.jpg", alt: "Blackout drapes in a minimalist luxury bedroom" },
+      { src: "/images/curtains/project-2.jpg", alt: "Master suite with layered sheer and blackout curtains" },
+    ],
   },
   {
-    slug: "sheer-curtains",
-    title: "Sheer Curtains",
+    slug: "wave-curtains",
+    title: "Wave Curtains",
+    feeling: "Effortless order",
     description:
-      "Airy voile and linen sheers that filter daylight into a soft glow while keeping privacy intact. Beautiful layered under heavier drapes.",
-    image: "/images/curtains/collection-sheer.jpg",
-    alt: "White sheer voile curtains diffusing daylight in a bright living room",
+      "One continuous, perfectly even ripple from ceiling to floor. Architectural calm for rooms that want nothing fussy in them.",
+    image: "/images/curtains/cat-wave.jpg",
+    alt: "Ivory wave-fold curtains in even ripples along a floor-to-ceiling window",
+    gallery: [
+      { src: "/images/curtains/cat-wave.jpg", alt: "Wave curtains in uniform folds along a glass wall" },
+      { src: "/images/curtains/project-1.jpg", alt: "Penthouse living space with full-height wave curtains" },
+      { src: "/images/curtains/cat-luxury.jpg", alt: "Tall ivory drapes with a continuous wave header" },
+    ],
   },
   {
-    slug: "office-curtains",
-    title: "Office Curtains",
+    slug: "double-layer-curtains",
+    title: "Double Layer Curtains",
+    feeling: "Light on your terms",
     description:
-      "Glare-control window curtains engineered for workspaces — fire-rated fabrics, clean tailoring and motorised tracks for meeting rooms and boardrooms.",
-    image: "/images/curtains/collection-office.jpg",
-    alt: "Grey office curtains framing glass walls in a modern corporate meeting room",
+      "Sheer by day, closed by night — one gesture changes the whole mood of a room. Comfort you can adjust hour by hour.",
+    image: "/images/curtains/cat-double.jpg",
+    alt: "Bedroom with a sheer inner layer and soft greige outer drape",
+    gallery: [
+      { src: "/images/curtains/cat-double.jpg", alt: "Double layer curtains with sheer and opaque panels" },
+      { src: "/images/curtains/collection-hotel.jpg", alt: "Dual-track sheer and blackout curtains in a suite" },
+      { src: "/images/curtains/after-room.jpg", alt: "Living room dressed with layered curtains" },
+    ],
   },
   {
-    slug: "hotel-curtains",
-    title: "Hotel Curtains",
+    slug: "roman-blinds",
+    title: "Roman Blinds",
+    feeling: "Quiet refinement",
     description:
-      "Contract-grade curtain systems for hospitality: dual-layer blackout and sheer tracks, durable fabrics and a finish that survives thousands of guest nights.",
-    image: "/images/curtains/collection-hotel.jpg",
-    alt: "Layered blackout and sheer hotel curtains in a five-star suite with a city view",
+      "Tailored folds that sit neatly at the window and let the room speak. Ideal where you want structure instead of drama.",
+    image: "/images/curtains/cat-roman.jpg",
+    alt: "Cream roman blinds folded neatly above a bright study window",
+    gallery: [
+      { src: "/images/curtains/cat-roman.jpg", alt: "Roman blinds in even folds above a marble desk" },
+      { src: "/images/curtains/collection-office.jpg", alt: "Roman blinds in a calm meeting room" },
+      { src: "/images/curtains/craft.jpg", alt: "Hand-finishing the hem of a tailored blind" },
+    ],
   },
   {
-    slug: "custom-curtains",
-    title: "Custom Curtains",
+    slug: "roller-blinds",
+    title: "Roller Blinds",
+    feeling: "Uncluttered living",
     description:
-      "Fully bespoke door curtains and window curtains — your fabric, your pleat, your hardware, measured and stitched to the millimetre for your space.",
-    image: "/images/curtains/collection-custom.jpg",
-    alt: "Craftsman hand-finishing a bespoke custom curtain header with brass rings",
+      "Almost invisible when raised, softly diffusing when lowered. The simplest way to make a modern apartment feel considered.",
+    image: "/images/curtains/cat-roller.jpg",
+    alt: "White roller blinds half lowered in a bright modern apartment",
+    gallery: [
+      { src: "/images/curtains/cat-roller.jpg", alt: "Roller blinds softening daylight in a minimal apartment" },
+      { src: "/images/curtains/cat-zebra.jpg", alt: "Neutral blind fitted flush inside a white window reveal" },
+      { src: "/images/curtains/before-room.jpg", alt: "Modern room before window dressing was fitted" },
+    ],
+  },
+  {
+    slug: "zebra-blinds",
+    title: "Zebra Blinds",
+    feeling: "Focus without gloom",
+    description:
+      "Slide the layers and the light shifts with them — bright enough to work in, private enough to relax in.",
+    image: "/images/curtains/cat-zebra.jpg",
+    alt: "Zebra blinds casting soft horizontal light stripes in a white minimal room",
+    gallery: [
+      { src: "/images/curtains/cat-zebra.jpg", alt: "Zebra blinds with alternating sheer and solid bands" },
+      { src: "/images/curtains/collection-office.jpg", alt: "Workspace with glare-controlled windows" },
+      { src: "/images/curtains/cat-roller.jpg", alt: "Blinds fitted across a bright open-plan space" },
+    ],
+  },
+  {
+    slug: "wooden-blinds",
+    title: "Wooden Blinds",
+    feeling: "Warmth that lasts",
+    description:
+      "Real timber slats that turn afternoon sun into warm lines across the floor. Character, not decoration.",
+    image: "/images/curtains/cat-wooden.jpg",
+    alt: "Light oak wooden blinds casting warm light lines across a linen sofa",
+    gallery: [
+      { src: "/images/curtains/cat-wooden.jpg", alt: "Wooden blinds filtering golden afternoon light" },
+      { src: "/images/curtains/collection-custom.jpg", alt: "Bespoke hardware and header detailing" },
+      { src: "/images/curtains/project-3.jpg", alt: "Timber-warm interior with tailored window dressing" },
+    ],
+  },
+  {
+    slug: "motorized-curtains",
+    title: "Motorized Curtains",
+    feeling: "Mornings that begin gently",
+    description:
+      "Your curtains open with the sunrise and close as you sit down for dinner. Comfort that arrives without being asked.",
+    image: "/images/curtains/cat-motorized.jpg",
+    alt: "Motorized ivory curtains gliding open on a ceiling track to reveal a garden",
+    gallery: [
+      { src: "/images/curtains/cat-motorized.jpg", alt: "Motorized curtains opening on a discreet ceiling track" },
+      { src: "/images/curtains/project-1.jpg", alt: "Penthouse with motorised full-height drapes" },
+      { src: "/images/curtains/cat-wave.jpg", alt: "Automated wave curtains along a glass facade" },
+    ],
+  },
+  {
+    slug: "luxury-curtains",
+    title: "Luxury Curtains",
+    feeling: "A home that feels finished",
+    description:
+      "Weighted, hand-finished drapes with a quiet sheen — the detail guests notice before they know why the room feels expensive.",
+    image: "/images/curtains/cat-luxury.jpg",
+    alt: "Full-height ivory pleated luxury drapes in a refined reception room",
+    gallery: [
+      { src: "/images/curtains/cat-luxury.jpg", alt: "Hand-finished luxury drapes falling to the floor" },
+      { src: "/images/curtains/collection-luxury.jpg", alt: "Velvet luxury curtains framing tall windows" },
+      { src: "/images/curtains/craft.jpg", alt: "Craftsperson finishing a luxury curtain by hand" },
+    ],
   },
 ];
 
 export const services = [
-  { title: "Premium Fabrics", description: "Curated European and Asian mills — velvet, linen, silk blends and performance weaves." },
-  { title: "Custom Measurements", description: "On-site laser measuring so every drop, pleat and return is exact." },
-  { title: "Blackout Curtains", description: "Light, heat and sound control for bedrooms, suites and media rooms." },
-  { title: "Sheer Curtains", description: "Daylight softened, privacy kept — the quietest kind of elegance." },
-  { title: "Luxury Designs", description: "Signature pleats, layered tracks and hardware finished in soft gold or matte black." },
-  { title: "Hotel Solutions", description: "Contract fabrics and dual-track systems specified for hospitality volumes." },
-  { title: "Office Curtains", description: "Glare control and acoustic comfort for boardrooms and open-plan floors." },
-  { title: "Professional Installation", description: "Certified fitters, clean handover, walls and floors left spotless." },
-  { title: "Free Consultation", description: "A designer visits, styles the room and quotes — at no cost." },
-  { title: "Fast Delivery", description: "Most bespoke orders tailored, delivered and installed within 10 days." },
+  { title: "A designer at your door", description: "We come to you, read the light in each room and suggest what will actually feel right — before anything is ordered." },
+  { title: "Measured to the millimetre", description: "Every drop and return is measured on site, so your curtains hang as though the windows were built for them." },
+  { title: "Fabrics you'll want to touch", description: "Linens, velvets and performance weaves chosen for how they fall, feel and age in daily family life." },
+  { title: "Darkness when you need it", description: "Blackout layers for bedrooms and media rooms — deeper sleep, cooler rooms, quieter evenings." },
+  { title: "Privacy without shadows", description: "Sheers that keep the world outside while daylight keeps coming in." },
+  { title: "Hand-finished tailoring", description: "Hems, headers and linings finished by hand, because that is the part you feel for years." },
+  { title: "Motorised comfort", description: "One touch, or a schedule that follows the sun. Your home starts anticipating you." },
+  { title: "Installation without mess", description: "Certified fitters, protected floors, and a room left cleaner than we found it." },
+  { title: "Hotels & workplaces", description: "Contract-grade systems delivered in phases so guests and teams are never disturbed." },
+  { title: "Cared for afterwards", description: "Guarantees on stitching, hardware and installation, and a team that answers when you call." },
 ];
 
 export const whyChoose = [
-  { title: "Premium Materials", description: "Every fabric is tested for drape, colourfastness and longevity before it reaches your window." },
-  { title: "Elegant Craftsmanship", description: "Hand-finished hems and headers by tailors with decades behind the machine." },
-  { title: "Affordable Luxury", description: "Direct-from-workshop pricing, so a premium finish never needs a premium markup." },
-  { title: "Personalized Service", description: "One designer stays with your project from first sketch to final installation." },
-  { title: "Durable Fabrics", description: "Performance weaves built to resist fading, sagging and daily wear." },
-  { title: "Expert Installation", description: "Precision tracks, level rods and a flawless fall — fitted in a single visit." },
-  { title: "Modern Designs", description: "Minimalist silhouettes shaped for contemporary interior design." },
-  { title: "Trusted Quality", description: "A written guarantee on stitching, hardware and installation." },
+  { title: "You'll feel it first", description: "Rooms become calmer, cooler and quieter. The look is the part you notice second." },
+  { title: "Made by people, not machines alone", description: "Our tailors have decades behind the machine, and their names are on your order." },
+  { title: "Honest, transparent pricing", description: "One quote, everything included. No surprises after the measuring tape leaves." },
+  { title: "One person, start to finish", description: "The designer who reads your rooms is the one who signs off the installation." },
+  { title: "Built for real family life", description: "Fabrics tested against sunlight, washing and small hands — and still beautiful in year five." },
+  { title: "Installed as though it were ours", description: "Level tracks, perfect fall, nothing left behind but the room you imagined." },
 ];
 
 export const stats = [
-  { value: "4,800+", label: "Happy Clients", description: "Homeowners, designers and businesses styled to date" },
-  { value: "6,200+", label: "Projects Completed", description: "Residential, hospitality and commercial installations" },
-  { value: "1,500+", label: "Curtain Designs", description: "Fabrics, pleats and finishes in our live catalogue" },
-  { value: "15", label: "Years of Experience", description: "Tailoring premium window and door curtains" },
-  { value: "98%", label: "Customer Satisfaction", description: "Verified post-installation review score" },
+  { value: "4,800+", label: "Homes transformed", description: "Families now living with better light" },
+  { value: "6,200+", label: "Rooms completed", description: "Residential, hospitality and workplace" },
+  { value: "1,500+", label: "Fabrics curated", description: "Chosen for feel, fall and longevity" },
+  { value: "15", label: "Years of craft", description: "Tailoring window dressing by hand" },
+  { value: "98%", label: "Would recommend us", description: "Verified after installation" },
+];
+
+export const process = [
+  { step: "01", title: "We listen", description: "A conversation about how you live, when you're home and what the room should feel like." },
+  { step: "02", title: "We measure", description: "Every window, door and track measured on site, with samples held against your walls." },
+  { step: "03", title: "We tailor", description: "Your fabric cut, lined and hand-finished in our own workshop." },
+  { step: "04", title: "We install", description: "Fitted, dressed and left immaculate — usually within ten days." },
 ];
 
 export const testimonials = [
   {
     id: 1,
-    title: "Our home finally feels finished",
+    title: "Our home finally feels like ours",
     quote:
-      "The blackout curtains in the bedrooms and the sheers in the living room completely changed how light moves through the house. The tailoring is flawless — it looks like the windows were designed around them.",
+      "I didn't expect curtains to change how we live, but the mornings are softer and the evenings feel private. The house feels calm now — and it looks like the windows were designed around them.",
     author: "Amelia Hartley",
     role: "Homeowner, Palm Residences",
     image: "/images/curtains/client-1.jpg",
   },
   {
     id: 2,
-    title: "The detailing designers dream about",
+    title: "The detail designers dream about",
     quote:
-      "I specify curtains for a living and Curtains Hub is the only supplier I hand a drawing to without worrying. The pleats, the returns, the hardware — all exact, every single time.",
+      "I specify window dressing for a living and Curtains Hub is the only partner I hand a drawing to without worrying. Every pleat, return and finish lands exactly as drawn.",
     author: "Julian Reyes",
     role: "Principal Architect, Reyes Studio",
     image: "/images/curtains/client-2.jpg",
@@ -139,16 +241,16 @@ export const testimonials = [
     id: 3,
     title: "Ninety suites, zero complaints",
     quote:
-      "They re-curtained our entire property in three weeks without disturbing a single guest. Two years on, the fabric still looks like the day it was installed.",
+      "They redressed our entire property in three weeks without disturbing a single guest. Two years on, guests still comment on how well they sleep.",
     author: "Margaret Vance",
     role: "General Manager, The Aurelia Hotel",
     image: "/images/curtains/client-3.jpg",
   },
   {
     id: 4,
-    title: "Premium quality, honest pricing",
+    title: "Buyers feel it the moment they walk in",
     quote:
-      "We fitted four show apartments with custom curtains. The finish reads far above what we paid, and buyers notice it the moment they walk in.",
+      "We dressed four show apartments. People stop talking about square metres and start imagining living there. That is worth far more than what we paid.",
     author: "Daniel Okafor",
     role: "Director, Northline Developments",
     image: "/images/curtains/client-4.jpg",
@@ -159,76 +261,76 @@ export const projects = [
   {
     title: "Skyline Penthouse, Downtown",
     category: "Residential",
-    description: "Full-height ivory pleated drapes on motorised tracks, framing an unbroken evening city view.",
+    description: "Full-height ivory drapes on silent motorised tracks — the city stays in view, the glare stays out.",
     image: "/images/curtains/project-1.jpg",
     alt: "Luxury penthouse dining room with tall ivory pleated curtains and a city skyline view",
   },
   {
     title: "Aurelia Master Suite",
     category: "Residential",
-    description: "Layered sheer and blackout curtains in cream and charcoal for daylight by choice, darkness on demand.",
+    description: "Sheer by day, blackout by night. A couple who used to wake at five now sleep until seven.",
     image: "/images/curtains/project-2.jpg",
-    alt: "Elegant master bedroom with layered sheer and charcoal blackout curtains",
+    alt: "Elegant master bedroom with layered sheer and soft blackout curtains",
   },
   {
     title: "The Aurelia Hotel Lobby",
     category: "Hospitality",
-    description: "Twelve-metre contract drapes with brass hardware, specified for daily use across a landmark lobby.",
+    description: "Twelve-metre drapes that make a landmark lobby feel warm rather than vast.",
     image: "/images/curtains/project-3.jpg",
-    alt: "Grand hotel lobby with towering floor-to-ceiling curtains and brass detailing",
+    alt: "Grand hotel lobby with towering floor-to-ceiling curtains",
   },
   {
     title: "Meridian Corporate Floor",
     category: "Commercial",
-    description: "Glare-control office curtains in graphite for a glass-walled boardroom and executive suites.",
+    description: "Glare gone, focus back. A glass-walled boardroom that finally works in the afternoon.",
     image: "/images/curtains/collection-office.jpg",
-    alt: "Modern office boardroom with graphite glare-control curtains",
+    alt: "Modern office boardroom with glare-control window dressing",
   },
   {
     title: "Harbour View Apartments",
     category: "Property Development",
-    description: "Custom curtains across four show apartments, delivered and installed inside ten days.",
-    image: "/images/curtains/collection-sheer.jpg",
+    description: "Four show apartments dressed in ten days — every viewing now begins with a compliment.",
+    image: "/images/curtains/cat-sheer.jpg",
     alt: "Bright apartment living room dressed with white sheer curtains",
   },
   {
     title: "Golden Hour Villa",
     category: "Residential",
-    description: "Champagne velvet luxury curtains layered over sheers to warm a double-height living space.",
-    image: "/images/curtains/collection-luxury.jpg",
-    alt: "Double-height villa living room with champagne velvet luxury curtains",
+    description: "Layered drapes over sheers to warm a double-height room that once echoed.",
+    image: "/images/curtains/cat-luxury.jpg",
+    alt: "Double-height villa living room with full-height luxury drapes",
   },
 ];
 
 export const faqs = [
   {
-    question: "How much do custom curtains from Curtains Hub cost?",
+    question: "Why are premium curtains worth the investment?",
     answer:
-      "Pricing depends on fabric, drop height and lining. Bespoke window curtains typically start around $95 per panel, with luxury velvet and hotel-grade blackout curtains quoted after measurement. Every quote includes tailoring, hardware and installation, with no hidden fees.",
+      "Because you live inside the result every day. Properly tailored curtains change how a room sleeps, sounds and feels — better rest, less heat, more privacy — and hand-finished fabrics still hang beautifully years after cheap panels have sagged and faded.",
   },
   {
     question: "Is the consultation and measurement really free?",
     answer:
-      "Yes. A Curtains Hub designer visits your home, office or site, measures every window and door, brings fabric samples and prepares a full quotation at no cost and with no obligation.",
+      "Yes. A Curtains Hub designer visits your home, office or site, reads the light in each room, measures every window and door, brings fabric samples and prepares a full quotation at no cost and with no obligation.",
   },
   {
-    question: "How long does it take to make and install my curtains?",
+    question: "How long until my rooms are transformed?",
     answer:
-      "Most bespoke orders are tailored, delivered and installed within 10 working days of fabric approval. Large hotel and commercial projects are scheduled in phases so your space stays in use.",
+      "Most bespoke orders are tailored, delivered and installed within 10 working days of fabric approval. Larger hotel and commercial projects are phased so your space stays in use throughout.",
   },
   {
-    question: "Do blackout curtains really block all the light?",
+    question: "Do blackout curtains really create true darkness?",
     answer:
-      "Our triple-weave blackout curtains block up to 99% of incoming light. Paired with a wraparound track or a pelmet, they create true darkness while also reducing heat gain and outside noise.",
+      "Our blackout layers block up to 99% of incoming light. Paired with a wraparound track or pelmet they create genuine darkness, while also reducing heat gain and softening outside noise.",
   },
   {
-    question: "Can you match curtains to an existing interior design scheme?",
+    question: "Can you work with my existing interior?",
     answer:
-      "Absolutely. Send us photos, a mood board or your designer's drawings and we will shortlist fabrics, pleats and hardware finishes that sit naturally within your existing home décor.",
+      "Always. Send photos, a mood board or your designer's drawings and we will shortlist fabrics, folds and hardware that sit naturally in the home you already love.",
   },
   {
-    question: "Do you supply curtains for hotels, offices and developments?",
+    question: "Do you work with hotels, offices and developers?",
     answer:
-      "Yes. We supply contract-grade, fire-rated fabrics and dual-track systems for hotels, offices, apartment buildings and property developers, with volume pricing and a dedicated project manager.",
+      "Yes. We supply contract-grade, fire-rated fabrics and dual-track systems for hotels, offices, apartment buildings and developments, with volume pricing and a dedicated project manager.",
   },
 ];

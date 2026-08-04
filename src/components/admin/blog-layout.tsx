@@ -37,8 +37,8 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
   return (
     <div className="min-h-screen bg-background flex">
       {/* Sidebar */}
-      <aside className="w-64 border-r border-white/10 flex flex-col">
-        <div className="p-6 border-b border-white/10">
+      <aside className="w-64 border-r border-border flex flex-col">
+        <div className="p-6 border-b border-border">
           <Link to="/" className="flex items-center gap-2">
             <img
               src="/images/common/logo.svg"
@@ -59,7 +59,7 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
                   "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors",
                   isActive
                     ? "bg-primary/10 text-primary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-white/5"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                 )}
               >
                 <item.icon className="w-5 h-5" />
@@ -69,10 +69,10 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
           })}
         </nav>
 
-        <div className="p-4 border-t border-white/10 space-y-2">
+        <div className="p-4 border-t border-border space-y-2">
           <Link
             to="/"
-            className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"
+            className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Site

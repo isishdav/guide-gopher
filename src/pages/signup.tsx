@@ -57,37 +57,37 @@ const SignupPage = () => {
 
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-2 text-left">
-              <label className="text-white text-sm font-medium ml-1">Full Name</label>
+              <label className="text-foreground text-sm font-medium ml-1">Full Name</label>
               <Input
                 type="text"
                 placeholder="Your full name"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="bg-[#121212] border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
+                className="bg-secondary border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
                 disabled={loading}
               />
             </div>
 
             <div className="space-y-2 text-left">
-              <label className="text-white text-sm font-medium ml-1">Work Email</label>
+              <label className="text-foreground text-sm font-medium ml-1">Work Email</label>
               <Input
                 type="email"
                 placeholder="name@company.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-[#121212] border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
+                className="bg-secondary border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
                 disabled={loading}
               />
             </div>
 
             <div className="space-y-2 text-left">
-              <label className="text-white text-sm font-medium ml-1">Password</label>
+              <label className="text-foreground text-sm font-medium ml-1">Password</label>
               <Input
                 type="password"
                 placeholder="Create a password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="bg-[#121212] border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
+                className="bg-secondary border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
                 disabled={loading}
               />
             </div>
@@ -105,7 +105,7 @@ const SignupPage = () => {
             <div className="text-center pt-4">
               <p className="text-muted-foreground text-sm">
                 Already have an account?{" "}
-                <Link to="/login" className="text-white font-medium hover:underline">
+                <Link to="/login" className="text-foreground font-medium hover:underline">
                   Log in
                 </Link>
               </p>

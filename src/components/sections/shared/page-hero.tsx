@@ -47,13 +47,13 @@ const PageHero = ({ eyebrow, title, description, image, imageAlt }: PageHeroProp
                 decoding="async"
                 className="absolute inset-0 w-full h-full object-cover will-change-transform"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/75 to-background" aria-hidden="true" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/40" aria-hidden="true" />
 
             <Container className="relative z-10">
                 <div className="max-w-[760px]">
                     {eyebrow && (
                         <Reveal variant="fade-up" immediate>
-                            <p className="text-primary tracking-[0.28em] uppercase text-xs md:text-sm mb-5">{eyebrow}</p>
+                            <p className="eyebrow mb-5">{eyebrow}</p>
                         </Reveal>
                     )}
                     <SplitText as="h1" text={title} className="h1 mb-4 block" immediate delay={0.15} />

@@ -27,10 +27,10 @@ const TestimonialCard = ({ testimonial, progress, index, total }) => {
           <div className="flex justify-between items-start">
             <div className="flex gap-1.5">
               {[...Array(3)].map((_, i) => (
-                <div key={i} className="w-2 h-2 rounded-full bg-white/10" />
+                <div key={i} className="w-2 h-2 rounded-full bg-accent" />
               ))}
             </div>
-            <div className="text-white/40 font-bold tracking-tighter text-xl italic uppercase">
+            <div className="text-foreground/40 font-bold tracking-tighter text-xl italic uppercase">
               {testimonial.logo}
             </div>
           </div>

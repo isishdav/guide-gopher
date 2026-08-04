@@ -13,8 +13,15 @@ export default {
       },
     },
     extend: {
+      screens: {
+        "3xl": "1800px",
+      },
       fontFamily: {
-        sans: ["'Inter Tight'", "sans-serif"],
+        sans: ["'Poppins'", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
+      boxShadow: {
+        lux: "0 18px 50px -32px rgb(0 0 0 / 0.22)",
+        "lux-lift": "0 34px 70px -34px rgb(0 0 0 / 0.28)",
       },
       colors: {
         border: "rgb(var(--border))",
