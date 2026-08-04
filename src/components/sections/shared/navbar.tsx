@@ -67,19 +67,20 @@ const Navbar = () => {
     <header
       ref={header}
       data-condensed="false"
-      className="w-full fixed top-0 left-0 z-40 will-change-transform transition-colors duration-500 data-[condensed=true]:bg-background/75 data-[condensed=true]:backdrop-blur-xl data-[condensed=true]:border-b data-[condensed=true]:border-border/60 md:pt-10 pt-6 pb-2"
+      className="w-full fixed top-0 left-0 z-40 will-change-transform bg-background/85 backdrop-blur-xl transition-colors duration-500 data-[condensed=true]:bg-background/95 data-[condensed=true]:border-b data-[condensed=true]:border-border md:pt-7 pt-5 pb-4"
     >
-      <Container className="flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2 w-fit group" aria-label="Curtains Hub — home">
+      <Container className="flex justify-between items-center gap-6">
+        <Link to="/" className="flex items-center gap-2.5 w-fit group" aria-label="Curtains Hub — home">
           <img
             src="/images/curtains/logo-mark.png"
             alt="Curtains Hub logo"
-            width={40}
-            height={40}
-            className="h-9 w-9 object-contain transition-transform duration-700 group-hover:rotate-[8deg] group-hover:scale-105"
+            width={36}
+            height={36}
+            className="h-8 w-8 object-contain transition-transform duration-700 group-hover:scale-105"
           />
-          <span className="text-lg font-medium tracking-[0.18em] uppercase text-foreground">Curtains Hub</span>
+          <span className="text-[0.95rem] font-medium tracking-[0.22em] uppercase text-foreground">Curtains Hub</span>
         </Link>
+
 
         {/* Mobile */}
         <div className="flex items-center gap-2 lg:hidden">
