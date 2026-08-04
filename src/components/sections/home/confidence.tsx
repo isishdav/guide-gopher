@@ -14,7 +14,7 @@ const Confidence = () => {
 
       <Container className="relative z-10 space-y-12">
         <div className="text-center max-w-[640px] mx-auto">
-          <SplitText as="h2" id="why-heading" text="Why Choose Curtains Hub" className="h2 md:mb-5 mb-3 block" />
+          <SplitText as="h2" id="why-heading" text="Why families trust us with their homes." className="h2 md:mb-5 mb-3 block" />
           <Reveal variant="blur" delay={0.1}>
             <p className="text-muted-foreground md:mb-8 mb-5">
               Premium materials, elegant craftsmanship and a personal designer — the quiet details that make
@@ -24,7 +24,7 @@ const Confidence = () => {
           <Reveal variant="fade-up" delay={0.2}>
             <Magnetic strength={10}>
               <Button asChild className="sweep">
-                <Link to="/about">Our Story</Link>
+                <Link to="/about">Our story</Link>
               </Button>
             </Magnetic>
           </Reveal>
@@ -34,15 +34,15 @@ const Confidence = () => {
         <Reveal
           variant="clip-center"
           stagger={0.08}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
         >
           {whyChoose.map((item) => (
             <Reveal
               item
               key={item.title}
-              className="card-lux p-6 rounded-[20px] border border-border bg-card/60 backdrop-blur-sm"
+              className="card-lux p-7 md:p-8 rounded-[24px] border border-border bg-background"
             >
-              <h3 className="h5 text-primary mb-2">{item.title}</h3>
+              <h3 className="h5 mb-2.5">{item.title}</h3>
               <p className="text-muted-foreground text-sm">{item.description}</p>
             </Reveal>
           ))}

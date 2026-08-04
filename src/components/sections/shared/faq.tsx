@@ -26,7 +26,7 @@ const FAQ = () => {
       <Container>
         <AnimateOnView once blur>
           <div className="text-center mb-8 md:mb-24">
-            <h2 id="faq-heading" className="h2">Curtain Questions, Answered</h2>
+            <h2 id="faq-heading" className="h2">Questions, answered honestly.</h2>
           </div>
         </AnimateOnView>
 
@@ -70,10 +70,10 @@ const FAQ = () => {
         <AnimateOnView once y={20} delay={0.2}>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-xl mx-auto md:mt-20 mt-8 md:py-2 md:pr-2 py-4 pr-4 pl-8 md:rounded-full rounded-md bg-card/50 border border-border/50 backdrop-blur-sm">
             <p className="text-lg font-medium text-center sm:text-left">
-              Still deciding on the right fabric?
+              Still deciding what would suit your home?
             </p>
             <Button asChild className="rounded-full px-6 w-full sm:w-auto">
-              <Link to="/contact">Talk to a Designer</Link>
+              <Link to="/contact">Talk to a designer</Link>
             </Button>
           </div>
         </AnimateOnView>

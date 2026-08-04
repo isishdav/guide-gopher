@@ -106,12 +106,12 @@ const BeforeAfter = () => {
       <Container className="relative z-10 space-y-10 md:space-y-14">
         <div className="max-w-2xl">
           <Reveal variant="fade-up" className="mb-4">
-            <p className="text-primary tracking-[0.28em] uppercase text-xs">The Transformation</p>
+            <p className="eyebrow">The transformation</p>
           </Reveal>
           <SplitText
             as="h2"
             id="transformation-heading"
-            text="The Same Room, Quietly Transformed"
+            text="The same room. A completely different feeling."
             className="h2 block mb-5"
           />
           <Reveal variant="blur" delay={0.15}>
