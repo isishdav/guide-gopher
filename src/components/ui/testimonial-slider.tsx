@@ -90,19 +90,19 @@ const TestimonialSlider = () => {
                         className="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-zinc-800 transition-colors group"
                         aria-label="Previous testimonial"
                     >
-                        <ChevronLeft className="w-6 h-6 text-zinc-400 group-hover:text-white transition-colors" />
+                        <ChevronLeft className="w-6 h-6 text-zinc-400 group-hover:text-foreground transition-colors" />
                     </button>
                     <button
                         onClick={next}
                         className="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-zinc-800 transition-colors group"
                         aria-label="Next testimonial"
                     >
-                        <ChevronRight className="w-6 h-6 text-zinc-400 group-hover:text-white transition-colors" />
+                        <ChevronRight className="w-6 h-6 text-zinc-400 group-hover:text-foreground transition-colors" />
                     </button>
                 </div>
 
                 <div className="text-zinc-500 font-medium tabular-nums">
-                    <span className="text-white">{currentIndex + 1}</span>
+                    <span className="text-foreground">{currentIndex + 1}</span>
                     <span className="mx-1">/</span>
                     <span>{testimonials.length}</span>
                 </div>

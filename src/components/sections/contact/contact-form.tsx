@@ -104,7 +104,7 @@ const ContactForm = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Email Card */}
-              <div className="bg-background p-6 rounded-2xl border border-white/5 space-y-6">
+              <div className="bg-background p-6 rounded-2xl border border-border space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-5 h-5 flex items-center justify-center">
                     <Mail className="w-4 h-4" />
@@ -117,7 +117,7 @@ const ContactForm = () => {
               </div>
 
               {/* Phone Card */}
-              <div className="bg-background p-6 rounded-2xl border border-white/5 space-y-6">
+              <div className="bg-background p-6 rounded-2xl border border-border space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-5 h-5 flex items-center justify-center">
                     <Phone className="w-4 h-4" />
@@ -130,7 +130,7 @@ const ContactForm = () => {
               </div>
 
               {/* Address Card */}
-              <div className="bg-background p-6 rounded-2xl border border-white/5 space-y-6 md:col-span-2">
+              <div className="bg-background p-6 rounded-2xl border border-border space-y-6 md:col-span-2">
                 <div className="flex items-center gap-3">
                   <div className="w-5 h-5 flex items-center justify-center">
                     <MapPin className="w-4 h-4" />
@@ -159,7 +159,7 @@ const ContactForm = () => {
                           <Input
                             placeholder="First Name"
                             {...field}
-                            className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
+                            className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-ring"
                           />
                         </FormControl>
                         <FormMessage />
@@ -176,7 +176,7 @@ const ContactForm = () => {
                           <Input
                             placeholder="Last Name"
                             {...field}
-                            className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
+                            className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-ring"
                           />
                         </FormControl>
                         <FormMessage />
@@ -196,7 +196,7 @@ const ContactForm = () => {
                           type="email"
                           placeholder="Email address"
                           {...field}
-                          className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
+                          className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-ring"
                         />
                       </FormControl>
                       <FormMessage />
@@ -215,7 +215,7 @@ const ContactForm = () => {
                           type="tel"
                           placeholder="Phone Number"
                           {...field}
-                          className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
+                          className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-ring"
                         />
                       </FormControl>
                       <FormMessage />
@@ -232,7 +232,7 @@ const ContactForm = () => {
                       <FormControl>
                         <Textarea
                           placeholder="Tell us about your rooms, windows and preferred fabrics..."
-                          className="min-h-[150px] bg-background border-none rounded-[14px] focus-visible:ring-1 focus-visible:ring-white/20 resize-none"
+                          className="min-h-[150px] bg-background border-none rounded-[14px] focus-visible:ring-1 focus-visible:ring-ring resize-none"
                           {...field}
                         />
                       </FormControl>

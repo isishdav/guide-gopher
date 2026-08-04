@@ -101,7 +101,7 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
                 <div className="max-w-[717px]" ref={contentRef}>
                     {/* Mobile Table of Contents */}
                     <div className="lg:hidden mb-12">
-                        <AnimateOnView blur once delay={0.4} className="bg-[#0A0A0A] border border-border rounded-[32px] p-8">
+                        <AnimateOnView blur once delay={0.4} className="bg-secondary border border-border rounded-[32px] p-8">
                             <h3 className="text-foreground text-xl font-semibold mb-6">Table of content</h3>
                             <nav className="space-y-4">
                                 {headings.length > 0 ? (
@@ -138,7 +138,7 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
                 {/* Sidebar */}
                 <aside className="max-w-[400px] w-full lg:sticky lg:top-[100px] lg:h-fit space-y-6">
                     {/* Table of Contents - Desktop */}
-                    <AnimateOnView blur once delay={0.4} className="bg-[#0A0A0A] border border-border rounded-[32px] p-8 hidden lg:block">
+                    <AnimateOnView blur once delay={0.4} className="bg-secondary border border-border rounded-[32px] p-8 hidden lg:block">
                         <h3 className="text-foreground text-xl font-semibold mb-6">Table of content</h3>
                         <nav className="space-y-4">
                             {headings.length > 0 ? (
@@ -169,7 +169,7 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
                     </AnimateOnView>
 
                     {/* Newsletter */}
-                    <AnimateOnView blur once delay={0.5} className="bg-[#0A0A0A] border border-border rounded-[32px] p-8">
+                    <AnimateOnView blur once delay={0.5} className="bg-secondary border border-border rounded-[32px] p-8">
                         <h3 className="text-foreground text-xl font-semibold mb-2 italic">AI & Markets: The Weekly Edge</h3>
                         <p className="text-foreground/40 text-sm mb-8">Unsubscribe anytime.</p>
 
@@ -181,7 +181,7 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
                                     className="w-full bg-secondary border border-border rounded-full px-6 py-4 text-foreground focus:outline-none focus:border-primary/50 transition-colors"
                                 />
                             </div>
-                            <Button className="w-full rounded-full py-7 bg-white text-black hover:bg-white/90 font-semibold shadow-inner">
+                            <Button className="w-full rounded-full py-7 bg-foreground text-background hover:bg-foreground/90 font-semibold shadow-inner">
                                 Send Now
                             </Button>
                         </div>

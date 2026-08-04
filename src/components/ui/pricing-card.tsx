@@ -41,7 +41,7 @@ const PricingCard = React.forwardRef<HTMLDivElement, PricingCardProps>(
     return (
       <Card
         ref={ref}
-        className="flex flex-col h-full relative overflow-hidden bg-card border-white/10"
+        className="flex flex-col h-full relative overflow-hidden bg-card border-border"
         style={
           backgroundImage
             ? {
@@ -77,7 +77,7 @@ const PricingCard = React.forwardRef<HTMLDivElement, PricingCardProps>(
                 </span>
               </div>
             </div>
-            <div className="h-px bg-white/10" />
+            <div className="h-px bg-accent" />
             <div className="space-y-4">
               <h4 className="text-lg font-medium text-foreground">
                 What You Get
@@ -110,7 +110,7 @@ const PricingCard = React.forwardRef<HTMLDivElement, PricingCardProps>(
                         strokeLinejoin="round"
                       />
                     </svg>
-                    <span className="text-lg text-white/80">
+                    <span className="text-lg text-muted-foreground">
                       {feature}
                     </span>
                   </li>

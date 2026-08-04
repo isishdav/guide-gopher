@@ -31,7 +31,7 @@ const Newsletter = React.forwardRef<HTMLFormElement, NewsletterProps>(
           className={cn(
             "flex items-center gap-3 w-full max-w-[490px] min-h-[58px] rounded-[56px]",
             "bg-[rgba(255,255,255,0.1)] border-[1.12698px] border-solid border-[rgba(255,255,255,0.2)]",
-            "px-[22px] py-3 text-white",
+            "px-[22px] py-3 text-foreground",
             className
           )}
         >
@@ -49,7 +49,7 @@ const Newsletter = React.forwardRef<HTMLFormElement, NewsletterProps>(
           "flex items-center w-full max-w-[490px] h-[58px] rounded-[56px]",
           "bg-[rgba(255,255,255,0.1)] border-[1.12698px] border-solid border-[rgba(255,255,255,0.1)]",
           "px-[22px] py-[6px] pr-[2px]",
-          "font-normal text-[18px] leading-[140%] tracking-[-0.02em] text-white",
+          "font-normal text-[18px] leading-[140%] tracking-[-0.02em] text-foreground",
           className
         )}
         {...props}
@@ -64,7 +64,7 @@ const Newsletter = React.forwardRef<HTMLFormElement, NewsletterProps>(
           placeholder={placeholder}
           className={cn(
             "flex-1 h-full w-full bg-transparent border-0 outline-none",
-            "text-white placeholder:text-white/70",
+            "text-foreground placeholder:text-foreground/70",
             "font-normal text-[18px] leading-[140%] tracking-[-0.02em]",
             "pr-2"
           )}
