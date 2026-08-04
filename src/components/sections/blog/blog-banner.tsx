@@ -113,8 +113,8 @@ const BlogBanner = () => {
             className={cn(
               "px-4 py-2 rounded-full text-sm font-medium transition-colors",
               !categoryFilter
-                ? "bg-primary text-white"
-                : "bg-white/10 text-muted-foreground hover:text-foreground"
+                ? "bg-primary text-foreground"
+                : "bg-accent text-muted-foreground hover:text-foreground"
             )}
           >
             All
@@ -126,8 +126,8 @@ const BlogBanner = () => {
               className={cn(
                 "px-4 py-2 rounded-full text-sm font-medium transition-colors",
                 categoryFilter === cat
-                  ? "bg-primary text-white"
-                  : "bg-white/10 text-muted-foreground hover:text-foreground"
+                  ? "bg-primary text-foreground"
+                  : "bg-accent text-muted-foreground hover:text-foreground"
               )}
             >
               {cat}
@@ -140,11 +140,11 @@ const BlogBanner = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="animate-pulse">
-                <div className="bg-white/10 rounded-2xl aspect-[4/3] mb-6" />
+                <div className="bg-accent rounded-2xl aspect-[4/3] mb-6" />
                 <div className="space-y-3">
-                  <div className="h-4 bg-white/10 rounded w-1/3" />
-                  <div className="h-6 bg-white/10 rounded w-full" />
-                  <div className="h-4 bg-white/10 rounded w-1/4" />
+                  <div className="h-4 bg-accent rounded w-1/3" />
+                  <div className="h-6 bg-accent rounded w-full" />
+                  <div className="h-4 bg-accent rounded w-1/4" />
                 </div>
               </div>
             ))}

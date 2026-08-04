@@ -148,14 +148,14 @@ const ProfilePage = () => {
             </AnimateOnView>
 
             <AnimateOnView y={20} blur delay={0.1}>
-              <div className="bg-card rounded-[34px] border border-white/10 p-8 md:p-12 overflow-hidden relative">
+              <div className="bg-card rounded-[34px] border border-border p-8 md:p-12 overflow-hidden relative">
                 <div className="space-y-10 relative z-10">
                   {/* Profile Photo Section */}
                   <div className="space-y-6">
                     <h2 className="h3">Profile Photo</h2>
                     <div className="flex flex-col md:flex-row items-center gap-8">
                       <div className="relative group">
-                        <Avatar className="w-32 h-32 border-4 border-white/5 shadow-glow">
+                        <Avatar className="w-32 h-32 border-4 border-border shadow-glow">
                           <AvatarImage src={profile?.avatar_url || undefined} alt={displayName} />
                           <AvatarFallback className="bg-primary/20 text-primary text-4xl font-bold">
                             {initials}
@@ -164,12 +164,12 @@ const ProfilePage = () => {
                         <button
                           onClick={handleAvatarClick}
                           disabled={uploading}
-                          className="absolute inset-0 flex items-center justify-center bg-black/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+                          className="absolute inset-0 flex items-center justify-center bg-foreground/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
                         >
                           {uploading ? (
-                            <Loader2 className="w-8 h-8 animate-spin text-white" />
+                            <Loader2 className="w-8 h-8 animate-spin text-foreground" />
                           ) : (
-                            <Camera className="w-8 h-8 text-white" />
+                            <Camera className="w-8 h-8 text-foreground" />
                           )}
                         </button>
                         <input
@@ -189,7 +189,7 @@ const ProfilePage = () => {
                             variant="outline"
                             onClick={handleRemoveAvatar}
                             disabled={saving}
-                            className="border-white/10 text-white px-4"
+                            className="border-border text-foreground px-4"
                           >
                             Remove
                           </Button>
@@ -201,25 +201,25 @@ const ProfilePage = () => {
                   {/* Information Form */}
                   <form className="space-y-8" onSubmit={handleSave}>
                     <div className="space-y-3">
-                      <label className="text-white font-medium ml-1">Full Name</label>
+                      <label className="text-foreground font-medium ml-1">Full Name</label>
                       <Input
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
-                        className="bg-black/40 border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
+                        className="bg-secondary border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
                         disabled={saving}
                       />
                     </div>
 
                     <div className="space-y-3">
-                      <label className="text-white font-medium ml-1">Email</label>
+                      <label className="text-foreground font-medium ml-1">Email</label>
                       <Input
                         readOnly
                         value={user?.email || ""}
-                        className="bg-black/20 border-none text-muted-foreground rounded-2xl h-14 px-6 cursor-not-allowed w-full focus-visible:ring-1 focus-visible:ring-white/10 focus-visible:ring-offset-0"
+                        className="bg-muted border-none text-muted-foreground rounded-2xl h-14 px-6 cursor-not-allowed w-full focus-visible:ring-1 focus-visible:ring-white/10 focus-visible:ring-offset-0"
                       />
                     </div>
 
-                    <div className="pt-6 border-t border-white/10 flex justify-end">
+                    <div className="pt-6 border-t border-border flex justify-end">
                       <Button
                         type="submit"
                         variant="primary"
