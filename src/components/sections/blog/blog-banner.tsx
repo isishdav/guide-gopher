@@ -111,7 +111,7 @@ const BlogBanner = () => {
           <button
             onClick={() => handleCategoryClick()}
             className={cn(
-              "px-4 py-2 rounded-full text-sm font-semibold transition-colors",
+              "px-4 py-2 rounded-none text-sm font-semibold transition-colors",
               !categoryFilter
                 ? "bg-primary text-foreground"
                 : "bg-accent text-muted-foreground hover:text-foreground"
@@ -124,7 +124,7 @@ const BlogBanner = () => {
               key={cat}
               onClick={() => handleCategoryClick(cat)}
               className={cn(
-                "px-4 py-2 rounded-full text-sm font-semibold transition-colors",
+                "px-4 py-2 rounded-none text-sm font-semibold transition-colors",
                 categoryFilter === cat
                   ? "bg-primary text-foreground"
                   : "bg-accent text-muted-foreground hover:text-foreground"
