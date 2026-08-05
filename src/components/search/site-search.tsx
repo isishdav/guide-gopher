@@ -180,7 +180,6 @@ const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
                                                     <span className="block truncate text-xs font-normal text-muted-foreground">{item.description}</span>
                                                 </span>
                                                 <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
-                                            </span>
                                             </button>
                                         </li>
                                     );
