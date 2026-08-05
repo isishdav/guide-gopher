@@ -51,7 +51,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
       }),
       Image.configure({
         HTMLAttributes: {
-          class: "rounded-lg max-w-full",
+          class: "rounded-none max-w-full",
         },
       }),
     ],
@@ -104,7 +104,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
     <button
       type="button"
       onClick={onClick}
-      className={`p-2 rounded-lg transition-colors ${
+      className={`p-2 rounded-none transition-colors ${
         active
           ? "bg-primary/20 text-primary"
           : "text-muted-foreground hover:text-foreground hover:bg-accent"
@@ -115,7 +115,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
   );
 
   return (
-    <div className="border border-border rounded-xl overflow-hidden">
+    <div className="border border-border rounded-none overflow-hidden">
       {/* Toolbar */}
       <div className="flex flex-wrap items-center gap-1 p-2 border-b border-border bg-secondary">
         <ToolbarButton
@@ -194,7 +194,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
           <DialogTrigger asChild>
             <button
               type="button"
-              className={`p-2 rounded-lg transition-colors ${
+              className={`p-2 rounded-none transition-colors ${
                 editor.isActive("link")
                   ? "bg-primary/20 text-primary"
                   : "text-muted-foreground hover:text-foreground hover:bg-accent"
@@ -226,7 +226,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="p-2 rounded-lg transition-colors text-muted-foreground hover:text-foreground hover:bg-accent"
+              className="p-2 rounded-none transition-colors text-muted-foreground hover:text-foreground hover:bg-accent"
             >
               <ImageIcon className="w-4 h-4" />
             </button>

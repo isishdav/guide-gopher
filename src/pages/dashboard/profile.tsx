@@ -136,7 +136,7 @@ const ProfilePage = () => {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div className="text-left text-foreground">
                   <h1 className="h1 mb-3">My Profile</h1>
-                  <p className="text-muted-foreground text-lg font-normal">Manage your profile settings and information</p>
+                  <p className="text-muted-foreground text-lg font-medium">Manage your profile settings and information</p>
                 </div>
                 <Button variant="outline" asChild>
                   <Link to="/" className="flex items-center gap-2 px-4">
@@ -157,7 +157,7 @@ const ProfilePage = () => {
                       <div className="relative group">
                         <Avatar className="w-32 h-32 border-4 border-border shadow-glow">
                           <AvatarImage src={profile?.avatar_url || undefined} alt={displayName} />
-                          <AvatarFallback className="bg-primary/20 text-primary text-4xl font-bold">
+                          <AvatarFallback className="bg-primary/20 text-primary text-4xl font-extrabold">
                             {initials}
                           </AvatarFallback>
                         </Avatar>
@@ -201,21 +201,21 @@ const ProfilePage = () => {
                   {/* Information Form */}
                   <form className="space-y-8" onSubmit={handleSave}>
                     <div className="space-y-3">
-                      <label className="text-foreground font-medium ml-1">Full Name</label>
+                      <label className="text-foreground font-semibold ml-1">Full Name</label>
                       <Input
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
-                        className="bg-secondary border-none rounded-2xl h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
+                        className="bg-secondary border-none rounded-none h-14 px-6 focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
                         disabled={saving}
                       />
                     </div>
 
                     <div className="space-y-3">
-                      <label className="text-foreground font-medium ml-1">Email</label>
+                      <label className="text-foreground font-semibold ml-1">Email</label>
                       <Input
                         readOnly
                         value={user?.email || ""}
-                        className="bg-muted border-none text-muted-foreground rounded-2xl h-14 px-6 cursor-not-allowed w-full focus-visible:ring-1 focus-visible:ring-white/10 focus-visible:ring-offset-0"
+                        className="bg-muted border-none text-muted-foreground rounded-none h-14 px-6 cursor-not-allowed w-full focus-visible:ring-1 focus-visible:ring-white/10 focus-visible:ring-offset-0"
                       />
                     </div>
 
@@ -224,7 +224,7 @@ const ProfilePage = () => {
                         type="submit"
                         variant="primary"
                         size="lg"
-                        className="px-12 rounded-2xl shadow-glow"
+                        className="px-12 rounded-none shadow-glow"
                         disabled={saving}
                       >
                         {saving ? "Saving..." : "Save Changes"}

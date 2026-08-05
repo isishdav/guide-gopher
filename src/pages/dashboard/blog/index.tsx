@@ -92,7 +92,7 @@ const BlogDashboard = () => {
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <div>
-              <h1 className="text-3xl font-bold mb-1">Blog Posts</h1>
+              <h1 className="text-3xl font-extrabold mb-1">Blog Posts</h1>
               <p className="text-muted-foreground">
                 Manage your blog content
               </p>
@@ -137,23 +137,23 @@ const BlogDashboard = () => {
           </div>
 
           {/* Table */}
-          <div className="border border-border rounded-xl overflow-hidden">
+          <div className="border border-border rounded-none overflow-hidden">
             <table className="w-full">
               <thead className="bg-secondary">
                 <tr>
-                  <th className="text-left px-4 py-3 text-sm font-medium text-muted-foreground">
+                  <th className="text-left px-4 py-3 text-sm font-semibold text-muted-foreground">
                     Post
                   </th>
-                  <th className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hidden md:table-cell">
+                  <th className="text-left px-4 py-3 text-sm font-semibold text-muted-foreground hidden md:table-cell">
                     Category
                   </th>
-                  <th className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hidden lg:table-cell">
+                  <th className="text-left px-4 py-3 text-sm font-semibold text-muted-foreground hidden lg:table-cell">
                     Author
                   </th>
-                  <th className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hidden lg:table-cell">
+                  <th className="text-left px-4 py-3 text-sm font-semibold text-muted-foreground hidden lg:table-cell">
                     Date
                   </th>
-                  <th className="text-right px-4 py-3 text-sm font-medium text-muted-foreground">
+                  <th className="text-right px-4 py-3 text-sm font-semibold text-muted-foreground">
                     Actions
                   </th>
                 </tr>
@@ -198,7 +198,7 @@ const BlogDashboard = () => {
                             alt={post.title}
                             className="w-16 h-12 rounded object-cover"
                           />
-                          <span className="font-medium truncate max-w-xs">
+                          <span className="font-semibold truncate max-w-xs">
                             {post.title}
                           </span>
                         </div>

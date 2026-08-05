@@ -33,7 +33,7 @@ const TestimonialSlider = () => {
                         exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
                     >
-                        <div className="relative md:w-80 md:h-80 h-64 w-64 flex-shrink-0 overflow-hidden rounded-2xl">
+                        <div className="relative md:w-80 md:h-80 h-64 w-64 flex-shrink-0 overflow-hidden rounded-none">
                             <img
                                 src={testimonials[currentIndex].image || "/images/common/placeholder.svg"}
                                 alt={`${testimonials[currentIndex].author}, ${testimonials[currentIndex].role}`}
@@ -43,9 +43,9 @@ const TestimonialSlider = () => {
                         <div className="flex flex-col justify-between h-full max-w-md text-center md:text-left">
                             <div>
                                 <h3 className="h4 mb-4">{testimonials[currentIndex].title}</h3>
-                                <p className="text-lg font-medium text-muted-foreground mb-2">"{testimonials[currentIndex].quote}"</p>
+                                <p className="text-lg font-semibold text-muted-foreground mb-2">"{testimonials[currentIndex].quote}"</p>
                             </div>
-                            <p className="text-foreground font-medium">{testimonials[currentIndex].author}<span className="block text-sm text-muted-foreground font-normal">{testimonials[currentIndex].role}</span></p>
+                            <p className="text-foreground font-semibold">{testimonials[currentIndex].author}<span className="block text-sm text-muted-foreground font-medium">{testimonials[currentIndex].role}</span></p>
                         </div>
                     </motion.div>
 
@@ -59,7 +59,7 @@ const TestimonialSlider = () => {
                                 <motion.div
                                     key={`preview-${testimonials[index].id}`}
                                     layout
-                                    className="flex-shrink-0 w-64 h-80 flex items-center relative rounded-2xl overflow-hidden grayscale opacity-40 hover:opacity-60 transition-opacity"
+                                    className="flex-shrink-0 w-64 h-80 flex items-center relative rounded-none overflow-hidden grayscale opacity-40 hover:opacity-60 transition-opacity"
                                     initial={{ opacity: 0, x: direction > 0 ? 150 : -150 }}
                                     animate={{ opacity: 0.4, x: 0 }}
                                     exit={{ opacity: 0, x: direction > 0 ? -150 : 150 }}
@@ -101,7 +101,7 @@ const TestimonialSlider = () => {
                     </button>
                 </div>
 
-                <div className="text-zinc-500 font-medium tabular-nums">
+                <div className="text-zinc-500 font-semibold tabular-nums">
                     <span className="text-foreground">{currentIndex + 1}</span>
                     <span className="mx-1">/</span>
                     <span>{testimonials.length}</span>

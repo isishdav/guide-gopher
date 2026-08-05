@@ -61,7 +61,7 @@ const BlogBanner = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {[1, 2].map((i) => (
                   <div key={i} className="space-y-4">
-                    <Skeleton className="aspect-[16/10] rounded-2xl" />
+                    <Skeleton className="aspect-[16/10] rounded-none" />
                     <Skeleton className="h-6 w-3/4" />
                     <Skeleton className="h-4 w-1/2" />
                   </div>
@@ -75,7 +75,7 @@ const BlogBanner = () => {
                       to={`/blog/${post.slug}`}
                       className="group block h-full"
                     >
-                      <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-4">
+                      <div className="relative aspect-[16/10] rounded-none overflow-hidden mb-4">
                         <img
                           src={post.image}
                           alt={post.title}
@@ -83,10 +83,10 @@ const BlogBanner = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         <div className="absolute bottom-4 left-4 right-4">
-                          <span className="text-primary text-sm font-medium">
+                          <span className="text-primary text-sm font-semibold">
                             {post.category}
                           </span>
-                          <h3 className="text-xl font-semibold mt-1 group-hover:text-primary transition-colors">
+                          <h3 className="text-xl font-bold mt-1 group-hover:text-primary transition-colors">
                             {post.title}
                           </h3>
                         </div>
@@ -111,7 +111,7 @@ const BlogBanner = () => {
           <button
             onClick={() => handleCategoryClick()}
             className={cn(
-              "px-4 py-2 rounded-full text-sm font-medium transition-colors",
+              "px-4 py-2 rounded-none text-sm font-semibold transition-colors",
               !categoryFilter
                 ? "bg-primary text-foreground"
                 : "bg-accent text-muted-foreground hover:text-foreground"
@@ -124,7 +124,7 @@ const BlogBanner = () => {
               key={cat}
               onClick={() => handleCategoryClick(cat)}
               className={cn(
-                "px-4 py-2 rounded-full text-sm font-medium transition-colors",
+                "px-4 py-2 rounded-none text-sm font-semibold transition-colors",
                 categoryFilter === cat
                   ? "bg-primary text-foreground"
                   : "bg-accent text-muted-foreground hover:text-foreground"
@@ -140,7 +140,7 @@ const BlogBanner = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="animate-pulse">
-                <div className="bg-accent rounded-2xl aspect-[4/3] mb-6" />
+                <div className="bg-accent rounded-none aspect-[4/3] mb-6" />
                 <div className="space-y-3">
                   <div className="h-4 bg-accent rounded w-1/3" />
                   <div className="h-6 bg-accent rounded w-full" />

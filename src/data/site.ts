@@ -1,25 +1,30 @@
+export const SITE_URL = "https://curtainshub.lovable.app";
+
 export const brand = {
   name: "Curtains Hub",
   shortName: "Curtains Hub",
   slogan: "Your Confidence Begins Here.",
   description:
-    "Curtains Hub creates calm, private, beautifully lit homes — bespoke curtains and blinds, measured, tailored and installed by our own craftspeople.",
-  email: "hello@curtainshub.com",
-  phone: "+1 (555) 018-2244",
-  phoneHref: "tel:+15550182244",
+    "Curtains Hub creates calm, private, beautifully lit homes in Kigali, Rwanda — bespoke curtains, blinds and curtain accessories, measured, tailored and installed by our own craftspeople.",
+  email: "buycurtainshub@gmail.com",
+  phone: "+250 787 176 493",
+  phoneHref: "tel:+250787176493",
+  whatsapp: "https://wa.me/250787176493",
   address: {
-    street: "42 Aurelia Design Quarter",
-    locality: "Dubai",
-    region: "Dubai",
-    postalCode: "00000",
-    country: "AE",
+    street: "KN 08 St, Nyabugogo",
+    locality: "Kigali",
+    region: "Kigali City",
+    postalCode: "",
+    country: "RW",
   },
-  hours: "Sat–Thu, 9:00 – 19:00",
+  addressFull: "KN 08 St, Nyabugogo, Kigali, Rwanda",
+  geo: { latitude: -1.9403, longitude: 30.0567 },
+  hours: "Mon–Sat, 8:00 – 19:00",
   social: {
-    instagram: "https://www.instagram.com/",
+    instagram: "https://www.instagram.com/curtainshub_",
     facebook: "https://www.facebook.com/",
     linkedin: "https://www.linkedin.com/",
-    x: "https://x.com/",
+    x: "https://x.com/mycurtainshub",
   },
 };
 
@@ -27,9 +32,9 @@ export const navLinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Collections", href: "/collections" },
+  { title: "Accessories", href: "/accessories" },
   { title: "Services", href: "/services" },
   { title: "Projects", href: "/projects" },
-  { title: "Testimonials", href: "/testimonials" },
   { title: "Contact", href: "/contact" },
 ];
 
@@ -179,6 +184,33 @@ export const collections = [
       { src: "/images/curtains/craft.jpg", alt: "Craftsperson finishing a luxury curtain by hand" },
     ],
   },
+  {
+    slug: "curtain-accessories",
+    title: "Accessories",
+    feeling: "The details that finish a room",
+    description:
+      "Rods, tracks, finials, tiebacks, rings, hooks and motors — the quiet hardware that makes curtains hang perfectly for years. Curtain accessories in Kigali, fitted or supplied on their own.",
+    image: "/images/curtains/cat-accessories.jpg",
+    alt: "Luxury curtain accessories including matte black rods, finials, rings and tassel tiebacks on white marble",
+    gallery: [
+      { src: "/images/curtains/cat-accessories.jpg", alt: "Curtain rods, finials, rings and tiebacks arranged on marble" },
+      { src: "/images/curtains/collection-custom.jpg", alt: "Bespoke curtain hardware and header detailing" },
+      { src: "/images/curtains/craft.jpg", alt: "Craftsperson fitting curtain hardware by hand" },
+    ],
+  },
+];
+
+export const accessories = [
+  { title: "Curtain Rods & Poles", description: "Matte black, brushed steel and timber poles cut to your exact window width.", image: "/images/curtains/cat-accessories.jpg" },
+  { title: "Ceiling & Wall Tracks", description: "Silent gliding tracks, single or dual, for wave headers and layered curtains.", image: "/images/curtains/cat-wave.jpg" },
+  { title: "Finials & End Caps", description: "The jewellery of a window — sculpted, understated finishes that match your interior.", image: "/images/curtains/collection-custom.jpg" },
+  { title: "Tiebacks & Tassels", description: "Rope, leather and hand-tied tassels that hold a drape in a soft, deliberate curve.", image: "/images/curtains/cat-luxury.jpg" },
+  { title: "Rings, Hooks & Glides", description: "Precision hardware so every pleat sits evenly and nothing snags or squeaks.", image: "/images/curtains/craft.jpg" },
+  { title: "Brackets & Supports", description: "Concealed, load-tested brackets for heavy blackout and full-height drapes.", image: "/images/curtains/cat-blackout.jpg" },
+  { title: "Motors & Remotes", description: "Smart motors, remotes and app control retro-fitted to new or existing tracks.", image: "/images/curtains/cat-motorized.jpg" },
+  { title: "Pelmets & Valances", description: "Tailored pelmets that hide hardware and seal light at the top of the window.", image: "/images/curtains/cat-roman.jpg" },
+  { title: "Linings & Interlinings", description: "Blackout, thermal and acoustic linings that change how a room sleeps and sounds.", image: "/images/curtains/collection-blackout.jpg" },
+  { title: "Sheer Voile Panels", description: "Standalone voiles and net panels to layer with curtains you already own.", image: "/images/curtains/cat-sheer.jpg" },
 ];
 
 export const services = [

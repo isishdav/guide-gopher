@@ -102,7 +102,7 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
                     {/* Mobile Table of Contents */}
                     <div className="lg:hidden mb-12">
                         <AnimateOnView blur once delay={0.4} className="bg-secondary border border-border rounded-[32px] p-8">
-                            <h3 className="text-foreground text-xl font-semibold mb-6">Table of content</h3>
+                            <h3 className="text-foreground text-xl font-bold mb-6">Table of content</h3>
                             <nav className="space-y-4">
                                 {headings.length > 0 ? (
                                     headings.map((heading) => (
@@ -110,7 +110,7 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
                                             key={heading.id}
                                             onClick={() => scrollToHeading(heading.id)}
                                             className={cn(
-                                                "flex items-center gap-2 text-sm font-medium leading-relaxed transition-all duration-300 text-left group",
+                                                "flex items-center gap-2 text-sm font-semibold leading-relaxed transition-all duration-300 text-left group",
                                                 activeId === heading.id
                                                     ? "text-foreground translate-x-1"
                                                     : "text-foreground/40 hover:text-foreground"
@@ -139,7 +139,7 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
                 <aside className="max-w-[400px] w-full lg:sticky lg:top-[100px] lg:h-fit space-y-6">
                     {/* Table of Contents - Desktop */}
                     <AnimateOnView blur once delay={0.4} className="bg-secondary border border-border rounded-[32px] p-8 hidden lg:block">
-                        <h3 className="text-foreground text-xl font-semibold mb-6">Table of content</h3>
+                        <h3 className="text-foreground text-xl font-bold mb-6">Table of content</h3>
                         <nav className="space-y-4">
                             {headings.length > 0 ? (
                                 headings.map((heading) => (
@@ -147,7 +147,7 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
                                         key={heading.id}
                                         onClick={() => scrollToHeading(heading.id)}
                                         className={cn(
-                                            "flex items-center gap-2 text-sm font-medium leading-relaxed transition-all duration-300 text-left group",
+                                            "flex items-center gap-2 text-sm font-semibold leading-relaxed transition-all duration-300 text-left group",
                                             activeId === heading.id
                                                 ? "text-foreground translate-x-1"
                                                 : "text-foreground/40 hover:text-foreground"
@@ -170,7 +170,7 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
 
                     {/* Newsletter */}
                     <AnimateOnView blur once delay={0.5} className="bg-secondary border border-border rounded-[32px] p-8">
-                        <h3 className="text-foreground text-xl font-semibold mb-2 italic">AI & Markets: The Weekly Edge</h3>
+                        <h3 className="text-foreground text-xl font-bold mb-2 italic">AI & Markets: The Weekly Edge</h3>
                         <p className="text-foreground/40 text-sm mb-8">Unsubscribe anytime.</p>
 
                         <div className="space-y-4">
@@ -181,7 +181,7 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
                                     className="w-full bg-secondary border border-border rounded-full px-6 py-4 text-foreground focus:outline-none focus:border-primary/50 transition-colors"
                                 />
                             </div>
-                            <Button className="w-full rounded-full py-7 bg-foreground text-background hover:bg-foreground/90 font-semibold shadow-inner">
+                            <Button className="w-full rounded-full py-7 bg-foreground text-background hover:bg-foreground/90 font-bold shadow-inner">
                                 Send Now
                             </Button>
                         </div>

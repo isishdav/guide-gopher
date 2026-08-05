@@ -8,7 +8,7 @@ const AuthNavbar = () => {
             <Container className="flex justify-between items-center">
                 <Link to="/" className="flex items-center space-x-2 xl:w-[25%] md:w-[30%] w-fit text-foreground">
                     <img src="/images/curtains/logo-mark.png" alt="Curtains Hub" className="h-6" />
-                    <span className="font-semibold text-xl tracking-tight hidden sm:inline uppercase">Curtains Hub</span>
+                    <span className="font-bold text-xl tracking-tight hidden sm:inline uppercase">Curtains Hub</span>
                 </Link>
 
                 <nav className="hidden lg:flex items-center gap-8 text-foreground/70">

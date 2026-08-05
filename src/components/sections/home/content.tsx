@@ -37,7 +37,7 @@ const Content = () => {
               <p className="h3 mb-2 tabular-nums">
                 <Counter value={stat.value} />
               </p>
-              <h3 className="text-base font-medium mb-1">{stat.label}</h3>
+              <h3 className="text-base font-semibold mb-1">{stat.label}</h3>
               <p className="text-muted-foreground text-sm">{stat.description}</p>
             </Reveal>
           ))}

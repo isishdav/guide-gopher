@@ -24,3 +24,5 @@ Allow: /
 Disallow: /dashboard/
 Disallow: /login
 Disallow: /signup
+
+Sitemap: https://curtainshub.lovable.app/sitemap.xml

@@ -32,7 +32,7 @@ const FAQ = () => {
 
         <div className="flex flex-col lg:flex-row gap-16 items-center justify-center">
           <AnimateOnView once className="max-w-[500px] w-full">
-            <figure className="relative aspect-square w-full rounded-3xl overflow-hidden border border-border/50 shadow-2xl">
+            <figure className="relative aspect-square w-full rounded-none overflow-hidden border border-border/50 shadow-2xl">
               <img
                 src="/images/curtains/collection-custom.jpg"
                 alt="Curtains Hub craftsman hand-finishing a bespoke curtain header with brass rings"
@@ -68,8 +68,8 @@ const FAQ = () => {
         </div>
 
         <AnimateOnView once y={20} delay={0.2}>
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-xl mx-auto md:mt-20 mt-8 md:py-2 md:pr-2 py-4 pr-4 pl-8 md:rounded-full rounded-md bg-card/50 border border-border/50 backdrop-blur-sm">
-            <p className="text-lg font-medium text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-xl mx-auto md:mt-20 mt-8 md:py-2 md:pr-2 py-4 pr-4 pl-8 md:rounded-full rounded-none bg-card/50 border border-border/50 backdrop-blur-sm">
+            <p className="text-lg font-semibold text-center sm:text-left">
               Still deciding what would suit your home?
             </p>
             <Button asChild className="rounded-full px-6 w-full sm:w-auto">

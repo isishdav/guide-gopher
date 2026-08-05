@@ -37,7 +37,7 @@ const UserMenu = () => {
       <DropdownMenuTrigger className="focus:outline-none">
         <Avatar className="h-10 w-10 border-2 border-border hover:border-primary/50 transition-colors cursor-pointer">
           <AvatarImage src={profile?.avatar_url || undefined} alt={displayName} />
-          <AvatarFallback className="bg-primary/20 text-primary text-sm font-medium">
+          <AvatarFallback className="bg-primary/20 text-primary text-sm font-semibold">
             {initials}
           </AvatarFallback>
         </Avatar>
@@ -46,9 +46,9 @@ const UserMenu = () => {
         align="end"
         className="w-56 bg-card border-border z-50"
       >
-        <DropdownMenuLabel className="font-normal">
+        <DropdownMenuLabel className="font-medium">
           <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium text-foreground">Hi, {displayName}</p>
+            <p className="text-sm font-semibold text-foreground">Hi, {displayName}</p>
             <p className="text-xs text-muted-foreground truncate">{user.email}</p>
           </div>
         </DropdownMenuLabel>

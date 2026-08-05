@@ -37,7 +37,7 @@ export default function TestimonialCard({
           )}>
             <div className={cn(
               "overflow-hidden bg-zinc-800 transition-all duration-500",
-              isActive ? "aspect-square rounded-3xl" : "aspect-square rounded-2xl"
+              isActive ? "aspect-square rounded-none" : "aspect-square rounded-none"
             )}>
               <img
                 src={imageSrc}
@@ -52,7 +52,7 @@ export default function TestimonialCard({
           {/* Text Content - Only rendered when active */}
           {isActive && (
             <div className="flex flex-col space-y-6 flex-1 animate-in fade-in slide-in-from-left-4 duration-500">
-              <h2 className="text-2xl md:text-3xl font-medium text-foreground tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-semibold text-foreground tracking-tight">
                 {title}
               </h2>
 
@@ -60,7 +60,7 @@ export default function TestimonialCard({
                 &quot;{quote}&quot;
               </blockquote>
 
-              <footer className="pt-2 text-zinc-500 text-base font-normal">
+              <footer className="pt-2 text-zinc-500 text-base font-medium">
                 {name}
               </footer>
             </div>
