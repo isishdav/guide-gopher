@@ -1,25 +1,30 @@
+export const SITE_URL = "https://curtainshub.lovable.app";
+
 export const brand = {
   name: "Curtains Hub",
   shortName: "Curtains Hub",
   slogan: "Your Confidence Begins Here.",
   description:
-    "Curtains Hub creates calm, private, beautifully lit homes — bespoke curtains and blinds, measured, tailored and installed by our own craftspeople.",
-  email: "hello@curtainshub.com",
-  phone: "+1 (555) 018-2244",
-  phoneHref: "tel:+15550182244",
+    "Curtains Hub creates calm, private, beautifully lit homes in Kigali, Rwanda — bespoke curtains, blinds and curtain accessories, measured, tailored and installed by our own craftspeople.",
+  email: "buycurtainshub@gmail.com",
+  phone: "+250 787 176 493",
+  phoneHref: "tel:+250787176493",
+  whatsapp: "https://wa.me/250787176493",
   address: {
-    street: "42 Aurelia Design Quarter",
-    locality: "Dubai",
-    region: "Dubai",
-    postalCode: "00000",
-    country: "AE",
+    street: "KN 08 St, Nyabugogo",
+    locality: "Kigali",
+    region: "Kigali City",
+    postalCode: "",
+    country: "RW",
   },
-  hours: "Sat–Thu, 9:00 – 19:00",
+  addressFull: "KN 08 St, Nyabugogo, Kigali, Rwanda",
+  geo: { latitude: -1.9403, longitude: 30.0567 },
+  hours: "Mon–Sat, 8:00 – 19:00",
   social: {
-    instagram: "https://www.instagram.com/",
+    instagram: "https://www.instagram.com/curtainshub_",
     facebook: "https://www.facebook.com/",
     linkedin: "https://www.linkedin.com/",
-    x: "https://x.com/",
+    x: "https://x.com/mycurtainshub",
   },
 };
 
@@ -27,9 +32,9 @@ export const navLinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Collections", href: "/collections" },
+  { title: "Accessories", href: "/accessories" },
   { title: "Services", href: "/services" },
   { title: "Projects", href: "/projects" },
-  { title: "Testimonials", href: "/testimonials" },
   { title: "Contact", href: "/contact" },
 ];
 
