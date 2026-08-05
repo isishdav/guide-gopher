@@ -18,7 +18,7 @@ const BlogPost = () => {
                     <div className="max-w-4xl mx-auto px-4 space-y-8">
                         <Skeleton className="h-12 w-3/4" />
                         <Skeleton className="h-6 w-1/2" />
-                        <Skeleton className="w-full h-[400px] rounded-lg" />
+                        <Skeleton className="w-full h-[400px] rounded-none" />
                         <div className="space-y-4">
                             <Skeleton className="h-4 w-full" />
                             <Skeleton className="h-4 w-full" />

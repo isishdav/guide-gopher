@@ -89,7 +89,7 @@ const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
                         onKeyDown={onKeyDown}
                         placeholder="Search curtains, blinds, accessories, services…"
                         aria-label="Search the website"
-                        className="h-14 w-full bg-transparent text-[0.95rem] font-medium outline-none placeholder:font-normal placeholder:text-muted-foreground"
+                        className="h-14 w-full bg-transparent text-[0.95rem] font-semibold outline-none placeholder:font-medium placeholder:text-muted-foreground"
                     />
                     <button
                         type="button"
@@ -112,7 +112,7 @@ const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
                                         <button
                                             type="button"
                                             onClick={() => setQuery(s)}
-                                            className="border border-border px-3 py-2 text-sm font-medium text-muted-foreground hover:border-foreground hover:text-foreground transition-colors"
+                                            className="border border-border px-3 py-2 text-sm font-semibold text-muted-foreground hover:border-foreground hover:text-foreground transition-colors"
                                         >
                                             {s}
                                         </button>
@@ -125,7 +125,7 @@ const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
                     {/* No results */}
                     {query && results.length === 0 && (
                         <div className="px-5 py-10 text-center space-y-2">
-                            <p className="text-body-sm font-medium text-foreground">
+                            <p className="text-body-sm font-semibold text-foreground">
                                 Nothing matches “{query}”.
                             </p>
                             <p className="text-sm text-muted-foreground">
@@ -176,8 +176,8 @@ const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
                                                     <span className="h-12 w-12 shrink-0 border border-border" aria-hidden="true" />
                                                 )}
                                                 <span className="min-w-0 flex-1">
-                                                    <span className="block truncate text-sm font-semibold text-foreground">{item.title}</span>
-                                                    <span className="block truncate text-xs font-normal text-muted-foreground">{item.description}</span>
+                                                    <span className="block truncate text-sm font-bold text-foreground">{item.title}</span>
+                                                    <span className="block truncate text-xs font-medium text-muted-foreground">{item.description}</span>
                                                 </span>
                                                 <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
                                             </button>
@@ -189,7 +189,7 @@ const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
                     ))}
                 </div>
 
-                <div className="hidden md:flex items-center gap-4 border-t border-border px-5 py-3 text-[0.7rem] font-medium text-muted-foreground">
+                <div className="hidden md:flex items-center gap-4 border-t border-border px-5 py-3 text-[0.7rem] font-semibold text-muted-foreground">
                     <span>↑ ↓ to navigate</span>
                     <span>↵ to open</span>
                     <span>esc to close</span>

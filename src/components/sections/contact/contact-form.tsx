@@ -94,7 +94,7 @@ const ContactForm = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left Column: Contact Info */}
-          <div className="bg-card md:p-[30px] p-6 md:rounded-3xl rounded-lg border border-border md:space-y-[60px] space-y-8 h-full">
+          <div className="bg-card md:p-[30px] p-6 md:rounded-none rounded-none border border-border md:space-y-[60px] space-y-8 h-full">
             <div className="space-y-3">
               <h2 className="h3">Speak to a Curtain Designer</h2>
               <p className="text-muted-foreground">
@@ -104,12 +104,12 @@ const ContactForm = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Email Card */}
-              <div className="bg-background p-6 rounded-2xl border border-border space-y-6">
+              <div className="bg-background p-6 rounded-none border border-border space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-5 h-5 flex items-center justify-center">
                     <Mail className="w-4 h-4" />
                   </div>
-                  <span className="font-medium">Email</span>
+                  <span className="font-semibold">Email</span>
                 </div>
                 <div className="text-sm text-muted-foreground pt-4">
                   <a href={`mailto:${brand.email}`} className="hover:text-primary transition-colors">{brand.email}</a>
@@ -117,12 +117,12 @@ const ContactForm = () => {
               </div>
 
               {/* Phone Card */}
-              <div className="bg-background p-6 rounded-2xl border border-border space-y-6">
+              <div className="bg-background p-6 rounded-none border border-border space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-5 h-5 flex items-center justify-center">
                     <Phone className="w-4 h-4" />
                   </div>
-                  <span className="font-medium">Phone</span>
+                  <span className="font-semibold">Phone</span>
                 </div>
                 <div className="text-sm text-muted-foreground pt-4">
                   <a href={brand.phoneHref} className="hover:text-primary transition-colors">{brand.phone}</a>
@@ -130,12 +130,12 @@ const ContactForm = () => {
               </div>
 
               {/* Address Card */}
-              <div className="bg-background p-6 rounded-2xl border border-border space-y-6 md:col-span-2">
+              <div className="bg-background p-6 rounded-none border border-border space-y-6 md:col-span-2">
                 <div className="flex items-center gap-3">
                   <div className="w-5 h-5 flex items-center justify-center">
                     <MapPin className="w-4 h-4" />
                   </div>
-                  <span className="font-medium">Address</span>
+                  <span className="font-semibold">Address</span>
                 </div>
                 <div className="text-sm text-muted-foreground pt-4">
                   {brand.address.street}, {brand.address.locality}
@@ -145,7 +145,7 @@ const ContactForm = () => {
           </div>
 
           {/* Right Column: Form */}
-          <div className="bg-card md:p-[30px] p-6 md:rounded-3xl rounded-lg border border-border h-full">
+          <div className="bg-card md:p-[30px] p-6 md:rounded-none rounded-none border border-border h-full">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -244,7 +244,7 @@ const ContactForm = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full h-14 rounded-full bg-gradient-to-b from-white to-[#d1d1d1] text-black font-medium hover:opacity-90 transition-opacity mt-4"
+                  className="w-full h-14 rounded-full bg-gradient-to-b from-white to-[#d1d1d1] text-black font-semibold hover:opacity-90 transition-opacity mt-4"
                   disabled={form.formState.isSubmitting}
                 >
                   Send Message

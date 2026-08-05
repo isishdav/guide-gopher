@@ -96,7 +96,7 @@ const AboutTestimonials = () => {
                         {testimonials.map((testimonial) => (
                             <div
                                 key={testimonial.id}
-                                className="bg-background border border-border rounded-2xl p-6 space-y-8"
+                                className="bg-background border border-border rounded-none p-6 space-y-8"
                             >
                                 <div className="flex justify-between items-center">
                                     <div className="flex gap-1.5">
@@ -104,7 +104,7 @@ const AboutTestimonials = () => {
                                             <div key={i} className="w-2 h-2 rounded-full bg-white/10" />
                                         ))}
                                     </div>
-                                    <div className="text-white/40 font-bold tracking-tighter italic uppercase">
+                                    <div className="text-white/40 font-extrabold tracking-tighter italic uppercase">
                                         {testimonial.logo}
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@ const AboutTestimonials = () => {
                                         className="w-10 h-10 rounded-full object-cover border border-white/10"
                                     />
                                     <div className="flex flex-col">
-                                        <span className="text-white font-medium text-sm">{testimonial.author}</span>
+                                        <span className="text-white font-semibold text-sm">{testimonial.author}</span>
                                         <span className="text-xs text-muted-foreground">{testimonial.role}</span>
                                     </div>
                                 </div>

@@ -8,8 +8,8 @@ interface BlogCardProps {
 const BlogCard = ({ post }: BlogCardProps) => {
   return (
     <Link to={`/blog/${post.slug}`} className="group block h-full">
-      <div className="flex flex-col h-full rounded-3xl overflow-hidden transition-colors duration-300">
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
+      <div className="flex flex-col h-full rounded-none overflow-hidden transition-colors duration-300">
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-none">
           <img
             src={post.image}
             alt={post.title}
@@ -18,7 +18,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
         </div>
 
         <div className="pt-6 pb-2 px-1 flex flex-col gap-3 flex-grow justify-between">
-          <div className="flex items-center gap-2 text-lg font-medium">
+          <div className="flex items-center gap-2 text-lg font-semibold">
             <span className="text-primary">{post.category}</span>
             <span className="w-1 h-1 rounded-full bg-muted-foreground/50" />
             <span className="text-muted-foreground">{post.read_time}</span>
@@ -28,7 +28,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
             {post.title}
           </h3>
           
-          <div className="flex items-center justify-between text-muted-foreground text-lg font-medium mt-1">
+          <div className="flex items-center justify-between text-muted-foreground text-lg font-semibold mt-1">
             <span>{post.date}</span>
             <span>By {post.author}</span>
           </div>

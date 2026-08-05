@@ -59,7 +59,7 @@ const ConfidenceSection = () => {
                                         <Star key={star} className="w-4 h-4 text-orange-500 fill-orange-500" />
                                     ))}
                                 </div>
-                                <span className="text-sm text-white font-medium">4.5 Reviews</span>
+                                <span className="text-sm text-white font-semibold">4.5 Reviews</span>
                             </div>
                         </div>
                     </AnimateOnView>

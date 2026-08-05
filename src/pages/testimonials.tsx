@@ -70,7 +70,7 @@ const TestimonialsPage = () => {
                         className="w-12 h-12 rounded-full object-cover"
                       />
                       <span>
-                        <span className="block font-medium">{testimonial.author}</span>
+                        <span className="block font-semibold">{testimonial.author}</span>
                         <span className="block text-sm text-muted-foreground">{testimonial.role}</span>
                       </span>
                     </figcaption>

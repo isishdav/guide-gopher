@@ -47,7 +47,7 @@ const WorldwideStats = () => {
                         className="lg:w-[40%] rounded-[32px] bg-[#111111] border border-white/5 flex flex-col justify-between overflow-hidden relative group min-h-[460px]"
                     >
                         <div className="relative z-10 pt-[29px] px-6">
-                            <h3 className="text-3xl font-semibold text-white leading-tight max-w-[280px]">
+                            <h3 className="text-3xl font-bold text-white leading-tight max-w-[280px]">
                                 Paymark Supports participants and sites
                             </h3>
                         </div>
@@ -63,7 +63,7 @@ const WorldwideStats = () => {
                                 <div className="absolute left-[15%] top-[50%] flex flex-col items-center gap-1">
                                     <div className="bg-black border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 shadow-2xl">
                                         <span className="text-[10px]">🇧🇷</span>
-                                        <span className="text-[10px] text-white/80 font-medium">Brazil</span>
+                                        <span className="text-[10px] text-white/80 font-semibold">Brazil</span>
                                     </div>
                                     <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
                                 </div>
@@ -72,7 +72,7 @@ const WorldwideStats = () => {
                                 <div className="absolute right-[15%] top-[15%] flex flex-col items-center gap-1">
                                     <div className="bg-black border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 shadow-2xl">
                                         <span className="text-[10px]">🇷🇺</span>
-                                        <span className="text-[10px] text-white/80 font-medium">Russia</span>
+                                        <span className="text-[10px] text-white/80 font-semibold">Russia</span>
                                     </div>
                                     <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
                                 </div>
@@ -81,7 +81,7 @@ const WorldwideStats = () => {
                                 <div className="absolute left-[45%] top-[35%] flex flex-col items-center gap-1">
                                     <div className="bg-black border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 shadow-2xl">
                                         <span className="text-[10px]">🇨🇴</span>
-                                        <span className="text-[10px] text-white/80 font-medium">Colombia</span>
+                                        <span className="text-[10px] text-white/80 font-semibold">Colombia</span>
                                     </div>
                                     <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
                                 </div>
@@ -97,7 +97,7 @@ const WorldwideStats = () => {
                                 y={30}
                                 once
                                 delay={0.1 * (index + 1)}
-                                className="py-[29px] px-6 rounded-2xl bg-card border border-white/5 flex flex-col md:justify-between md:min-h-[460px] transition-all duration-300 hover:border-white/10 gap-6 md:gap-0"
+                                className="py-[29px] px-6 rounded-none bg-card border border-white/5 flex flex-col md:justify-between md:min-h-[460px] transition-all duration-300 hover:border-white/10 gap-6 md:gap-0"
                             >
                                 <div className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
                                     <stat.icon className="w-5 h-5 text-white/80" />

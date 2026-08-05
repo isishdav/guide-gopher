@@ -205,7 +205,7 @@ const BlogEditor = () => {
               </Link>
             </Button>
             <div>
-              <h1 className="text-2xl font-bold">
+              <h1 className="text-2xl font-extrabold">
                 {isEditMode ? "Edit Post" : "Create New Post"}
               </h1>
               <p className="text-muted-foreground">
@@ -324,7 +324,7 @@ const BlogEditor = () => {
               <Label>Featured Image</Label>
               <div className="space-y-4">
                 {image ? (
-                  <div className="relative rounded-xl overflow-hidden">
+                  <div className="relative rounded-none overflow-hidden">
                     <img
                       src={image}
                       alt="Featured"
@@ -341,7 +341,7 @@ const BlogEditor = () => {
                     </Button>
                   </div>
                 ) : (
-                  <div className="border-2 border-dashed border-white/20 rounded-xl p-8 text-center">
+                  <div className="border-2 border-dashed border-white/20 rounded-none p-8 text-center">
                     <div className="flex flex-col items-center gap-4">
                       <ImagePlus className="w-10 h-10 text-muted-foreground" />
                       <div className="space-y-2">

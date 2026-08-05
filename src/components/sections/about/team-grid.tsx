@@ -40,7 +40,7 @@ const TeamGrid = () => {
                     {teamMembers.map((member, index) => (
                         <AnimateOnView
                             key={index}
-                            className="p-4 rounded-2xl bg-card border border-border flex flex-col md:flex-row text-center md:text-left items-center gap-4 transition-all duration-300 hover:bg-white/5"
+                            className="p-4 rounded-none bg-card border border-border flex flex-col md:flex-row text-center md:text-left items-center gap-4 transition-all duration-300 hover:bg-white/5"
                         >
                             <img
                                 src={member.avatar}
@@ -48,7 +48,7 @@ const TeamGrid = () => {
                                 className="w-12 h-12 rounded-[10px] object-cover"
                             />
                             <div className="flex flex-col min-w-0">
-                                <span className="text-white font-medium truncate">{member.name}</span>
+                                <span className="text-white font-semibold truncate">{member.name}</span>
                                 <span className="text-xs text-muted-foreground truncate">{member.title}</span>
                             </div>
                         </AnimateOnView>

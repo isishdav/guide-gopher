@@ -56,7 +56,7 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
                 key={item.href}
                 to={item.href}
                 className={cn(
-                  "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors",
+                  "flex items-center gap-3 px-4 py-3 rounded-none text-sm font-semibold transition-colors",
                   isActive
                     ? "bg-primary/10 text-primary"
                     : "text-muted-foreground hover:text-foreground hover:bg-secondary"
@@ -72,7 +72,7 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
         <div className="p-4 border-t border-border space-y-2">
           <Link
             to="/"
-            className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+            className="flex items-center gap-3 px-4 py-3 rounded-none text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Site
@@ -87,7 +87,7 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
               </AvatarFallback>
             </Avatar>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium truncate">
+              <p className="text-sm font-semibold truncate">
                 {profile?.full_name || user?.email}
               </p>
               <p className="text-xs text-muted-foreground">Admin</p>

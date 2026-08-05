@@ -21,7 +21,7 @@ const TestimonialCard = ({ testimonial, progress, index, total }) => {
       }}
       className="absolute inset-x-0 top-0 bottom-0 flex items-center justify-center p-4 h-screen"
     >
-      <div className="rounded-2xl p-8 md:p-12 w-full max-w-[775px] shadow-2xl relative overflow-hidden group bg-[url(/images/common/testimonial-bg.webp)] bg-cover">
+      <div className="rounded-none p-8 md:p-12 w-full max-w-[775px] shadow-2xl relative overflow-hidden group bg-[url(/images/common/testimonial-bg.webp)] bg-cover">
 
         <div className="flex flex-col gap-8 md:gap-12">
           <div className="flex justify-between items-start">
@@ -30,7 +30,7 @@ const TestimonialCard = ({ testimonial, progress, index, total }) => {
                 <div key={i} className="w-2 h-2 rounded-full bg-accent" />
               ))}
             </div>
-            <div className="text-foreground/40 font-bold tracking-tighter text-xl italic uppercase">
+            <div className="text-foreground/40 font-extrabold tracking-tighter text-xl italic uppercase">
               {testimonial.logo}
             </div>
           </div>

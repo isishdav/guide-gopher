@@ -89,7 +89,7 @@ const AccessoriesPage = () => {
                     />
                     <div className="p-6 space-y-2">
                       <h3 className="h5">{item.title}</h3>
-                      <p className="text-sm font-normal text-muted-foreground">{item.description}</p>
+                      <p className="text-sm font-medium text-muted-foreground">{item.description}</p>
                     </div>
                   </article>
                 </AnimateOnView>

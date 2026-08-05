@@ -91,7 +91,7 @@ const CollectionsPage = () => {
                     type="button"
                     onClick={() => setFilter(f)}
                     aria-pressed={filter === f}
-                    className="border border-border px-4 py-2.5 text-sm font-semibold text-muted-foreground transition-colors hover:border-foreground hover:text-foreground aria-pressed:bg-foreground aria-pressed:text-background aria-pressed:border-foreground"
+                    className="border border-border px-4 py-2.5 text-sm font-bold text-muted-foreground transition-colors hover:border-foreground hover:text-foreground aria-pressed:bg-foreground aria-pressed:text-background aria-pressed:border-foreground"
                   >
                     {f}
                   </button>

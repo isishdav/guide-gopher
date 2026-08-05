@@ -22,7 +22,7 @@ const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
         <Card
           ref={ref}
           className={cn(
-            "overflow-hidden md:p-8 p-5 md:rounded-[30px] rounded-lg border-0 bg-[url(images/common/feature-card-bg.webp)] bg-cover",
+            "overflow-hidden md:p-8 p-5 md:rounded-[30px] rounded-none border-0 bg-[url(images/common/feature-card-bg.webp)] bg-cover",
             variant === "full-width" && "w-full",
             variant === "split" && "grid md:grid-cols-2 md:gap-[90px] md:items-center",
             variant === "default" && "flex flex-col-reverse md:flex-row md:items-center justify-between md:gap-[90px] gap-6",
@@ -66,7 +66,7 @@ const FeatureCardBadge = React.forwardRef<HTMLDivElement, React.HTMLAttributes<H
 
     return (
       <div ref={ref} className={cn("mb-4", className)} {...props}>
-        <Badge variant="secondary" className="rounded-full px-3 py-1 text-sm font-medium">
+        <Badge variant="secondary" className="rounded-full px-3 py-1 text-sm font-semibold">
           {children}
         </Badge>
       </div>
@@ -151,7 +151,7 @@ const FeatureCardImage = React.forwardRef<HTMLDivElement, FeatureCardImageProps>
       <div
         ref={ref}
         className={cn(
-          "relative w-full flex-shrink-0 max-w-[494px] md:rounded-[20px] rounded-md",
+          "relative w-full flex-shrink-0 max-w-[494px] md:rounded-[20px] rounded-none",
           imagePosition === "left" ? "md:order-1" : "md:order-2",
           className
         )}
@@ -173,7 +173,7 @@ FeatureCardImage.displayName = "FeatureCardImage";
 
 // Overlay position variants
 const overlayPositionVariants = cva(
-  "absolute bg-card/95 backdrop-blur-sm border border-border rounded-lg p-4 shadow-lg",
+  "absolute bg-card/95 backdrop-blur-sm border border-border rounded-none p-4 shadow-lg",
   {
     variants: {
       position: {

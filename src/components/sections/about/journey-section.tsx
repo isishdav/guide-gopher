@@ -65,7 +65,7 @@ const JourneySection = () => {
                     </AnimateOnView>
                 </StaggerContainer>
 
-                <div className="relative bg-card md:rounded-[40px] rounded-lg border border-border p-6 md:p-12 overflow-hidden">
+                <div className="relative bg-card md:rounded-[40px] rounded-none border border-border p-6 md:p-12 overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-12 gap-8 items-center">
                         {/* Left Content */}
                         <div className="flex flex-col h-full justify-between py-4">
@@ -112,7 +112,7 @@ const JourneySection = () => {
                                         <div className="h3 mb-2">
                                             {journeyTabs[activeTab].year}
                                         </div>
-                                        <div className="text-lg text-muted-foreground font-medium">
+                                        <div className="text-lg text-muted-foreground font-semibold">
                                             {journeyTabs[activeTab].subtitle}
                                         </div>
                                     </motion.div>
@@ -121,7 +121,7 @@ const JourneySection = () => {
                         </div>
 
                         {/* Right Image */}
-                        <div className="relative aspect-[4/3] md:aspect-[16/10] lg:aspect-square overflow-hidden md:rounded-[32px] rounded-lg">
+                        <div className="relative aspect-[4/3] md:aspect-[16/10] lg:aspect-square overflow-hidden md:rounded-[32px] rounded-none">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeTab}

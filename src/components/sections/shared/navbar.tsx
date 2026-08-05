@@ -105,7 +105,7 @@ const Navbar = () => {
                       to={page.href}
                       data-active={pathname === page.href}
                       aria-current={pathname === page.href ? "page" : undefined}
-                      className="nav-link px-3 py-2 text-sm font-semibold text-foreground hover:text-primary data-[active=true]:text-primary transition-colors"
+                      className="nav-link px-3 py-2 text-sm font-bold text-foreground hover:text-primary data-[active=true]:text-primary transition-colors"
                     >
                       {page.title}
                     </Link>
@@ -124,8 +124,8 @@ const Navbar = () => {
               className="group flex items-center gap-2.5 h-10 w-[210px] border border-border bg-background/70 px-3 text-left text-muted-foreground hover:border-foreground/40 hover:text-foreground transition-colors"
             >
               <Search className="h-4 w-4 shrink-0" aria-hidden="true" />
-              <span className="text-sm font-medium truncate">Search</span>
-              <kbd className="ml-auto text-[0.65rem] font-semibold tracking-wider text-muted-foreground">⌘K</kbd>
+              <span className="text-sm font-semibold truncate">Search</span>
+              <kbd className="ml-auto text-[0.65rem] font-bold tracking-wider text-muted-foreground">⌘K</kbd>
             </button>
 
             {!loading && (
@@ -185,7 +185,7 @@ const Navbar = () => {
                         to={page.href}
                         onClick={() => setIsOpen(false)}
                         aria-current={pathname === page.href ? "page" : undefined}
-                        className="block py-2 min-h-11 font-semibold text-muted-foreground hover:text-primary aria-[current=page]:text-primary transition-colors">
+                        className="block py-2 min-h-11 font-bold text-muted-foreground hover:text-primary aria-[current=page]:text-primary transition-colors">
                         {page.title}
                       </Link>
                     ))}
