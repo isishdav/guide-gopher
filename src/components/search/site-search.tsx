@@ -79,7 +79,7 @@ const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
                     <Search className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
                     <input
                         ref={inputRef}
-                        type="search"
+                        type="text"
                         role="combobox"
                         aria-expanded={results.length > 0}
                         aria-controls="site-search-results"
@@ -91,14 +91,7 @@ const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
                         aria-label="Search the website"
                         className="h-14 w-full bg-transparent text-[0.95rem] font-semibold outline-none placeholder:font-medium placeholder:text-muted-foreground"
                     />
-                    <button
-                        type="button"
-                        onClick={() => onOpenChange(false)}
-                        aria-label="Close search"
-                        className="h-9 w-9 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        <X className="h-4 w-4" aria-hidden="true" />
-                    </button>
+                    <span className="w-9 shrink-0" aria-hidden="true" />
                 </div>
 
                 <div ref={listRef} id="site-search-results" role="listbox" className="max-h-[58vh] overflow-y-auto p-2">
