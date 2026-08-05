@@ -1,57 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://curtains-hub.onrender.com//</loc>
+    <loc>https://curtainshub.lovable.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://curtains-hub.onrender.com//collections</loc>
+    <loc>https://curtainshub.lovable.app/collections</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://curtains-hub.onrender.com//services</loc>
+    <loc>https://curtainshub.lovable.app/accessories</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://curtains-hub.onrender.com//projects</loc>
+    <loc>https://curtainshub.lovable.app/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://curtainshub.lovable.app/projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://curtains-hub.onrender.com//testimonials</loc>
+    <loc>https://curtainshub.lovable.app/testimonials</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://curtains-hub.onrender.com//about</loc>
+    <loc>https://curtainshub.lovable.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://curtains-hub.onrender.com//contact</loc>
+    <loc>https://curtainshub.lovable.app/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://curtains-hub.onrender.com//blog</loc>
+    <loc>https://curtainshub.lovable.app/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://curtains-hub.onrender.com//legal/privacy-policy</loc>
+    <loc>https://curtainshub.lovable.app/legal/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://curtains-hub.onrender.com//legal/terms-&-condition</loc>
+    <loc>https://curtainshub.lovable.app/legal/terms-&amp;-condition</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://curtains-hub.onrender.com//legal/cookie-policy</loc>
+    <loc>https://curtainshub.lovable.app/legal/cookie-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
