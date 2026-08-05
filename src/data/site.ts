@@ -184,6 +184,33 @@ export const collections = [
       { src: "/images/curtains/craft.jpg", alt: "Craftsperson finishing a luxury curtain by hand" },
     ],
   },
+  {
+    slug: "curtain-accessories",
+    title: "Accessories",
+    feeling: "The details that finish a room",
+    description:
+      "Rods, tracks, finials, tiebacks, rings, hooks and motors — the quiet hardware that makes curtains hang perfectly for years. Curtain accessories in Kigali, fitted or supplied on their own.",
+    image: "/images/curtains/cat-accessories.jpg",
+    alt: "Luxury curtain accessories including matte black rods, finials, rings and tassel tiebacks on white marble",
+    gallery: [
+      { src: "/images/curtains/cat-accessories.jpg", alt: "Curtain rods, finials, rings and tiebacks arranged on marble" },
+      { src: "/images/curtains/collection-custom.jpg", alt: "Bespoke curtain hardware and header detailing" },
+      { src: "/images/curtains/craft.jpg", alt: "Craftsperson fitting curtain hardware by hand" },
+    ],
+  },
+];
+
+export const accessories = [
+  { title: "Curtain Rods & Poles", description: "Matte black, brushed steel and timber poles cut to your exact window width.", image: "/images/curtains/cat-accessories.jpg" },
+  { title: "Ceiling & Wall Tracks", description: "Silent gliding tracks, single or dual, for wave headers and layered curtains.", image: "/images/curtains/cat-wave.jpg" },
+  { title: "Finials & End Caps", description: "The jewellery of a window — sculpted, understated finishes that match your interior.", image: "/images/curtains/collection-custom.jpg" },
+  { title: "Tiebacks & Tassels", description: "Rope, leather and hand-tied tassels that hold a drape in a soft, deliberate curve.", image: "/images/curtains/cat-luxury.jpg" },
+  { title: "Rings, Hooks & Glides", description: "Precision hardware so every pleat sits evenly and nothing snags or squeaks.", image: "/images/curtains/craft.jpg" },
+  { title: "Brackets & Supports", description: "Concealed, load-tested brackets for heavy blackout and full-height drapes.", image: "/images/curtains/cat-blackout.jpg" },
+  { title: "Motors & Remotes", description: "Smart motors, remotes and app control retro-fitted to new or existing tracks.", image: "/images/curtains/cat-motorized.jpg" },
+  { title: "Pelmets & Valances", description: "Tailored pelmets that hide hardware and seal light at the top of the window.", image: "/images/curtains/cat-roman.jpg" },
+  { title: "Linings & Interlinings", description: "Blackout, thermal and acoustic linings that change how a room sleeps and sounds.", image: "/images/curtains/collection-blackout.jpg" },
+  { title: "Sheer Voile Panels", description: "Standalone voiles and net panels to layer with curtains you already own.", image: "/images/curtains/cat-sheer.jpg" },
 ];
 
 export const services = [
