@@ -2,7 +2,7 @@
 
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { groupOrder, searchSite, suggestedSearches, type SearchItem } from "@/lib/search-index";
-import { ArrowUpRight, Search, X } from "lucide-react";
+import { ArrowUpRight, Search } from "lucide-react";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
 
