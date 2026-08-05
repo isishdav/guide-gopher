@@ -3,8 +3,7 @@
 import { writeFileSync } from "fs"
 import { resolve } from "path"
 
-// TODO: replace with your project URL once a project name or custom domain is set.
-const BASE_URL = "https://curtains-hub.onrender.com/"
+const BASE_URL = "https://curtainshub.lovable.app"
 
 interface SitemapEntry {
   path: string
@@ -15,6 +14,7 @@ interface SitemapEntry {
 const entries: SitemapEntry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/collections", changefreq: "monthly", priority: "0.9" },
+  { path: "/accessories", changefreq: "monthly", priority: "0.9" },
   { path: "/services", changefreq: "monthly", priority: "0.9" },
   { path: "/projects", changefreq: "monthly", priority: "0.8" },
   { path: "/testimonials", changefreq: "monthly", priority: "0.7" },
@@ -26,11 +26,14 @@ const entries: SitemapEntry[] = [
   { path: "/legal/cookie-policy", changefreq: "yearly", priority: "0.2" },
 ]
 
+const escapeXml = (value: string) =>
+  value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+
 function generateSitemap(entries: SitemapEntry[]) {
   const urls = entries.map((e) =>
     [
       `  <url>`,
-      `    <loc>${BASE_URL}${e.path}</loc>`,
+      `    <loc>${escapeXml(`${BASE_URL}${e.path}`)}</loc>`,
       e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
       e.priority ? `    <priority>${e.priority}</priority>` : null,
       `  </url>`,
