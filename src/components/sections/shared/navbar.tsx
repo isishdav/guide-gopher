@@ -143,7 +143,7 @@ const Navbar = () => {
 
 
           {/* Mobile: search icon + menu */}
-          <div className="flex items-center gap-1 lg:hidden">
+          <div className="flex items-center justify-end gap-1 lg:hidden col-start-2">
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
@@ -186,7 +186,7 @@ const Navbar = () => {
                         to={page.href}
                         onClick={() => setIsOpen(false)}
                         aria-current={pathname === page.href ? "page" : undefined}
-                        className="block py-2 min-h-11 font-bold text-muted-foreground hover:text-primary aria-[current=page]:text-primary transition-colors">
+                        className="block py-2 min-h-11 flex items-center text-[1.05rem] font-normal text-foreground/75 hover:text-foreground aria-[current=page]:text-foreground transition-colors">
                         {page.title}
                       </Link>
                     ))}
