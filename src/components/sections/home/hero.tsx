@@ -1,4 +1,5 @@
 import { Magnetic } from "@/components/motion/magnetic";
+import { RotatingWord } from "@/components/motion/rotating-word";
 import { SplitText } from "@/components/motion/split-text";
 import { Button } from "@/components/ui/button";
 import { EASE, gsap, prefersReducedMotion } from "@/lib/motion/gsap";
@@ -58,6 +59,13 @@ const Hero = () => {
           0.9,
         )
         .fromTo(
+          "[data-hero-word]",
+          { opacity: 0, y: 22, filter: "blur(10px)" },
+          { opacity: 1, y: 0, filter: "blur(0px)", duration: 1 },
+          1.45,
+        )
+        .fromTo(
+
           "[data-hero-copy]",
           { opacity: 0, y: 26, filter: "blur(8px)" },
           { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.1 },
@@ -115,14 +123,22 @@ const Hero = () => {
             Curtains Hub — Your Confidence Begins Here
           </p>
 
-          <SplitText
-            as="h1"
-            id="hero-heading"
-            text="Come home to softer mornings."
-            className="h1 text-foreground mb-7 block"
-            immediate
-            afterIntro
-          />
+          <h1 id="hero-heading" className="h1 text-foreground mb-7">
+            <SplitText
+              as="span"
+              text="Transform your home into"
+              className="block"
+              immediate
+              afterIntro
+            />
+            <span data-hero-word data-hero-fade className="block opacity-0">
+              <RotatingWord
+                words={["Luxury", "Comfort", "Elegance", "Privacy", "Warmth", "Modern living"]}
+                className="text-foreground"
+              />
+            </span>
+          </h1>
+
 
           <p
             data-hero-copy
@@ -156,7 +172,7 @@ const Hero = () => {
       <div className="relative z-10 mt-14 md:mt-20 px-4 md:px-6 3xl:px-16">
         <div
           data-hero-parallax
-          className="relative mx-auto max-w-[1600px] overflow-hidden rounded-[28px] md:rounded-[40px] shadow-lift will-change-transform"
+          className="relative mx-auto max-w-[1600px] overflow-hidden rounded-none shadow-lift will-change-transform"
         >
           <img
             data-hero-bg

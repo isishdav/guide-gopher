@@ -82,22 +82,22 @@ const Navbar = () => {
       <header
         ref={header}
         data-condensed="false"
-        className="w-full fixed top-0 left-0 z-40 will-change-transform bg-background/60 supports-[backdrop-filter]:bg-background/50 backdrop-blur-2xl backdrop-saturate-150 border-b border-border/50 transition-colors duration-500 data-[condensed=true]:bg-background/80 data-[condensed=true]:border-border md:pt-7 pt-5 pb-4"
+        className="w-full fixed top-0 left-0 z-40 will-change-transform bg-background/60 supports-[backdrop-filter]:bg-background/50 backdrop-blur-2xl backdrop-saturate-150 border-b border-border/50 transition-colors duration-500 data-[condensed=true]:bg-background/85 data-[condensed=true]:border-border pt-4 pb-4 md:pt-6 md:pb-6"
       >
-        <Container className="flex justify-between items-center gap-6">
+        <Container className="grid grid-cols-[auto_1fr_auto] items-center gap-6">
           <Link to="/" className="flex items-center w-fit group shrink-0" aria-label="Curtains Hub — home">
             <img
-              src="/images/curtains/logo-mark.png"
+              src="/images/curtains/logo.svg"
               alt="Curtains Hub — luxury curtains in Kigali, Rwanda"
               width={40}
               height={40}
-              className="h-9 w-9 md:h-10 md:w-10 object-contain transition-transform duration-700 group-hover:scale-105"
+              className="h-10 w-10 object-contain transition-transform duration-700 group-hover:scale-105"
             />
           </Link>
 
           {/* Desktop nav */}
-          <NavigationMenu className="hidden lg:block mx-auto" aria-label="Primary">
-            <NavigationMenuList className="gap-1">
+          <NavigationMenu className="hidden lg:flex justify-center" aria-label="Primary">
+            <NavigationMenuList className="flex items-center gap-1">
               {navLinks.map((page) => (
                 <NavigationMenuItem key={page.href}>
                   <NavigationMenuLink asChild>
@@ -105,7 +105,7 @@ const Navbar = () => {
                       to={page.href}
                       data-active={pathname === page.href}
                       aria-current={pathname === page.href ? "page" : undefined}
-                      className="nav-link px-3 py-2 text-sm font-bold text-foreground hover:text-primary data-[active=true]:text-primary transition-colors"
+                      className="nav-link flex items-center h-10 px-3 text-sm font-normal tracking-[0.01em] text-foreground/80 hover:text-foreground data-[active=true]:text-foreground transition-colors"
                     >
                       {page.title}
                     </Link>
@@ -121,11 +121,11 @@ const Navbar = () => {
               type="button"
               onClick={() => setSearchOpen(true)}
               aria-label="Search the website"
-              className="group flex items-center gap-2.5 h-10 w-[210px] border border-border bg-background/70 px-3 text-left text-muted-foreground hover:border-foreground/40 hover:text-foreground transition-colors"
+              className="group flex items-center gap-2.5 h-10 w-[200px] border border-border bg-background/70 px-3 text-left text-muted-foreground hover:border-foreground/40 hover:text-foreground transition-colors"
             >
               <Search className="h-4 w-4 shrink-0" aria-hidden="true" />
-              <span className="text-sm font-semibold truncate">Search</span>
-              <kbd className="ml-auto text-[0.65rem] font-bold tracking-wider text-muted-foreground">⌘K</kbd>
+              <span className="text-sm font-normal truncate">Search</span>
+              <kbd className="ml-auto text-[0.65rem] font-medium tracking-wider text-muted-foreground">⌘K</kbd>
             </button>
 
             {!loading && (
@@ -133,7 +133,7 @@ const Navbar = () => {
                 <UserMenu />
               ) : (
                 <Magnetic strength={8}>
-                  <Button asChild className="sweep">
+                  <Button asChild size="sm" className="sweep h-10 font-medium">
                     <Link to="/contact">Book a Free Consultation</Link>
                   </Button>
                 </Magnetic>
@@ -141,8 +141,9 @@ const Navbar = () => {
             )}
           </div>
 
+
           {/* Mobile: search icon + menu */}
-          <div className="flex items-center gap-1 lg:hidden">
+          <div className="flex items-center justify-end gap-1 lg:hidden col-start-2">
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
@@ -169,7 +170,7 @@ const Navbar = () => {
                   <SheetHeader className="flex flex-row justify-between border-b border-border pb-4">
                     <SheetTitle className="flex items-center">
                       <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)} aria-label="Curtains Hub — home">
-                        <img src="/images/curtains/logo-mark.png" alt="Curtains Hub logo" width={32} height={32} className="h-8 w-8 object-contain" />
+                        <img src="/images/curtains/logo.svg" alt="Curtains Hub logo" width={32} height={32} className="h-8 w-8 object-contain" />
                       </Link>
                     </SheetTitle>
                     <SheetPrimitive.Close className="h-11 w-11 flex items-center justify-center opacity-70 transition-opacity hover:opacity-100">
@@ -185,7 +186,7 @@ const Navbar = () => {
                         to={page.href}
                         onClick={() => setIsOpen(false)}
                         aria-current={pathname === page.href ? "page" : undefined}
-                        className="block py-2 min-h-11 font-bold text-muted-foreground hover:text-primary aria-[current=page]:text-primary transition-colors">
+                        className="flex py-2 min-h-11 items-center text-[1.05rem] font-normal text-foreground/75 hover:text-foreground aria-[current=page]:text-foreground transition-colors">
                         {page.title}
                       </Link>
                     ))}

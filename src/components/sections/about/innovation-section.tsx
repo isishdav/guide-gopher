@@ -62,7 +62,7 @@ const InnovationSection = () => {
                         <AnimateOnView
                             key={index}
                             className={cn(
-                                "relative md:p-8 p-6 rounded-[20px] bg-card border border-border flex flex-col gap-6 overflow-hidden transition-all duration-300 hover:border-white/10 group"
+                                "relative md:p-8 p-6 rounded-none bg-card border border-border flex flex-col gap-6 overflow-hidden transition-all duration-300 hover:border-white/10 group"
                             )}
                         >
                             {/* Highlight Glow Effect */}

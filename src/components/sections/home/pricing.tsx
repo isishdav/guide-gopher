@@ -57,7 +57,7 @@ const CollectionsGallery = () => {
               <Link
                 to="/collections"
                 aria-label={`${collection.title} — ${collection.feeling}`}
-                className="card-lux relative block h-full w-full overflow-hidden rounded-[24px] md:rounded-[32px] bg-secondary border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="card-lux relative block h-full w-full overflow-hidden rounded-none bg-secondary border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
                 <img
                   src={collection.image}

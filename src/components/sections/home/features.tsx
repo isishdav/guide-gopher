@@ -38,7 +38,7 @@ const Features = () => {
             <Reveal
               item
               key={service.title}
-              className="card-lux p-7 md:p-8 rounded-[24px] bg-secondary border border-border"
+              className="card-lux p-7 md:p-8 rounded-none bg-secondary border border-border"
             >
               <h3 className="h4 mb-2.5">{service.title}</h3>
               <p className="text-muted-foreground">{service.description}</p>

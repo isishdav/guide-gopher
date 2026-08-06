@@ -44,7 +44,7 @@ const WorldwideStats = () => {
                     <AnimateOnView
                         y={30}
                         once
-                        className="lg:w-[40%] rounded-[32px] bg-[#111111] border border-white/5 flex flex-col justify-between overflow-hidden relative group min-h-[460px]"
+                        className="lg:w-[40%] rounded-none bg-[#111111] border border-white/5 flex flex-col justify-between overflow-hidden relative group min-h-[460px]"
                     >
                         <div className="relative z-10 pt-[29px] px-6">
                             <h3 className="text-3xl font-bold text-white leading-tight max-w-[280px]">

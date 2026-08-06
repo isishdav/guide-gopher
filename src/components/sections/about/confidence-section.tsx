@@ -69,7 +69,7 @@ const ConfidenceSection = () => {
                     {stats.map((stat, index) => (
                         <AnimateOnView
                             key={index}
-                            className="py-6 pl-6 pr-3 rounded-[20px] bg-card border border-border flex flex-col gap-10"
+                            className="py-6 pl-6 pr-3 rounded-none bg-card border border-border flex flex-col gap-10"
                         >
                             <span className="text-sm text-accent">{stat.label}</span>
                             <div className="flex flex-col gap-2">

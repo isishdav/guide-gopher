@@ -125,7 +125,7 @@ const BeforeAfter = () => {
         <div
           ref={frame}
           data-ba-frame
-          className="relative rounded-[24px] overflow-hidden border border-border select-none touch-pan-y cursor-ew-resize will-change-transform"
+          className="relative rounded-none overflow-hidden border border-border select-none touch-pan-y cursor-ew-resize will-change-transform"
           style={{ ["--split" as string]: "8%" }}
         >
           <img

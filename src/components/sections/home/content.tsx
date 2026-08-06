@@ -32,7 +32,7 @@ const Content = () => {
             <Reveal
               item
               key={stat.label}
-              className="card-lux p-7 rounded-[24px] bg-secondary border border-border text-center lg:text-left"
+              className="card-lux p-7 rounded-none bg-secondary border border-border text-center lg:text-left"
             >
               <p className="h3 mb-2 tabular-nums">
                 <Counter value={stat.value} />
