@@ -35,7 +35,7 @@ const CTA = () => {
                 </div>
 
                 <Reveal variant="clip-center" className="w-full max-w-[840px] mx-auto">
-                    <figure className="rounded-[24px] overflow-hidden border border-border">
+                    <figure className="rounded-none overflow-hidden border border-border">
                         <img
                             src="/images/curtains/project-1.jpg"
                             alt="Luxury penthouse dining room dressed with full-height ivory curtains by Curtains Hub"

@@ -40,7 +40,7 @@ const Confidence = () => {
             <Reveal
               item
               key={item.title}
-              className="card-lux p-7 md:p-8 rounded-[24px] border border-border bg-background"
+              className="card-lux p-7 md:p-8 rounded-none border border-border bg-background"
             >
               <h3 className="h5 mb-2.5">{item.title}</h3>
               <p className="text-muted-foreground text-sm">{item.description}</p>

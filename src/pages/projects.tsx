@@ -36,7 +36,7 @@ const ProjectsPage = () => {
             <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, index) => (
                 <AnimateOnView key={project.title} delay={(index % 3) * 0.08}>
-                  <article className="group h-full rounded-[24px] overflow-hidden bg-card border border-border">
+                  <article className="group h-full rounded-none overflow-hidden bg-card border border-border">
                     <figure className="aspect-[4/3] overflow-hidden">
                       <img
                         src={project.image}

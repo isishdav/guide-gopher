@@ -94,7 +94,7 @@ const ContactForm = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left Column: Contact Info */}
-          <div className="bg-card md:p-[30px] p-6 md:rounded-none rounded-none border border-border md:space-y-[60px] space-y-8 h-full">
+          <div className="bg-card md:p-[30px] p-6 rounded-none rounded-none border border-border md:space-y-[60px] space-y-8 h-full">
             <div className="space-y-3">
               <h2 className="h3">Speak to a Curtain Designer</h2>
               <p className="text-muted-foreground">
@@ -145,7 +145,7 @@ const ContactForm = () => {
           </div>
 
           {/* Right Column: Form */}
-          <div className="bg-card md:p-[30px] p-6 md:rounded-none rounded-none border border-border h-full">
+          <div className="bg-card md:p-[30px] p-6 rounded-none rounded-none border border-border h-full">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -159,7 +159,7 @@ const ContactForm = () => {
                           <Input
                             placeholder="First Name"
                             {...field}
-                            className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-ring"
+                            className="bg-background border-none rounded-none h-12 focus-visible:ring-1 focus-visible:ring-ring"
                           />
                         </FormControl>
                         <FormMessage />
@@ -176,7 +176,7 @@ const ContactForm = () => {
                           <Input
                             placeholder="Last Name"
                             {...field}
-                            className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-ring"
+                            className="bg-background border-none rounded-none h-12 focus-visible:ring-1 focus-visible:ring-ring"
                           />
                         </FormControl>
                         <FormMessage />
@@ -196,7 +196,7 @@ const ContactForm = () => {
                           type="email"
                           placeholder="Email address"
                           {...field}
-                          className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-ring"
+                          className="bg-background border-none rounded-none h-12 focus-visible:ring-1 focus-visible:ring-ring"
                         />
                       </FormControl>
                       <FormMessage />
@@ -215,7 +215,7 @@ const ContactForm = () => {
                           type="tel"
                           placeholder="Phone Number"
                           {...field}
-                          className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-ring"
+                          className="bg-background border-none rounded-none h-12 focus-visible:ring-1 focus-visible:ring-ring"
                         />
                       </FormControl>
                       <FormMessage />
@@ -232,7 +232,7 @@ const ContactForm = () => {
                       <FormControl>
                         <Textarea
                           placeholder="Tell us about your rooms, windows and preferred fabrics..."
-                          className="min-h-[150px] bg-background border-none rounded-[14px] focus-visible:ring-1 focus-visible:ring-ring resize-none"
+                          className="min-h-[150px] bg-background border-none rounded-none focus-visible:ring-1 focus-visible:ring-ring resize-none"
                           {...field}
                         />
                       </FormControl>

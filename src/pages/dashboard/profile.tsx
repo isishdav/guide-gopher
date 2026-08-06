@@ -148,7 +148,7 @@ const ProfilePage = () => {
             </AnimateOnView>
 
             <AnimateOnView y={20} blur delay={0.1}>
-              <div className="bg-card rounded-[34px] border border-border p-8 md:p-12 overflow-hidden relative">
+              <div className="bg-card rounded-none border border-border p-8 md:p-12 overflow-hidden relative">
                 <div className="space-y-10 relative z-10">
                   {/* Profile Photo Section */}
                   <div className="space-y-6">

@@ -87,7 +87,7 @@ const Navbar = () => {
         <Container className="flex justify-between items-center gap-6">
           <Link to="/" className="flex items-center w-fit group shrink-0" aria-label="Curtains Hub — home">
             <img
-              src="/images/curtains/logo-mark.png"
+              src="/images/curtains/logo.svg"
               alt="Curtains Hub — luxury curtains in Kigali, Rwanda"
               width={40}
               height={40}
@@ -169,7 +169,7 @@ const Navbar = () => {
                   <SheetHeader className="flex flex-row justify-between border-b border-border pb-4">
                     <SheetTitle className="flex items-center">
                       <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)} aria-label="Curtains Hub — home">
-                        <img src="/images/curtains/logo-mark.png" alt="Curtains Hub logo" width={32} height={32} className="h-8 w-8 object-contain" />
+                        <img src="/images/curtains/logo.svg" alt="Curtains Hub logo" width={32} height={32} className="h-8 w-8 object-contain" />
                       </Link>
                     </SheetTitle>
                     <SheetPrimitive.Close className="h-11 w-11 flex items-center justify-center opacity-70 transition-opacity hover:opacity-100">

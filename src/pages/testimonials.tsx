@@ -51,7 +51,7 @@ const TestimonialsPage = () => {
             <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {testimonials.map((testimonial, index) => (
                 <AnimateOnView key={testimonial.id} delay={(index % 2) * 0.08}>
-                  <figure className="h-full p-6 rounded-[24px] bg-card border border-border space-y-4">
+                  <figure className="h-full p-6 rounded-none bg-card border border-border space-y-4">
                     <div className="flex gap-1" aria-label="Rated 5 out of 5">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <Star key={star} className="w-4 h-4 text-primary fill-current" aria-hidden="true" />

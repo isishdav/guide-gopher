@@ -48,7 +48,7 @@ const About = () => {
               </AnimateOnView>
 
               <AnimateOnView delay={0.15}>
-                <figure className="rounded-[24px] overflow-hidden border border-border">
+                <figure className="rounded-none overflow-hidden border border-border">
                   <img
                     src="/images/curtains/collection-custom.jpg"
                     alt="Curtains Hub tailor hand-finishing a bespoke curtain header on premium fabric"

@@ -85,7 +85,7 @@ export const CurtainLoader = () => {
       >
         <img
           data-loader-logo
-          src="/images/curtains/logo-mark.png"
+          src="/images/curtains/logo.svg"
           alt=""
           width={64}
           height={64}

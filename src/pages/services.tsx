@@ -60,7 +60,7 @@ const ServicesPage = () => {
 
             <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((service, index) => (
-                <AnimateOnView key={service.title} delay={(index % 3) * 0.08} className="p-6 rounded-[20px] bg-card border border-border">
+                <AnimateOnView key={service.title} delay={(index % 3) * 0.08} className="p-6 rounded-none bg-card border border-border">
                   <h3 className="h4 mb-2">{service.title}</h3>
                   <p className="text-muted-foreground text-sm">{service.description}</p>
                 </AnimateOnView>
@@ -78,7 +78,7 @@ const ServicesPage = () => {
 
             <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               {steps.map((step, index) => (
-                <AnimateOnView key={step.title} delay={index * 0.08} className="p-6 rounded-[20px] border border-border bg-background">
+                <AnimateOnView key={step.title} delay={index * 0.08} className="p-6 rounded-none border border-border bg-background">
                   <h3 className="h5 text-primary mb-2">{step.title}</h3>
                   <p className="text-muted-foreground text-sm">{step.description}</p>
                 </AnimateOnView>

@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Company */}
           <div data-reveal-item className="space-y-7 lg:col-span-2 max-w-md">
             <Link to="/" className="flex items-center gap-3" aria-label="Curtains Hub — home">
-              <img src="/images/curtains/logo-mark.png" alt="Curtains Hub logo" width={40} height={40} loading="lazy" className="h-10 w-10 object-contain" />
+              <img src="/images/curtains/logo.svg" alt="Curtains Hub logo" width={40} height={40} loading="lazy" className="h-10 w-10 object-contain" />
               <span className="text-[0.95rem] tracking-[0.22em] uppercase">Curtains Hub</span>
             </Link>
             <p className="text-muted-foreground text-body-sm">

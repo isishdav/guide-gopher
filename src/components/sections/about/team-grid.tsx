@@ -45,7 +45,7 @@ const TeamGrid = () => {
                             <img
                                 src={member.avatar}
                                 alt={member.name}
-                                className="w-12 h-12 rounded-[10px] object-cover"
+                                className="w-12 h-12 rounded-none object-cover"
                             />
                             <div className="flex flex-col min-w-0">
                                 <span className="text-white font-semibold truncate">{member.name}</span>

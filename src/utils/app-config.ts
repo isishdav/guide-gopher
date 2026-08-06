@@ -4,7 +4,7 @@ export const appConfig = {
     description:
         "Curtains Hub designs, tailors and installs luxury curtains for homes, hotels and offices — premium fabrics, custom measurements and expert installation.",
     url: "",
-    logo: "/images/curtains/logo-mark.png",
+    logo: "/images/curtains/logo.svg",
     favicon: "/favicon.png",
     ogImage: "/images/curtains/hero.jpg",
 }
