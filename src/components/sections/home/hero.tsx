@@ -59,6 +59,13 @@ const Hero = () => {
           0.9,
         )
         .fromTo(
+          "[data-hero-word]",
+          { opacity: 0, y: 22, filter: "blur(10px)" },
+          { opacity: 1, y: 0, filter: "blur(0px)", duration: 1 },
+          1.45,
+        )
+        .fromTo(
+
           "[data-hero-copy]",
           { opacity: 0, y: 26, filter: "blur(8px)" },
           { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.1 },
