@@ -115,14 +115,22 @@ const Hero = () => {
             Curtains Hub — Your Confidence Begins Here
           </p>
 
-          <SplitText
-            as="h1"
-            id="hero-heading"
-            text="Come home to softer mornings."
-            className="h1 text-foreground mb-7 block"
-            immediate
-            afterIntro
-          />
+          <h1 id="hero-heading" className="h1 text-foreground mb-7">
+            <SplitText
+              as="span"
+              text="Transform your home into"
+              className="block"
+              immediate
+              afterIntro
+            />
+            <span data-hero-word className="block opacity-0">
+              <RotatingWord
+                words={["Luxury", "Comfort", "Elegance", "Privacy", "Warmth", "Modern living"]}
+                className="text-foreground"
+              />
+            </span>
+          </h1>
+
 
           <p
             data-hero-copy
