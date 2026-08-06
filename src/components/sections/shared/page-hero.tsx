@@ -50,11 +50,11 @@ const PageHero = ({ eyebrow, title, description, image, imageAlt }: PageHeroProp
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/40" aria-hidden="true" />
 
             <Container className="relative z-10">
-                <div className="max-w-[760px]">
+                <div className="max-w-[760px]"><u>
                     {eyebrow && (
                         <Reveal variant="fade-up" immediate>
                             <p className="eyebrow mb-5">{eyebrow}</p>
-                        </Reveal>
+                        </Reveal></u>
                     )}
                     <SplitText as="h1" text={title} className="h1 mb-4 block" immediate delay={0.15} />
                     <Reveal variant="blur" delay={0.45} immediate>
