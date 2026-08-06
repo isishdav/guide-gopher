@@ -94,7 +94,7 @@ const ContactForm = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left Column: Contact Info */}
-          <div className="bg-card md:p-[30px] p-6 rounded-none rounded-none border border-border md:space-y-[60px] space-y-8 h-full">
+          <div className="bg-card md:p-[30px] p-6 rounded-none border border-border md:space-y-[60px] space-y-8 h-full">
             <div className="space-y-3">
               <h2 className="h3">Speak to a Curtain Designer</h2>
               <p className="text-muted-foreground">
@@ -145,7 +145,7 @@ const ContactForm = () => {
           </div>
 
           {/* Right Column: Form */}
-          <div className="bg-card md:p-[30px] p-6 rounded-none rounded-none border border-border h-full">
+          <div className="bg-card md:p-[30px] p-6 rounded-none border border-border h-full">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

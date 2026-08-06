@@ -156,7 +156,7 @@ const Hero = () => {
       <div className="relative z-10 mt-14 md:mt-20 px-4 md:px-6 3xl:px-16">
         <div
           data-hero-parallax
-          className="relative mx-auto max-w-[1600px] overflow-hidden rounded-none rounded-none shadow-lift will-change-transform"
+          className="relative mx-auto max-w-[1600px] overflow-hidden rounded-none shadow-lift will-change-transform"
         >
           <img
             data-hero-bg
