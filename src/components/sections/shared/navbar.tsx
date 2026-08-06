@@ -186,7 +186,7 @@ const Navbar = () => {
                         to={page.href}
                         onClick={() => setIsOpen(false)}
                         aria-current={pathname === page.href ? "page" : undefined}
-                        className="block py-2 min-h-11 flex items-center text-[1.05rem] font-normal text-foreground/75 hover:text-foreground aria-[current=page]:text-foreground transition-colors">
+                        className="flex py-2 min-h-11 items-center text-[1.05rem] font-normal text-foreground/75 hover:text-foreground aria-[current=page]:text-foreground transition-colors">
                         {page.title}
                       </Link>
                     ))}
