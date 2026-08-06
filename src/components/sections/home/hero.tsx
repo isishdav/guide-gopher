@@ -131,7 +131,7 @@ const Hero = () => {
               immediate
               afterIntro
             />
-            <span data-hero-word className="block opacity-0">
+            <span data-hero-word data-hero-fade className="block opacity-0">
               <RotatingWord
                 words={["Luxury", "Comfort", "Elegance", "Privacy", "Warmth", "Modern living"]}
                 className="text-foreground"
