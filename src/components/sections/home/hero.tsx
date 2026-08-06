@@ -1,4 +1,5 @@
 import { Magnetic } from "@/components/motion/magnetic";
+import { RotatingWord } from "@/components/motion/rotating-word";
 import { SplitText } from "@/components/motion/split-text";
 import { Button } from "@/components/ui/button";
 import { EASE, gsap, prefersReducedMotion } from "@/lib/motion/gsap";
