@@ -9,13 +9,14 @@ import { SITE_URL, brand, collections } from "@/data/site";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
-const FILTERS = ["All", "Curtains", "Blinds", "Motorized", "Accessories"] as const;
+const FILTERS = ["All", "Curtains", "Sheer", "Blackout", "Motorized", "Accessories"] as const;
 type Filter = (typeof FILTERS)[number];
 
 const filterOf = (slug: string): Filter => {
   if (slug === "curtain-accessories") return "Accessories";
   if (slug === "motorized-curtains") return "Motorized";
-  if (slug.includes("blinds")) return "Blinds";
+  if (slug.includes("sheer")) return "Sheer";
+  if (slug.includes("blackout")) return "Blackout";
   return "Curtains";
 };
 
@@ -31,7 +32,7 @@ const jsonLd = {
     },
     {
       "@type": "ItemList",
-      name: "Curtain & Blind Collections — Curtains Hub Kigali",
+      name: "Curtain Collections — Curtains Hub Kigali",
       itemListElement: collections.map((collection, index) => ({
         "@type": "ListItem",
         position: index + 1,
@@ -65,20 +66,27 @@ const CollectionsPage = () => {
     <>
       <SEO
         title="Curtain Collections Kigali | Sheer, Blackout & Custom Curtains"
-        description="Explore luxury curtain collections in Kigali, Rwanda — sheer curtains, blackout curtains, wave curtains, roman, roller, zebra and wooden blinds, motorized curtains and curtain accessories."
+        description="Explore luxury curtain collections in Kigali, Rwanda — sheer curtains, blackout curtains, wave, pinch pleat, eyelet, linen and layered curtains, motorized curtains and curtain accessories."
         canonicalUrl="/collections"
         ogImage="/images/curtains/collection-luxury.jpg"
-        keywords="luxury curtains Rwanda, curtains in Kigali, blackout curtains Rwanda, sheer curtains Kigali, blinds Rwanda, custom curtains Kigali"
+        keywords="luxury curtains Rwanda, curtains in Kigali, blackout curtains Rwanda, sheer curtains Kigali, motorized curtains Rwanda, custom curtains Kigali"
         jsonLd={jsonLd}
       />
       <Layout>
-        <PageHero
-          eyebrow="Collections"
-          title="Curtain & Blind Collections in Kigali"
-          description="Eleven signature ranges, each written around a way of living — from sheer voiles that soften a Kigali morning to blackout drapes, motorized tracks and the accessories that hold it all together."
-          image="/images/curtains/collection-luxury.jpg"
-          imageAlt="Luxury full-height ivory curtains framing tall windows in an elegant Kigali living room"
-        />
+        <section className="hero-padding-top pb-14 md:pb-20 border-b border-border" aria-labelledby="collections-heading">
+          <Container>
+            <div className="max-w-[820px]">
+              <AnimateOnView>
+                <p className="eyebrow mb-5">Collections</p>
+                <h1 id="collections-heading" className="h1 mb-5">Curtain Collections in Kigali</h1>
+                <p className="text-body-md text-muted-foreground max-w-2xl">
+                  Eleven signature ranges, each written around a way of living — from sheer voiles that soften a
+                  Kigali morning to blackout drapes, motorized tracks and the accessories that hold it all together.
+                </p>
+              </AnimateOnView>
+            </div>
+          </Container>
+        </section>
 
         <section className="section-y" aria-labelledby="all-collections">
           <Container className="space-y-12">
