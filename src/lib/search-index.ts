@@ -13,9 +13,9 @@ export interface SearchItem {
 }
 
 const pageMeta: Record<string, string> = {
-    "/": "Luxury curtains in Kigali, Rwanda — sheer, blackout, custom curtains and blinds.",
+    "/": "Luxury curtains in Kigali, Rwanda — sheer, blackout, custom and motorized curtains.",
     "/about": "The Curtains Hub story, workshop and craftspeople in Kigali.",
-    "/collections": "Every curtain and blind range: sheer, blackout, wave, roman, roller, zebra, wooden, motorized.",
+    "/collections": "Every curtain range: sheer, blackout, wave, pinch pleat, eyelet, linen, layered and motorized.",
     "/accessories": "Curtain rods, tracks, finials, tiebacks, rings, motors and linings in Rwanda.",
     "/services": "Free consultation, measuring, tailoring, installation and aftercare.",
     "/projects": "Homes, hotels, offices and developments we have dressed.",
