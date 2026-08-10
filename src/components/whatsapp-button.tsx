@@ -11,7 +11,7 @@ const WhatsAppButton = () => (
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Chat with Curtains Hub on WhatsApp"
-    className="whatsapp-fab group fixed z-40 bottom-5 right-5 md:bottom-8 md:right-8 flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[rgba(37, 211, 102, 1.0)] text-background shadow-lift transition-transform duration-500 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+    className="whatsapp-fab group fixed z-40 bottom-5 right-5 md:bottom-8 md:right-8 flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#25D366] text-background shadow-lift transition-transform duration-500 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
   >
     <span className="whatsapp-fab__halo" aria-hidden="true" />
     <svg
