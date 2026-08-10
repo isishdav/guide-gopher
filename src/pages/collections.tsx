@@ -1,7 +1,6 @@
 import Container from "@/components/container";
 import Layout from "@/components/layout";
 import SEO from "@/components/seo";
-import PageHero from "@/components/sections/shared/page-hero";
 import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
