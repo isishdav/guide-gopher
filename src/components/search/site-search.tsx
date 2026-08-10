@@ -87,7 +87,7 @@ const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         onKeyDown={onKeyDown}
-                        placeholder="Search curtains, blinds, accessories, services…"
+                        placeholder="Search curtains, accessories, services…"
                         aria-label="Search the website"
                         className="h-14 w-full bg-transparent text-[0.95rem] font-semibold outline-none placeholder:font-medium placeholder:text-muted-foreground"
                     />

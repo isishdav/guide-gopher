@@ -85,7 +85,39 @@ const Hero = () => {
         );
 
       waitForIntro().then(() => {
-        if (!cancelled) intro.play();
+        if (cancelled) return;
+        intro.play();
+
+        // ---- Scroll-driven 3D curtain close -----------------------------
+        // Desktop-only: the fabric panels glide back across the window with
+        // perspective + depth, scrubbed directly by scroll position.
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          const close = gsap.timeline({
+            defaults: { ease: "none", immediateRender: false },
+            scrollTrigger: {
+              trigger: el,
+              start: "top top",
+              end: "bottom top",
+              scrub: 1.1,
+            },
+          });
+
+          close
+            .fromTo(
+              "[data-hero-curtain='left']",
+              { xPercent: -102, rotateY: 26, scaleX: 0.94 },
+              { xPercent: -2, rotateY: 0, scaleX: 1 },
+              0,
+            )
+            .fromTo(
+              "[data-hero-curtain='right']",
+              { xPercent: 102, rotateY: -26, scaleX: 0.94 },
+              { xPercent: 2, rotateY: 0, scaleX: 1 },
+              0,
+            )
+            .fromTo("[data-hero-dim]", { opacity: 0 }, { opacity: 0.55 }, 0)
+            .fromTo("[data-hero-bg]", { scale: 1 }, { scale: 1.06 }, 0);
+        }
       });
 
       // ---- Scroll-linked parallax ---------------------------------------
@@ -193,14 +225,21 @@ const Hero = () => {
             </div>
           )}
 
-          <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+          <div
+            className="absolute inset-0 overflow-hidden pointer-events-none curtain-stage"
+            aria-hidden="true"
+          >
+            <div
+              data-hero-dim
+              className="absolute inset-0 bg-foreground/70 opacity-0"
+            />
             <div
               data-hero-curtain="left"
-              className="absolute inset-y-0 left-0 w-[52%] curtain-fabric curtain-fabric--left"
+              className="absolute inset-y-0 left-0 w-[52%] curtain-fabric curtain-fabric--left curtain-panel-3d origin-left"
             />
             <div
               data-hero-curtain="right"
-              className="absolute inset-y-0 right-0 w-[52%] curtain-fabric curtain-fabric--right"
+              className="absolute inset-y-0 right-0 w-[52%] curtain-fabric curtain-fabric--right curtain-panel-3d origin-right"
             />
           </div>
         </div>

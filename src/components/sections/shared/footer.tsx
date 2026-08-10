@@ -2,14 +2,15 @@ import Container from "@/components/container";
 import { Reveal } from "@/components/motion/reveal";
 import { Newsletter } from "@/components/ui/newsletter";
 import { brand, collections, navLinks } from "@/data/site";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, MessageCircle, Phone, Twitter, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const socialLinks = [
   { icon: Instagram, href: brand.social.instagram, label: "Curtains Hub on Instagram" },
   { icon: Facebook, href: brand.social.facebook, label: "Curtains Hub on Facebook" },
   { icon: Twitter, href: brand.social.x, label: "Curtains Hub on X" },
-  { icon: Linkedin, href: brand.social.linkedin, label: "Curtains Hub on LinkedIn" },
+  { icon: Youtube, href: brand.social.youtube, label: "Curtains Hub on YouTube" },
+  { icon: MessageCircle, href: brand.whatsapp, label: "Chat with Curtains Hub on WhatsApp" },
 ];
 
 const Footer = () => {

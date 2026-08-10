@@ -4,8 +4,8 @@ import { SplitText } from "@/components/motion/split-text";
 import { EASE, gsap, prefersReducedMotion } from "@/lib/motion/gsap";
 import { useLayoutEffect, useRef } from "react";
 
-const BEFORE = "/images/curtains/before-room.jpg";
-const AFTER = "/images/curtains/after-room.jpg";
+const BEFORE = "/images/curtains/after-room.jpg";
+const AFTER = "/images/curtains/before-room.jpg";
 
 /**
  * Signature before / after showcase. The "after" image is revealed with a
@@ -130,7 +130,7 @@ const BeforeAfter = () => {
         >
           <img
             src={BEFORE}
-            alt="Modern living room with bare windows before curtains were installed"
+            alt="Living room with bare windows before Curtains Hub fitted curtains"
             width={1600}
             height={1072}
             loading="lazy"
