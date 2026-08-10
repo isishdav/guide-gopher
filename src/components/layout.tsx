@@ -6,6 +6,7 @@ import SmoothScroll from './motion/smooth-scroll'
 import CTA from './sections/shared/cta'
 import Footer from './sections/shared/footer'
 import Navbar from './sections/shared/navbar'
+import WhatsAppButton from './whatsapp-button'
 
 const ScrollToTop = () => {
     const { pathname } = useLocation()
@@ -36,6 +37,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <CTA />
             </main>
             <Footer />
+            <WhatsAppButton />
         </>
     )
 }
