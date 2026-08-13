@@ -1,5 +1,6 @@
 import Container from "@/components/container";
 import Layout from "@/components/layout";
+import PageHero from "@/components/sections/shared/page-hero";
 import SEO from "@/components/seo";
 import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
@@ -72,20 +73,13 @@ const CollectionsPage = () => {
         jsonLd={jsonLd}
       />
       <Layout>
-        <section className="hero-padding-top pb-14 md:pb-20 border-b border-border" aria-labelledby="collections-heading">
-          <Container>
-            <div className="max-w-[820px]">
-              <AnimateOnView>
-                <p className="eyebrow mb-5">Collections</p>
-                <h1 id="collections-heading" className="h1 mb-5">Curtain Collections in Kigali</h1>
-                <p className="text-body-md text-muted-foreground max-w-2xl">
-                  Eleven signature ranges, each written around a way of living — from sheer voiles that soften a
-                  Kigali morning to blackout drapes, motorized tracks and the accessories that hold it all together.
-                </p>
-              </AnimateOnView>
-            </div>
-          </Container>
-        </section>
+        <PageHero
+          eyebrow="Collections"
+          title="Curtain Collections in Kigali"
+          description="Eleven signature ranges, each written around a way of living — from sheer voiles that soften a Kigali morning to blackout drapes, motorized tracks and the accessories that hold it all together."
+          image="/images/curtains/collection-luxury.jpg"
+          imageAlt="Luxury full-height ivory curtains framing tall windows in an elegant Kigali living room"
+        />
 
         <section className="section-y" aria-labelledby="all-collections">
           <Container className="space-y-12">

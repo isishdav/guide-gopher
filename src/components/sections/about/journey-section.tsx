@@ -12,28 +12,28 @@ const journeyTabs = [
         description: "We introduced our platform with tools designed to simplify saving, budgeting, and managing money effectively.",
         year: "2021",
         subtitle: "Launch",
-        image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200", // Using a placeholder unsplash image
+        image: "/images/curtains/craft.jpg", // Using a placeholder unsplash image
     },
     {
         title: "Rapid Growth",
         description: "Our user base tripled within the first year as we expanded our features to include early access credit cards.",
         year: "2022",
         subtitle: "Expansion",
-        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200",
+        image: "/images/curtains/about.jpg",
     },
     {
         title: "Building Community",
         description: "We launched our social features, allowing users to share financial tips and growth strategies with each other.",
         year: "2023",
         subtitle: "Connection",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200",
+        image: "/images/curtains/project-1.jpg",
     },
     {
         title: "Future Horizons",
         description: "Integrating AI-driven insights to help users make even smarter financial decisions for long-term wealth.",
         year: "2024",
         subtitle: "Innovation",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+        image: "/images/curtains/project-2.jpg",
     },
 ];
 
