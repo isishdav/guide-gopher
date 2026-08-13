@@ -134,9 +134,10 @@ const Hero = () => {
             <span data-hero-word data-hero-fade className="block opacity-0">
               <RotatingWord
                 words={["Luxury", "Comfort", "Elegance", "Privacy", "Warmth", "Modern living"]}
-                className="text-foreground"
+                className="bg-foreground text-background px-4 py-1 md:px-6 md:py-2"
               />
             </span>
+
           </h1>
 
 
