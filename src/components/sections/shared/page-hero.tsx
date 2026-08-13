@@ -50,7 +50,7 @@ const PageHero = ({ eyebrow, title, description, image, imageAlt }: PageHeroProp
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/40" aria-hidden="true" />
 
             <Container className="relative z-10">
-                <div className="max-w-[760px] font-white">
+                <div className="max-w-[760px]">
                     {eyebrow && (
                         <Reveal variant="fade-up" immediate>
                             <p className="eyebrow mb-5">{eyebrow}</p>
