@@ -4,18 +4,18 @@ import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
 
 const teamMembers = [
-    { name: "Albert Flores", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100" },
-    { name: "Wade Warren", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100" },
-    { name: "Annette Black", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" },
-    { name: "Annette Black", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" },
-    { name: "Esther Howard", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" },
-    { name: "Jane Cooper", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" },
-    { name: "Robert Fox", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&q=80&w=100" },
-    { name: "Robert Fox", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" },
-    { name: "Devon Lane", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=100" },
-    { name: "Kristin Watson", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" },
-    { name: "Ralph Edwards", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" },
-    { name: "Ralph Edwards", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100" },
+    { name: "Albert Flores", title: "Chief Executive Officer", avatar: "/images/curtains/team-2.jpg" },
+    { name: "Wade Warren", title: "Chief Executive Officer", avatar: "/images/curtains/team-4.jpg" },
+    { name: "Annette Black", title: "Chief Executive Officer", avatar: "/images/curtains/team-1.jpg" },
+    { name: "Annette Black", title: "Chief Executive Officer", avatar: "/images/curtains/team-3.jpg" },
+    { name: "Esther Howard", title: "Chief Executive Officer", avatar: "/images/curtains/team-1.jpg" },
+    { name: "Jane Cooper", title: "Chief Executive Officer", avatar: "/images/curtains/team-3.jpg" },
+    { name: "Robert Fox", title: "Chief Executive Officer", avatar: "/images/curtains/team-4.jpg" },
+    { name: "Robert Fox", title: "Chief Executive Officer", avatar: "/images/curtains/team-1.jpg" },
+    { name: "Devon Lane", title: "Chief Executive Officer", avatar: "/images/curtains/team-2.jpg" },
+    { name: "Kristin Watson", title: "Chief Executive Officer", avatar: "/images/curtains/team-3.jpg" },
+    { name: "Ralph Edwards", title: "Chief Executive Officer", avatar: "/images/curtains/team-1.jpg" },
+    { name: "Ralph Edwards", title: "Chief Executive Officer", avatar: "/images/curtains/team-2.jpg" },
 ];
 
 const TeamGrid = () => {
