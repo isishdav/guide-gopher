@@ -51,32 +51,57 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data: ContactFormValues) => {
-    try {
-      console.log("Form submitted:", data);
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
-        variant: "default",
-      });
-      form.reset();
-      setIsSuccess(true);
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 3000);
-      setError(null);
-    } catch (error) {
-      toast({
-        title: "Failed to send message",
-        description: "Please try again later or contact us directly.",
-        variant: "destructive",
-      });
-      setError("Failed to send message. Please try again later.");
-      setTimeout(() => {
-        setError(null);
-      }, 5000);
+  try {
+    const response = await fetch(
+      "https://formsubmit.co/ajax/isishdav@gmail.com",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: "New Curtains Hub Consultation Request",
+          _template: "table",
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          phone: data.phone || "Not provided",
+          message: data.message,
+        }),
+      }
+    );
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error("Failed to send message");
     }
-  };
+
+    toast({
+      title: "Message sent successfully!",
+      description: "We'll get back to you as soon as possible.",
+    });
+
+    form.reset();
+    setIsSuccess(true);
+    setError(null);
+
+    setTimeout(() => {
+      setIsSuccess(false);
+    }, 3000);
+  } catch (error) {
+    console.error("Form submission error:", error);
+
+    toast({
+      title: "Failed to send message",
+      description: "Please try again later or contact us directly.",
+      variant: "destructive",
+    });
+
+    setError("Failed to send message. Please try again later.");
+  }
+};
 
   return (
     <section className="hero-padding-top pb-20">
@@ -147,7 +172,7 @@ const ContactForm = () => {
           {/* Right Column: Form */}
           <div className="bg-card md:p-[30px] p-6 rounded-none border border-border h-full">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} method="POST" action="https://formsubmit.co/isishdav@gmail.com" className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
