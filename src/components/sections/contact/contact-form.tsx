@@ -147,7 +147,7 @@ const ContactForm = () => {
           {/* Right Column: Form */}
           <div className="bg-card md:p-[30px] p-6 rounded-none border border-border h-full">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} action="https://formsubmit.co/isishdav@gmail.com" className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} method="POST" action="https://formsubmit.co/isishdav@gmail.com" className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
