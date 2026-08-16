@@ -5,6 +5,10 @@ import { AuthProvider } from "@/hooks/use-auth";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import { useOnlineStatus } from "./hooks/use-online-status";
+import OfflinePage from "./components/errors/offline-page";
+
 import About from "./pages/about";
 import Blog from "./pages/blog";
 import BlogPost from "./pages/blog/[slug]";
@@ -27,45 +31,50 @@ import SignupPage from "./pages/signup";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <BrowserRouter>
-          <AuthProvider>
-            <Toaster />
-            <Sonner />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/collections" element={<CollectionsPage />} />
-              <Route path="/accessories" element={<AccessoriesPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/testimonials" element={<TestimonialsPage />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+const App = () => {
+  const isOnline = useOnlineStatus();
 
+  if (!isOnline) {
+    return <OfflinePage />;
+  }
 
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
+  return (
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <BrowserRouter>
+            <AuthProvider>
+              <Toaster />
+              <Sonner />
 
-
-              <Route path="/dashboard/profile" element={<ProfilePage />} />
-              <Route path="/dashboard/blog" element={<BlogDashboard />} />
-              <Route path="/dashboard/blog/new" element={<BlogEditor />} />
-              <Route path="/dashboard/blog/edit/:id" element={<BlogEditor />} />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/signup" element={<SignupPage />} />
-              <Route path="/legal/terms-&-condition" element={<TermsAndConditionPage />} />
-              <Route path="/legal/privacy-policy" element={<PrivacyPolicyPage />} />
-              <Route path="/legal/cookie-policy" element={<CookiePolicyPage />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </AuthProvider>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
-);
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/collections" element={<CollectionsPage />} />
+                <Route path="/accessories" element={<AccessoriesPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+                <Route path="/testimonials" element={<TestimonialsPage />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/dashboard/profile" element={<ProfilePage />} />
+                <Route path="/dashboard/blog" element={<BlogDashboard />} />
+                <Route path="/dashboard/blog/new" element={<BlogEditor />} />
+                <Route path="/dashboard/blog/edit/:id" element={<BlogEditor />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/signup" element={<SignupPage />} />
+                <Route path="/legal/terms-&-condition" element={<TermsAndConditionPage />} />
+                <Route path="/legal/privacy-policy" element={<PrivacyPolicyPage />} />
+                <Route path="/legal/cookie-policy" element={<CookiePolicyPage />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </AuthProvider>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  );
+};
 
 export default App;
