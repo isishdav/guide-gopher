@@ -106,10 +106,10 @@ export const collections = [
     feeling: "Quiet refinement",
     description:
       "Hand-formed pleats that fall in a perfectly even rhythm and let the room speak. Ideal where you want structure instead of drama.",
-    image: "/images/curtains/cat-roman.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQilUiY6UGVGycxy_I1M5YGZI_EFgXquY1Do8IWk2Q0Ag&s=10",
     alt: "Cream pinch pleat curtains hanging neatly beside a bright study window",
     gallery: [
-      { src: "/images/curtains/cat-roman.jpg", alt: "Pinch pleat curtains in even folds beside a marble desk" },
+      { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQilUiY6UGVGycxy_I1M5YGZI_EFgXquY1Do8IWk2Q0Ag&s=10", alt: "Pinch pleat curtains in even folds beside a marble desk" },
       { src: "/images/curtains/collection-office.jpg", alt: "Tailored pleated curtains in a calm meeting room" },
       { src: "/images/curtains/craft.jpg", alt: "Hand-finishing the hem of a tailored curtain panel" },
     ],
@@ -148,10 +148,10 @@ export const collections = [
     feeling: "Warmth that lasts",
     description:
       "Natural woven linen that turns afternoon sun into a warm glow across the floor. Character, not decoration.",
-    image: "/images/curtains/cat-wooden.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeX9Szxx7HMnBk82PMZ5QBkeqz0heyXhKfomVVOe4Snw&s=10",
     alt: "Natural linen curtains filtering warm afternoon light onto a linen sofa",
     gallery: [
-      { src: "/images/curtains/cat-wooden.jpg", alt: "Linen curtains filtering golden afternoon light" },
+      { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeX9Szxx7HMnBk82PMZ5QBkeqz0heyXhKfomVVOe4Snw&s=10", alt: "Linen curtains filtering golden afternoon light" },
       { src: "/images/curtains/collection-custom.jpg", alt: "Bespoke hardware and curtain header detailing" },
       { src: "/images/curtains/project-3.jpg", alt: "Timber-warm interior with tailored curtains" },
     ],
@@ -247,7 +247,7 @@ export const process = [
   { step: "01", title: "We listen", description: "A conversation about how you live, when you're home and what the room should feel like." },
   { step: "02", title: "We measure", description: "Every window, door and track measured on site, with samples held against your walls." },
   { step: "03", title: "We tailor", description: "Your fabric cut, lined and hand-finished in our own workshop." },
-  { step: "04", title: "We install", description: "Fitted, dressed and left immaculate — usually within ten days." },
+  { step: "04", title: "We install", description: "Fitted, dressed and left immaculate." },
 ];
 
 export const testimonials = [
@@ -348,7 +348,7 @@ export const faqs = [
   {
     question: "How long until my rooms are transformed?",
     answer:
-      "Most bespoke orders are tailored, delivered and installed within 10 working days of fabric approval. Larger hotel and commercial projects are phased so your space stays in use throughout.",
+      "Most bespoke orders are tailored, delivered and installed within 1 working days of fabric approval because there are already made curtains. Larger hotel and commercial projects are phased so your space stays in use throughout.",
   },
   {
     question: "Do blackout curtains really create true darkness?",

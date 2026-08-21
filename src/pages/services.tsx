@@ -26,7 +26,7 @@ const jsonLd = {
 const steps = [
   { title: "1. Free Consultation", description: "A designer visits your space, listens to how you use it and brings fabric samples to see in your own light." },
   { title: "2. Custom Measurement", description: "Every window and door is laser-measured so drops, pleats and returns are exact to the millimetre." },
-  { title: "3. Tailoring", description: "Your curtains are cut, lined and hand-finished in our workshop, usually within ten working days." },
+  { title: "3. Tailoring", description: "Your curtains are cut, lined and hand-finished in our workshop, usually within one to two working days." },
   { title: "4. Professional Installation", description: "Certified fitters install tracks and rods, dress every fold and leave your space spotless." },
 ];
 
